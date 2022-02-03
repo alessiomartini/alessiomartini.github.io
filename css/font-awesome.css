@@ -627,6 +627,30 @@
 .fa-unimib:before {
   content: "\f099";
 }
+/***********************************************/
+.unimib-icon {
+  /*background: url('http://s.mobileread.com/i/icons/icon7.gif');*/
+  content: url(../images/unimib.png);
+  
+  /* Other styles here */
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*/
+/***********************************************/
 .fa-twitter:before {
   content: "\f099";
 }
