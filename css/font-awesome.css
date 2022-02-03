@@ -625,7 +625,7 @@
   content: "\f098";
 }
 .fa-unimib:before {
-  content: "\f099";
+  content: url(../images/unimib.ico);
 }
 /***********************************************/
 .unimib-icon {
