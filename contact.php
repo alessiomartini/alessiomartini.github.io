@@ -9,6 +9,6 @@ if (!empty($_POST)) {
     $msg = wordwrap($msg,70);
 
     // send email
-    mail("alemarti.2001@gmail.com","alessiomartini.ddns.net",$msg);
+    mail("alemarti.2001@gmail.com","Messaggio dal sito personale",$msg);
 }
 ?>
