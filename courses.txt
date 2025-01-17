@@ -34,7 +34,7 @@
             <li><strong>First year:</strong>
                 <ul>
                     <li>Mathematical Analysis 1 - S. Secchi</li>
-                    <li>Linear Algebra and Geometry - S. Brivio</li>
+                    <li>Linear Algebra and Geometry - S. Brivios</li>
                 </ul>
             </li>
         </ul>
