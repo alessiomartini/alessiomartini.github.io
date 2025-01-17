@@ -61,7 +61,6 @@
     </style>
 </head>
 <body>
-
 <header>
     <h1>Alessio Martini</h1>
     <p>Theoretical & Mathematical Physics | Master's Student</p>
@@ -76,77 +75,52 @@
 
 <section id="biography" class="container">
     <h2>Biography</h2>
-    <p>Hello! My name is Alessio Martini. I am a Master's student in Theoretical Physics at the University of Amsterdam. I previously completed my Bachelor's degree in Physics at the University of Milano-Bicocca. My academic interests include quantum field theory, statistical mechanics, and non-equilibrium phenomena. Through my studies, I aim to deepen our understanding of the fundamental laws of nature.</p>
+    <div id="biography-text"></div>
 </section>
 
 <section id="courses" class="container">
     <h2>Courses</h2>
-    <ul>
-        <li><strong>Master's Courses (University of Amsterdam):</strong>
-            <ul>
-                <li>Quantum Field Theory I & II - D. Hofman</li>
-                <li>Statistical Mechanics of Fields - M. Kardar (MIT online)</li>
-                <li>Non equilibrium statistical Physics - E. Lerner</li>
-                <li>Algebraic Topology 1 - I. Klang, L. Meier (Mastermath)</li>
-                <li>Differential Geometry - M. Crainic (Mastermath)</li>
-            </ul>
-        </li>
-        <li><strong>In between:</strong>
-            <ul>
-                <li>Geoemtrical Anatomy of Theoretical Physics - F. Schuller (Wien online)</li>
-                <li>General Relativity - F. Schuller (Wien online)</li>
-            </ul>
-        </li>
-        </li><strong>Bachelor's Courses (University of Milano-Bicocca):</strong>
-            <ul>
-                <li><strong>Third year:</strong>
-                    <ul>
-                        <li>Quantum Mechanics - C. Oleari</li>
-                        <li>Special Relativity - E. Re</li>
-                        <li>Nuclear and Subnuclear Physics - F. Terranova, L. Gironi</li>
-                        <li>Structure of Matter - F. Montalenti</li>
-                    </ul>
-                </li>
-                <li><strong>Second year:</strong>
-                    <ul>
-                        <li>Classical Mechanics - G. Cristadoro</li>
-                        <li>Electromagnetism - T. Tabarelli</li>
-                        <li>Mathematical Methods for Physics - S. Penati</li>
-                    </ul>
-                </li>
-                <li><strong>First year:</strong>
-                    <ul>
-                        <li>Mathematical Analysis 1 - S. Secchi</li>
-                        <li>Linear Algebra and Geometry - S. Brivio</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li><strong>High School's Courses (High School ITIS Greppi):</strong>
-            <ul>
-                <li>Sistemi e Reti - V. Villa</li>
-                <li>Telecomunicazioni - C. Cancellieri</li>
-                <li>Introduction to Cryptography - A. Previtali (Math Professor at Univ. of Milano-Bicocca)</li>
-                <li>Theory of Coding - S. Redaelli</li>
-                <li>History and Italian Literature - P. Fumagalli</li>
-            </ul>
-        </li>
-    </ul>
+    <div id="courses-list"></div>
 </section>
 
 <section id="publications" class="container">
     <h2>Publications</h2>
-    <p>Currently, I am working on research projects and preparing manuscripts. Check back soon for updates on my publications!</p>
+    <div id="publications-text"></div>
 </section>
 
 <section id="teaching" class="container">
     <h2>Teaching</h2>
-    <p>I have experience tutoring undergraduate students in classical mechanics, electromagnetism, and quantum mechanics. I am passionate about teaching and strive to make complex topics accessible and engaging.</p>
+    <div id="teaching-text"></div>
 </section>
 
 <footer>
     <p>Copyright &copy; 2025 Alessio Martini. All Rights Reserved.</p>
 </footer>
 
+<script>
+    // Function to load content from a text file and insert it into the given element
+    function loadContent(file, elementId) {
+        fetch(file)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load ${file}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById(elementId).innerHTML = data;
+            })
+            .catch(error => {
+                console.error(error);
+                document.getElementById(elementId).innerHTML = "Content could not be loaded.";
+            });
+    }
+
+    // Load content for each section
+    loadContent("biography.txt", "biography-text");
+    loadContent("courses.txt", "courses-list");
+    loadContent("publications.txt", "publications-text");
+    loadContent("teaching.txt", "teaching-text");
+</script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<ul>
+    <li><strong>Master's Courses (University of Amsterdam):</strong>
+        <ul>
+            <li>Quantum Field Theory I & II - D. Hofman</li>
+            <li>Statistical Mechanics of Fields - M. Kardar (MIT online)</li>
+            <li>Non-equilibrium Statistical Physics - E. Lerner</li>
+            <li>Algebraic Topology 1 - I. Klang, L. Meier (Mastermath)</li>
+            <li>Differential Geometry - M. Crainic (Mastermath)</li>
+        </ul>
+    </li>
+    <li><strong>In between:</strong>
+        <ul>
+            <li>Geometrical Anatomy of Theoretical Physics - F. Schuller (Wien online)</li>
+            <li>General Relativity - F. Schuller (Wien online)</li>
+        </ul>
+    </li>
+    <li><strong>Bachelor's Courses (University of Milano-Bicocca):</strong>
+        <ul>
+            <li><strong>Third year:</strong>
+                <ul>
+                    <li>Quantum Mechanics - C. Oleari</li>
+                    <li>Special Relativity - E. Re</li>
+                    <li>Nuclear and Subnuclear Physics - F. Terranova, L. Gironi</li>
+                    <li>Structure of Matter - F. Montalenti</li>
+                </ul>
+            </li>
+            <li><strong>Second year:</strong>
+                <ul>
+                    <li>Classical Mechanics - G. Cristadoro</li>
+                    <li>Electromagnetism - T. Tabarelli</li>
+                    <li>Mathematical Methods for Physics - S. Penati</li>
+                </ul>
+            </li>
+            <li><strong>First year:</strong>
+                <ul>
+                    <li>Mathematical Analysis 1 - S. Secchi</li>
+                    <li>Linear Algebra and Geometry - S. Brivio</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
