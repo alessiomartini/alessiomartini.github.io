@@ -22,7 +22,7 @@
                     <li>Special Relativity - E. Re</li>
                     <li>Nuclear and Subnuclear Physics - F. Terranova, L. Gironi</li>
                     <li>Structure of Matter - F. Montalenti</li>
-                    <li>Geometry 3 - A. Della Vedova</li>
+                    <li>Geometry 3 - A. </li>
                 </ul>
             </li>
             <li><strong>Second year:</strong>
@@ -30,7 +30,6 @@
                     <li>Classical Mechanics - G. Cristadoro</li>
                     <li>Electromagnetism - T. Tabarelli</li>
                     <li>Mathematical Methods for Physics - S. Penati</li>
-                    <li>Geometry 1 - A. Della Vedova</li>
                 </ul>
             </li>
             <li><strong>First year:</strong>
