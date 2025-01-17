@@ -1,5 +1,5 @@
 <ul>
-    <li><strong>Master's Courses (University of Amsterdam):</strong>
+    <li><strong>Master's Courses (University of Amsterdam):</strong> [2024-]
         <ul>
             <li>Quantum Field Theory I & II - D. Hofman</li>
             <li>Statistical Mechanics of Fields - M. Kardar (MIT online)</li>
@@ -8,13 +8,13 @@
             <li>Differential Geometry - M. Crainic (Mastermath)</li>
         </ul>
     </li>
-    <li><strong>In between:</strong>
+    <li><strong>In between:</strong> [2024]
         <ul>
             <li>Geometrical Anatomy of Theoretical Physics - F. Schuller (Wien online)</li>
             <li>General Relativity - F. Schuller (Wien online)</li>
         </ul>
     </li>
-    <li><strong>Bachelor's Courses (University of Milano-Bicocca):</strong>
+    <li><strong>Bachelor's Courses (University of Milano-Bicocca):</strong> [2021-2024]
         <ul>
             <li><strong>Third year:</strong>
                 <ul>
@@ -39,11 +39,11 @@
             </li>
         </ul>
     </li>
-	<li><strong>High School's Courses (High School ITIS Greppi):</strong>
+	<li><strong>High School's Courses (High School ITIS Greppi):</strong> [2015-2021]
             <ul>
+		<li>Introduction to Cryptography - A. Previtali (Math Professor at Univ. of Milano-Bicocca)</li>
                 <li>Sistemi e Reti - V. Villa</li>
                 <li>Telecomunicazioni - C. Cancellieri</li>
-                <li>Introduction to Cryptography - A. Previtali (Math Professor at Univ. of Milano-Bicocca)</li>
                 <li>Theory of Coding - S. Redaelli</li>
                 <li>History and Italian Literature - P. Fumagalli</li>
             </ul>
