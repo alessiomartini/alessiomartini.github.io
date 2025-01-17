@@ -39,4 +39,13 @@
             </li>
         </ul>
     </li>
+	<li><strong>High School's Courses (High School ITIS Greppi):</strong>
+            <ul>
+                <li>Sistemi e Reti - V. Villa</li>
+                <li>Telecomunicazioni - C. Cancellieri</li>
+                <li>Introduction to Cryptography - A. Previtali (Math Professor at Univ. of Milano-Bicocca)</li>
+                <li>Theory of Coding - S. Redaelli</li>
+                <li>History and Italian Literature - P. Fumagalli</li>
+            </ul>
+        </li>
 </ul>
