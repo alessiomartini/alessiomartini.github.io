@@ -6,6 +6,7 @@
             <li>Non-equilibrium Statistical Physics - E. Lerner</li>
             <li>Algebraic Topology 1 - I. Klang, L. Meier (Mastermath)</li>
             <li>Differential Geometry - M. Crainic (Mastermath)</li>
+            <li>Categories and Modules - B. Edixhoven, D. Holmes, R. de Jeu, A. Kret, S. Sagave (Mastermath online)</li>
         </ul>
     </li>
     <li><strong>In between:</strong> [2024]
