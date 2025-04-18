@@ -27,6 +27,7 @@
             <li>Geometrical Anatomy of Theoretical Physics - F. Schuller (Wien online)</li>
             <li>General Relativity - F. Schuller (Wien online)</li>
 		<li>Fisica Teorica 1 - A. Zaffaroni (UniMiB)</li>
+		<li>Quantum Information Theory & Computing - A. Zaffaroni (UniMiB)</li>
         </ul>
     </li>
     <li><strong>Bachelor's Courses (University of Milano-Bicocca):</strong> [2021-2024]
