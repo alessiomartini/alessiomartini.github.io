@@ -8,7 +8,7 @@
     </li>
     <li><strong>Master's Courses (University of Amsterdam):</strong> [2024-]
         <ul>		
-		<li>Lattice Gauge Theory - J. van Wezel</li>
+		<li>Lattice Gauge Theory (Adv. Topics in Theo. Phys. 2) - J. van Wezel</li>
 		<li>Condensed Matter Theory Advanced - V. Gritzev</li>
 		<li>String Theory I - L. Eberhardt</li>
 		<li>Topology in Physics - M. Vonk, H. Posthuma</li>
