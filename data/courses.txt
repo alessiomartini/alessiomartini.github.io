@@ -1,6 +1,19 @@
 <ul>
-    <li><strong>Master's Courses (University of Amsterdam):</strong> [2024-]
+    <li><strong>Master's Seminars (University of Amsterdam):</strong> [2024-]
         <ul>
+            <li>Asymptotic symmetries, Soft Theorems, and Memory Effects: The Infrared Triangle - M. Prahar</li>
+            <li>Introduction to higher form symmetries and their applications - N. Iqbal</li>
+		<li>Quantum Mechanics in the everyday world - J. van Wezel</li>
+        </ul>
+    </li>
+    <li><strong>Master's Courses (University of Amsterdam):</strong> [2024-]
+        <ul>		
+		<li>Lattice Gauge Theory - J. van Wezel</li>
+		<li>Condensed Matter Theory Advanced - V. Gritzev</li>
+		<li>String Theory I - L. Eberhardt</li>
+		<li>Topology in Physics - M. Vonk, H. Posthuma</li>
+		<li>Hydrodynamics - M. Jalaal, P. Cosme</li>
+		<li>Quantum Field Theory III & Advanced - A. Puhm</li>
             <li>Quantum Field Theory I & II - D. Hofman</li>
             <li>Statistical Mechanics of Fields - M. Kardar (MIT online)</li>
             <li>Non-equilibrium Statistical Physics - E. Lerner</li>
