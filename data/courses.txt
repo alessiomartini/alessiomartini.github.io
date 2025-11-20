@@ -1,69 +1,71 @@
 <ul>
     <li><strong>Master's Seminars (University of Amsterdam):</strong> [2024-]
         <ul>
-            <li>Asymptotic symmetries, Soft Theorems, and Memory Effects: The Infrared Triangle - M. Prahar</li>
-            <li>Introduction to higher form symmetries and their applications - N. Iqbal</li>
-		<li>Quantum Mechanics in the everyday world - J. van Wezel</li>
+            <li>Asymptotic symmetries, Soft Theorems, and Memory Effects: The Infrared Triangle - Mitra Prahar</li>
+            <li>Introduction to higher form symmetries and their applications - Nabil Iqbal</li>
+			<li>Quantum Mechanics in the everyday world - J. van Wezel</li>
         </ul>
     </li>
     <li><strong>Master's Courses (University of Amsterdam):</strong> [2024-]
-        <ul>		
-		<li>Lattice Gauge Theory (Adv. Topics in Theo. Phys. 2) - J. van Wezel</li>
-		<li>Condensed Matter Theory Advanced - V. Gritzev</li>
-		<li>String Theory I - L. Eberhardt</li>
-		<li>Topology in Physics - M. Vonk, H. Posthuma</li>
-		<li>Hydrodynamics - M. Jalaal, P. Cosme</li>
-		<li>Quantum Field Theory III & Advanced - A. Puhm</li>
-            <li>Quantum Field Theory I & II - D. Hofman</li>
-            <li>Statistical Mechanics of Fields - M. Kardar (MIT online)</li>
-            <li>Non-equilibrium Statistical Physics - E. Lerner</li>
-            <li>Algebraic Topology 1 - I. Klang, L. Meier (Mastermath)</li>
-            <li>Differential Geometry - M. Crainic (Mastermath)</li>
-            <li>Categories and Modules - B. Edixhoven, D. Holmes, R. de Jeu, A. Kret, S. Sagave (Mastermath online)</li>
+        <ul>
+			<li>Generalised Symmetries in QFT and Gravity - Nabil Iqbal (Jena TPI School on QFT & Holography)</li>
+			<li>Exploring artificial intelligence for (quantum) physics (Adv. Topics in Theo. Phys.) - Evert van Nieuwenburg</li>
+			<li>Topological Order and Quantum Information (Adv. Topics in Theo. Phys.) - Kareljan Schoutens</li>
+			<li>Lattice Gauge Theory (Adv. Topics in Theo. Phys.) - Jasper van Wezel</li>
+			<li>Condensed Matter Theory Advanced - Vladimir Gritsev</li>
+			<li>String Theory I & II - Lorenz Eberhardt</li>
+			<li>Topology in Physics - Marcel Vonk, Hessel Posthuma</li>
+			<li>Hydrodynamics - Mazi Jalaal, Pedro Cosme</li>
+			<li>Quantum Field Theory III & Advanced - Andrea Puhm</li>
+            <li>Quantum Field Theory I & II - Diego Hofman</li>
+            <li>Non-equilibrium Statistical Physics - Edan Lerner</li>
+            <li>Algebraic Topology 1 - Inbar Klang, Lennart Meier (Mastermath)</li>
+            <li>Differential Geometry - Marius Crainic (Mastermath)</li>
+            <li>Categories and Modules - Bas Edixhoven, David Holmes, Rob de Jeu, Arno Kret, Steffen Sagave (Mastermath)</li>
         </ul>
     </li>
     <li><strong>In between:</strong> [2024]
         <ul>
-            <li>Geometrical Anatomy of Theoretical Physics - F. Schuller (Wien online)</li>
-            <li>General Relativity - F. Schuller (Wien online)</li>
-		<li>Fisica Teorica 1 - A. Zaffaroni (UniMiB)</li>
-		<li>Quantum Information Theory & Computing - A. Zaffaroni (UniMiB)</li>
+            <li>Geometrical Anatomy of Theoretical Physics - Frederic Schuller (Wien)</li>
+            <li>General Relativity - Frederic Schuller (Wien)</li>
+			<li>Fisica Teorica 1 - Alberto Zaffaroni (UniMiB)</li>
+			<li>Quantum Information Theory & Computing - Alberto Zaffaroni (UniMiB)</li>
         </ul>
     </li>
     <li><strong>Bachelor's Courses (University of Milano-Bicocca):</strong> [2021-2024]
         <ul>
             <li><strong>Third year:</strong>
                 <ul>
-                    <li>Quantum Mechanics - C. Oleari</li>
-                    <li>Special Relativity - E. Re</li>
-                    <li>Nuclear and Subnuclear Physics - F. Terranova, L. Gironi</li>
-                    <li>Structure of Matter - F. Montalenti</li>
-                    <li>Geometry 3 - A. Della Vedova</li>
+                    <li>Quantum Mechanics - Carlo Oleari</li>
+                    <li>Special Relativity - Emanuele Re</li>
+                    <li>Nuclear and Subnuclear Physics - Francesco Terranova, Luca Gironi</li>
+                    <li>Structure of Matter - Francesco Montalenti</li>
+                    <li>Geometry 3 - Alberto Della Vedova</li>
                 </ul>
             </li>
             <li><strong>Second year:</strong>
                 <ul>
-                    <li>Classical Mechanics - G. Cristadoro</li>
-                    <li>Electromagnetism - T. Tabarelli</li>
-                    <li>Mathematical Methods for Physics - S. Penati</li>
-                    <li>Geometry 1 - A. Della Vedova</li>
+                    <li>Classical Mechanics - Giampaolo Cristadoro</li>
+                    <li>Electromagnetism - Tommaso Tabarelli de Fatis</li>
+                    <li>Mathematical Methods for Physics - Silvia Penati</li>
+                    <li>Geometry 1 - Alberto Della Vedova</li>
                 </ul>
             </li>
             <li><strong>First year:</strong>
                 <ul>
-                    <li>Mathematical Analysis 1 - S. Secchi</li>
-                    <li>Linear Algebra and Geometry - S. Brivio</li>
+                    <li>Mathematical Analysis 1 - Simone Secchi</li>
+                    <li>Linear Algebra and Geometry - Sonia Brivio</li>
                 </ul>
             </li>
         </ul>
     </li>
 	<li><strong>High School's Courses (High School ITIS Greppi):</strong> [2015-2021]
             <ul>
-		<li>Introduction to Cryptography - A. Previtali (Math Professor at Univ. of Milano-Bicocca)</li>
-                <li>Sistemi e Reti - V. Villa</li>
-                <li>Telecomunicazioni - C. Cancellieri</li>
-                <li>Theory of Coding - S. Redaelli</li>
-                <li>History and Italian Literature - P. Fumagalli</li>
+		<li>Introduction to Cryptography - Andrea Previtali (Math Professor at Univ. of Milano-Bicocca)</li>
+                <li>Sistemi e Reti - Vincenzo Villa</li>
+                <li>Telecomunicazioni - Calogero Cancellieri</li>
+                <li>Theory of Coding - Samuele Redaelli</li>
+                <li>History and Italian Literature - Paola Fumagalli</li>
             </ul>
         </li>
 </ul>
