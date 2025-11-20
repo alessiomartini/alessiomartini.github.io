@@ -1,6 +1,7 @@
 <strong>Some teachers on the web I've found interesting douring my studies:</strong>
 <ul>
 	<li><a href="https://people.utwente.nl/f.p.schuller?tab=education">Frederic Schuller</a></li>
+	<li><a href="https://www.damtp.cam.ac.uk/user/dbs26/teaching.html">David Skinner</a></li>
 	<li><a href="https://www.youtube.com/channel/UCpHjg_Qmzxm3xaAWRrwQPCA">Tobias Orborne</a></li>
 	<li><a href="https://mcgreevy.physics.ucsd.edu/">John McGreevy</a></li>
 	<li><a href="https://www.damtp.cam.ac.uk/user/tong/teaching.html">David Tong</a></li>
