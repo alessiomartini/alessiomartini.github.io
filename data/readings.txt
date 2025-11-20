@@ -1,1 +1,14 @@
-
+<ul>
+    <li><strong>Lecture Notes:</strong>
+        <ul>
+            <li>QFT - David Tong</li>
+            <li>Advanced QFT - David Skinner</li>
+            <li>QFT I,II & III - John McGreevy</li>
+        </ul>
+    </li>
+    <li><strong>Articles:</strong> 
+        <ul>
+      			<li>Quantum mechanics of the potential - Andrew M. Essin, David J. Griffiths</li>
+        </ul>
+    </li>
+</ul>
