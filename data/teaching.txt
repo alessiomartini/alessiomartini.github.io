@@ -1,1 +1,13 @@
-<p>I have experience tutoring undergraduate students in classical mechanics, electromagnetism, and quantum mechanics. I am passionate about teaching and strive to make complex topics accessible and engaging.</p>
+<ul>
+    <li><strong>Teacher Assistant:</strong>
+        <ul>
+            <li>Quantum Field Theory I & II - Diego Hofman (University of Amsterdam - 2025)</li>
+            <li>Electrodynamics - Kareljan Schoutens (University of Amsterdam - 2025)</li>
+        </ul>
+    </li>
+    <li><strong>Teacher:</strong>
+        <ul>
+			        <li>NOT YET!</li>
+        </ul>
+    </li>
+</ul>
