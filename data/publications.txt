@@ -1,3 +1,3 @@
 <p>Currently, I am working on research projects and preparing manuscripts. Check back soon for updates on my publications!</p>
 
-<a href="https://www.overleaf.com/read/wjnyvhmbdfzt#46d2d3">Here my Bachelor's thesis on Anomalies in Quantum Mechanics</a>
+<a href="Tesi_Martini_867624_v3.pdf" target="_blank">Here my Bachelor's thesis on Anomalies in Quantum Mechanics</a>
