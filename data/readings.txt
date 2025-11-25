@@ -8,7 +8,7 @@
     </li>
     <li><strong>Articles:</strong> 
         <ul>
-      			<li><p>Quantum mechanics of the \( \frac{1}{x^2} \) potential - Andrew M. Essin, David J. Griffiths</p></li>
+      			<li>Quantum mechanics of the \( \frac{1}{x^2} \) potential - Andrew M. Essin, David J. Griffiths</li>
         </ul>
     </li>
 </ul>
