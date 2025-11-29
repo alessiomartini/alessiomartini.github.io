@@ -1,5 +1,6 @@
 <p>Currently, I am working on research projects and preparing manuscripts. Check back soon for updates on my publications!</p>
 
-<a href="https://www.overleaf.com/read/rnkjkvqzdtxq#2dc6ca" target="_blank">Preliminary notes of Master's Thesis</a>
-
-<a href="Tesi_Martini_867624_v3.pdf" target="_blank">Here my Bachelor's thesis on Anomalies in Quantum Mechanics</a>
+<ul>
+  <li><a href="https://www.overleaf.com/read/rnkjkvqzdtxq#2dc6ca" target="_blank">Preliminary notes of Master's Thesis</a></li>
+  <li><a href="Tesi_Martini_867624_v3.pdf" target="_blank">Here my Bachelor's thesis on Anomalies in Quantum Mechanics</a></li>
+</ul>
