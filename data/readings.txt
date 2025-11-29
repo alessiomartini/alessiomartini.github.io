@@ -2,13 +2,16 @@
     <li><strong>Lecture Notes:</strong>
         <ul>
             <li>QFT - David Tong</li>
+            <li>String Theory - David Tong</li>
             <li>Advanced QFT - David Skinner</li>
+            <li>Supersymmetry - David Skinner</li>
             <li>QFT I,II & III - John McGreevy</li>
         </ul>
     </li>
     <li><strong>Articles:</strong> 
         <ul>
       			<li>Quantum mechanics of the \( \frac{1}{x^2} \) potential - Andrew M. Essin, David J. Griffiths</li>
+                <li>Generalized Symmetries - Gaiotto, Kapustin, Seberg, ...</li>
         </ul>
     </li>
 </ul>
