@@ -2,7 +2,7 @@
 
 <p>My scientific trajectory has progressively converged toward gravitational physics and quantum field theory, guided by a strong interest in geometric and structural approaches to fundamental interactions. A rigorous background in QFT, string theory, and mathematical methods, together with my Master’s thesis on modern symmetry structures, has shaped my focus on conceptual questions at the interface of geometry and quantum theory. Teaching and mentoring have further reinforced my long-term commitment to academia and my motivation to contribute to inclusive, collaborative research environments.</p>
 
-<h1>Academic Interests</h1>
+<h3>Academic Interests</h3>
 <p>My research explores the structural interface between quantum gravity, generalized symmetries, and holography. I am interested in how higher-form and non-invertible symmetry structures, together with their anomaly constraints, shape low-energy gravitational dynamics and the space of consistent holographic duals. My work focuses on the role of defect operators, information-theoretic bounds, and anomaly inflow as probes of spacetime geometry, black holes, and bulk reconstruction.</p>
 
 <p>
