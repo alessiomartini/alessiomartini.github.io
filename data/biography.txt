@@ -6,5 +6,5 @@
 <p>My research explores the structural interface between quantum gravity, generalized symmetries, and holography. I am interested in how higher-form and non-invertible symmetry structures, together with their anomaly constraints, shape low-energy gravitational dynamics and the space of consistent holographic duals. My work focuses on the role of defect operators, information-theoretic bounds, and anomaly inflow as probes of spacetime geometry, black holes, and bulk reconstruction.</p>
 
 <p>
-You can view my full <a href="CV.pdf" target="_blank">Curriculum Vitae</a>.
+You can view my <a href="CV.pdf" target="_blank">Curriculum Vitae</a>.
 </p>
