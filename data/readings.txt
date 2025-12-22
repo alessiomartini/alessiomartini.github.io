@@ -10,7 +10,7 @@
     </li>
     <li><strong>Articles:</strong> 
         <ul>
-      			<li>Quantum mechanics of the \( \frac{1}{x^2} \) potential - Andrew M. Essin, David J. Griffiths</li>
+      			<li>Quantum mechanics of the $\frac{1}{x^2}$ potential - Andrew M. Essin, David J. Griffiths</li>
                 <li>Generalized Symmetries - Gaiotto, Kapustin, Seberg, ...</li>
         </ul>
     </li>
