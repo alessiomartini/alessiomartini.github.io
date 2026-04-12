@@ -1,9 +1,19 @@
-<p>Hello! My name is Alessio Martini. I am a Master's student in Theoretical Physics at the University of Amsterdam. I previously completed my Bachelor's degree in Physics at the University of Milano-Bicocca.</p>
+<p>Hello! My name is Alessio Martini. I am a Master’s student in Theoretical Physics at the University of Amsterdam (ITFA), after completing my Bachelor’s degree in Physics at the University of Milano-Bicocca.</p>
 
-<p>My scientific trajectory has progressively converged toward gravitational physics and quantum field theory, guided by a strong interest in geometric and structural approaches to fundamental interactions. A rigorous background in QFT, string theory, and mathematical methods, together with my Master’s thesis on modern symmetry structures, has shaped my focus on conceptual questions at the interface of geometry and quantum theory. Teaching and mentoring have further reinforced my long-term commitment to academia and my motivation to contribute to inclusive, collaborative research environments.</p>
+<p>My academic path has been shaped by a strong interest in geometric and structural approaches to physics. During my Bachelor’s and Master’s I focused on quantum field theory, string theory, differential geometry, and topology in physics, culminating in a Master’s thesis on generalized symmetries and modern symmetry structures in quantum field theory and gravity. This training has given me a rigorous background in abstract modelling, mathematical methods, and conceptual aspects of quantum theory.</p>
 
-<h3>Academic Interests</h3>
-<p>My research explores the structural interface between quantum gravity, generalized symmetries, and holography. I am interested in how higher-form and non-invertible symmetry structures, together with their anomaly constraints, shape low-energy gravitational dynamics and the space of consistent holographic duals. My work focuses on the role of defect operators, information-theoretic bounds, and anomaly inflow as probes of spacetime geometry, black holes, and bulk reconstruction.</p>
+<p>In parallel, I have always been deeply interested in social and political questions: how collective behaviour emerges, how institutions shape individual choices, and how crises and inequalities propagate through societies. Over time, this has led me to look for ways to connect my theoretical and computational skills with the quantitative study of social phenomena.</p>
+
+<h3>Current Research Interests</h3>
+<p>My main interest is now in socio-physics and the quantitative modelling of complex social systems. I am particularly drawn to questions such as:</p>
+<ul>
+  <li>How attitudes, beliefs, and perceptions spread on social and institutional networks;</li>
+  <li>How feedback between individual behaviour and social structure can generate tipping dynamics and phase transitions in collective outcomes;</li>
+  <li>How tools from statistical physics, dynamical systems, and information theory can be adapted to study phenomena like distrust, polarization, cooperation, and governance under stress.</li>
+</ul>
+<p>I am interested in building and analysing models that remain structurally grounded—using geometric, field-theoretic, and complex-systems perspectives—while being empirically informed and relevant to real-world social and political issues.</p>
+
+<p>More broadly, I see my work as an attempt to bridge rigorous theoretical physics with socially oriented research, contributing quantitative tools and structural insight to the understanding of contemporary social challenges.</p>
 
 <p>
 You can view my <a href="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/alessio-martini/975572a7-4607-4c3d-a6b0-5efd54024fad?view=html" target="_blank">Curriculum Vitae</a>.
