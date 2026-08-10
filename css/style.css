@@ -333,6 +333,20 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
 
 .project-card p { margin-bottom: 1rem; }
 
+.project-status {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  margin-left: 0.4rem;
+}
+
 .project-links {
   display: flex;
   align-items: center;

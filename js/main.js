@@ -91,8 +91,9 @@
       const repoLink = project.repo
         ? `<a class="project-source" href="${project.repo}" target="_blank" rel="noopener noreferrer">Source</a>`
         : "";
+      const statusTag = project.status ? `<span class="project-status">${project.status}</span>` : "";
       card.innerHTML = `
-        <h4>${project.name}</h4>
+        <h4>${project.name} ${statusTag}</h4>
         <p>${project.description}</p>
         <div class="project-links">
           <a class="btn btn-ghost btn-sm" href="${project.href}" target="_blank" rel="noopener noreferrer">Visit project</a>

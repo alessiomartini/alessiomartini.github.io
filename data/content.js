@@ -150,6 +150,20 @@ const SITE = {
       href: "https://alessiomartini.github.io/geopolitics-atlas/",
       repo: "https://github.com/alessiomartini/geopolitics-atlas",
     },
+    {
+      name: "Harmonic Ear Training",
+      description: "A static site for training your ear on harmony — chord degree, quality and inversion drills with adaptive spaced repetition.",
+      href: "https://alessiomartini.github.io/ear-training/",
+      repo: "https://github.com/alessiomartini/ear-training",
+      status: "In progress",
+    },
+    {
+      name: "The Real-Time Earth",
+      description: "A modular catalog of live global data feeds, shown unmodified — no interpolation, no placeholders, gaps shown as gaps.",
+      href: "https://realtime-earth.alemarti-2001.workers.dev",
+      repo: "https://github.com/alessiomartini/realtime-earth",
+      status: "In progress",
+    },
   ],
 
   resources: {
