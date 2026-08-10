@@ -1,4 +1,0 @@
-<p>Email: <a href="mailto:alemarti.2001@gmail.com">alemarti.2001@gmail.com</a></p>
-<p>Repositories: <a href="https://github.com/alessiomartini">github.com/alessiomartini</a></p>
-<p>Stack Overflow: <a href="https://stackoverflow.com/users/32032937/alessio">stackoverflow.com/users/32032937/alessio</a></p>
-<p>Coding Certificates: <a href="https://www.sololearn.com/en/profile/8992711">sololearn.com/en/profile/8992711</a></p>
