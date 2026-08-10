@@ -84,6 +84,25 @@
     });
   }
 
+  function renderProjects(projects) {
+    const container = document.getElementById("projects-list");
+    projects.forEach((project) => {
+      const card = el("div", "card project-card");
+      const repoLink = project.repo
+        ? `<a class="project-source" href="${project.repo}" target="_blank" rel="noopener noreferrer">Source</a>`
+        : "";
+      card.innerHTML = `
+        <h4>${project.name}</h4>
+        <p>${project.description}</p>
+        <div class="project-links">
+          <a class="btn btn-ghost btn-sm" href="${project.href}" target="_blank" rel="noopener noreferrer">Visit project</a>
+          ${repoLink}
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  }
+
   function renderResources(resources) {
     const notes = document.getElementById("resources-notes");
     resources.lectureNotes.forEach((n) => {
@@ -173,6 +192,7 @@
     renderEducation(SITE.education);
     renderTeaching(SITE.teaching);
     renderPublications(SITE.publications);
+    renderProjects(SITE.projects);
     renderResources(SITE.resources);
     renderContact(SITE.contacts);
 

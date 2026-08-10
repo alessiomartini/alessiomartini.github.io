@@ -143,6 +143,15 @@ const SITE = {
     ],
   },
 
+  projects: [
+    {
+      name: "Geopolitics Atlas",
+      description: "A personal reference map of ongoing conflicts — historical context, verified facts, and contested narratives, with sources.",
+      href: "https://alessiomartini.github.io/geopolitics-atlas/",
+      repo: "https://github.com/alessiomartini/geopolitics-atlas",
+    },
+  ],
+
   resources: {
     lectureNotes: [
       { title: "Quantum Field Theory", author: "David Tong" },
