@@ -32,6 +32,12 @@ Only touch `index.html` for structural changes (new sections, layout), and
 `css/style.css` for visual changes (colors live in the `:root` and
 `:root[data-theme="dark"]` blocks at the top of the file).
 
+**Whenever you edit `data/content.js` or `js/main.js`**, bump the `?v=N`
+query string on their `<script>` tags at the bottom of `index.html` (e.g.
+`?v=2` → `?v=3`). Without it, visitors' browsers can keep serving a cached
+copy of the old script after you publish an update, so the page looks
+unchanged (or a new section can end up empty) until they hard-refresh.
+
 ## Previewing locally
 
 Serve the directory over local HTTP (plain `file://` can block script
