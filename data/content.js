@@ -200,6 +200,7 @@ const SITE = {
   contacts: [
     { label: "Email", value: "alemarti.2001@gmail.com", href: "mailto:alemarti.2001@gmail.com", icon: "mail" },
     { label: "GitHub", value: "github.com/alessiomartini", href: "https://github.com/alessiomartini", icon: "github" },
+    { label: "LinkedIn", value: "linkedin.com/in/alessio-martini", href: "https://www.linkedin.com/in/alessio-martini-a329181b4/", icon: "linkedin" },
     { label: "Stack Overflow", value: "stackoverflow.com/users/32032937/alessio", href: "https://stackoverflow.com/users/32032937/alessio", icon: "stackoverflow" },
     { label: "SoloLearn", value: "sololearn.com/en/profile/8992711", href: "https://www.sololearn.com/en/profile/8992711", icon: "code" },
   ],
