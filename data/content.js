@@ -164,6 +164,13 @@ const SITE = {
       repo: "https://github.com/alessiomartini/realtime-earth",
       status: "In progress",
     },
+    {
+      name: "Markets from First Principles",
+      description: "A single-author learning site that teaches finance and economics to someone who already thinks like a theoretical physicist. Eight tracks, 51 pages, one concept per page.",
+      href: "https://alessiomartini.github.io/markets-first-principles/",
+      repo: "https://github.com/alessiomartini/markets-first-principles",
+      status: "In progress",
+    },
   ],
 
   resources: {
