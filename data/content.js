@@ -138,8 +138,8 @@ const SITE = {
   publications: {
     intro: "Currently, I am working on research projects and preparing manuscripts. Check back soon for updates on my publications!",
     items: [
-      { title: "Preliminary notes of Master's Thesis", href: "https://www.overleaf.com/read/rnkjkvqzdtxq#2dc6ca", external: true },
-      { title: "Bachelor's Thesis — Anomalies in Quantum Mechanics", href: "pdfs/Tesi_Martini_867624_v3.pdf", external: true },
+      { title: "Master's Thesis — Non-invertible Symmetries in QFT and Gravity", href: "https://github.com/alessiomartini/msc-thesis-non-invertible-symmetries", external: true },
+      { title: "Bachelor's Thesis — Anomalies in Quantum Mechanics", href: "https://github.com/alessiomartini/bsc-thesis-scale-anomaly-in-qm", external: true },
     ],
   },
 
