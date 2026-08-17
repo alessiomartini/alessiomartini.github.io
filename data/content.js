@@ -34,6 +34,19 @@ const SITE = {
     ],
   },
 
+  cvs: [
+    {
+      title: "General CV",
+      description: "Comprehensive overview of education, experience, and skills.",
+      href: "pdfs/CV.pdf",
+    },
+    {
+      title: "Quant Research CV",
+      description: "Tailored CV for quantitative research and finance applications.",
+      href: "pdfs/CV_QuantResearch.pdf",
+    },
+  ],
+
   education: [
     {
       group: "Master's Seminars",

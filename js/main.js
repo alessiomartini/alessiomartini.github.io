@@ -124,6 +124,19 @@
     });
   }
 
+  function renderCVs(cvs) {
+    const container = document.getElementById("cv-list");
+    cvs.forEach((cv) => {
+      const item = el("div", "cv-item");
+      item.innerHTML = `
+        <h4>${cv.title}</h4>
+        <p>${cv.description}</p>
+        <a href="${cv.href}" target="_blank" rel="noopener noreferrer">Download PDF</a>
+      `;
+      container.appendChild(item);
+    });
+  }
+
   function renderContact(contacts) {
     const list = document.getElementById("contact-list");
     contacts.forEach((c) => {
@@ -196,6 +209,7 @@
     renderPublications(SITE.publications);
     renderProjects(SITE.projects);
     renderResources(SITE.resources);
+    renderCVs(SITE.cvs);
     renderContact(SITE.contacts);
 
     document.getElementById("year").textContent = new Date().getFullYear();
