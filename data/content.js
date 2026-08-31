@@ -185,6 +185,35 @@ const SITE = {
       repo: "https://github.com/alessiomartini/markets-first-principles",
       status: "In progress",
     },
+    {
+      name: "Amsterdam Events",
+      description: "Aggregates events happening in Amsterdam — jazz & live music, free museum entry, demonstrations, clubbing — from multiple source websites into one filterable static site.",
+      href: "https://alessiomartini.github.io/amsterdam-events/",
+      repo: "https://github.com/alessiomartini/amsterdam-events",
+      status: "In progress",
+    },
+    {
+      name: "Song Library",
+      description: "Personal song library in lead-sheet form with melody, chord symbols, lyrics, transposition, vocal range, and Spotify/YouTube links.",
+      href: "https://alessiomartini.github.io/music-library/",
+      repo: "https://github.com/alessiomartini/music-library",
+      status: "In progress",
+    },
+  ],
+
+  apps: [
+    {
+      name: "Pantry",
+      description: "Native Android app (Kotlin + Jetpack Compose) for managing groceries, pantry inventory, product expiration dates, and recipe ideas using Claude API.",
+      repo: "https://github.com/alessiomartini/grocery-list",
+      platform: "Android",
+    },
+    {
+      name: "EngVocab",
+      description: "Flashcard app for vocabulary building — words, phrasal verbs, idioms in English, German, French, or Dutch, translated to Italian. No ads, local, free, open source.",
+      repo: "https://github.com/alessiomartini/flash-cards-app",
+      platform: "Android",
+    },
   ],
 
   resources: {

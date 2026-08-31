@@ -105,6 +105,25 @@
     });
   }
 
+  function renderApps(apps) {
+    const container = document.getElementById("apps-list");
+    apps.forEach((app) => {
+      const card = el("div", "card");
+      const repoLink = app.repo
+        ? `<a class="project-source" href="${app.repo}" target="_blank" rel="noopener noreferrer">Source</a>`
+        : "";
+      card.innerHTML = `
+        <h4>${app.name}</h4>
+        <p>${app.description}</p>
+        <div class="project-links">
+          <span style="font-size: 0.9rem; color: var(--text-muted);">📱 ${app.platform}</span>
+          ${repoLink}
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  }
+
   function renderResources(resources) {
     const notes = document.getElementById("resources-notes");
     resources.lectureNotes.forEach((n) => {
@@ -208,6 +227,7 @@
     renderTeaching(SITE.teaching);
     renderPublications(SITE.publications);
     renderProjects(SITE.projects);
+    renderApps(SITE.apps);
     renderResources(SITE.resources);
     renderCVs(SITE.cvs);
     renderContact(SITE.contacts);
