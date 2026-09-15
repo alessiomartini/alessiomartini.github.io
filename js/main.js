@@ -45,7 +45,10 @@
       const items = group.items
         .map((item) => {
           if (typeof item === "string") return `<li>${item}</li>`;
-          const nameHtml = item.courseHref ? `<a class="text-link" href="${item.courseHref}">${item.name}</a>` : item.name;
+          const isExternal = item.courseHref && item.courseHref.startsWith("http");
+          const nameHtml = item.courseHref
+            ? `<a class="text-link" href="${item.courseHref}"${isExternal ? ' target="_blank" rel="noopener noreferrer"' : ""}>${item.name}</a>`
+            : item.name;
           const profHtml = item.professor
             ? item.professorHref
               ? ` — <a class="text-link" href="${item.professorHref}" target="_blank" rel="noopener noreferrer">${item.professor}</a>`
