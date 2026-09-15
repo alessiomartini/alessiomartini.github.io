@@ -9,7 +9,6 @@ const SITE = {
     location: "University of Amsterdam (ITFA)",
     photo: "foto_alessio.jpg",
     cv: "pdfs/CV.pdf",
-    cvExternal: "https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/alessio-martini/975572a7-4607-4c3d-a6b0-5efd54024fad?view=html",
     intro: "Bridging quantum field theory and geometric physics with the quantitative study of complex social systems.",
   },
 
@@ -45,6 +44,12 @@ const SITE = {
       title: "Quant Research CV",
       description: "Tailored CV for quantitative research and finance applications.",
       href: "pdfs/CV_QuantResearch.pdf",
+    },
+    {
+      title: "Europass CV",
+      description: "Official Europass e-Portfolio profile, kept up to date online.",
+      href: "https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/alessio-martini/975572a7-4607-4c3d-a6b0-5efd54024fad?view=html",
+      linkText: "View Online",
     },
   ],
 
@@ -284,7 +289,7 @@ const SITE = {
   },
 
   contacts: [
-    { label: "Email", value: "alemarti.2001@gmail.com", href: "mailto:alemarti.2001@gmail.com", icon: "mail" },
+    { label: "Email", value: "alemarti.2001@gmail.com", href: "mailto:alemarti.2001@gmail.com?subject=%5BWEBSITE%20CONTACT%5D", icon: "mail" },
     { label: "GitHub", value: "github.com/alessiomartini", href: "https://github.com/alessiomartini", icon: "github" },
     { label: "LinkedIn", value: "linkedin.com/in/alessio-martini", href: "https://www.linkedin.com/in/alessio-martini-a329181b4/", icon: "linkedin" },
     { label: "Stack Overflow", value: "stackoverflow.com/users/32032937/alessio", href: "https://stackoverflow.com/users/32032937/alessio", icon: "stackoverflow" },

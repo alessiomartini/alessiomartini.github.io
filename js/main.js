@@ -134,7 +134,7 @@
       item.innerHTML = `
         <h4>${cv.title}</h4>
         <p>${cv.description}</p>
-        <a href="${cv.href}" target="_blank" rel="noopener noreferrer">Download PDF</a>
+        <a href="${cv.href}" target="_blank" rel="noopener noreferrer">${cv.linkText || "Download PDF"}</a>
       `;
       container.appendChild(item);
     });
