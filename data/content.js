@@ -66,9 +66,9 @@ const SITE = {
       items: [
         "<strong>Master's Thesis</strong> — Non-invertible Symmetries in QFT and Gravity (<a href=\"https://github.com/alessiomartini/msc-thesis-non-invertible-symmetries\" target=\"_blank\" rel=\"noopener noreferrer\">repo</a>)",
         "Generalised Symmetries in QFT and Gravity — Nabil Iqbal (Jena TPI School on QFT & Holography)",
-        "Exploring artificial intelligence for (quantum) physics (Adv. Topics in Theo. Phys.) — Evert van Nieuwenburg",
-        "Topological Order and Quantum Information (Adv. Topics in Theo. Phys.) — Kareljan Schoutens",
-        "Lattice Gauge Theory (Adv. Topics in Theo. Phys.) — Jasper van Wezel",
+        "Exploring artificial intelligence for (quantum) physics (Adv. Topics in Theo. Phys.) — <a href=\"https://www.linkedin.com/in/evert-van-nieuwenburg/\" target=\"_blank\" rel=\"noopener noreferrer\">Evert van Nieuwenburg</a> (<a href=\"https://www.drstp.nl/events/advanced-topics-in-theoretical-physics-autumn-2025/\" target=\"_blank\" rel=\"noopener noreferrer\">course page</a>, <a href=\"https://github.com/everthemore/ATTP-2025\" target=\"_blank\" rel=\"noopener noreferrer\">materials</a>)",
+        "Topological Order and Quantum Information (Adv. Topics in Theo. Phys.) — <a href=\"https://www.linkedin.com/in/kareljan-schoutens-39b30849/\" target=\"_blank\" rel=\"noopener noreferrer\">Kareljan Schoutens</a> (<a href=\"https://www.drstp.nl/events/advanced-topics-in-theoretical-physics-autumn-2025/\" target=\"_blank\" rel=\"noopener noreferrer\">course page</a>)",
+        "Lattice Gauge Theory (Adv. Topics in Theo. Phys.) — <a href=\"https://jvanwezel.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Jasper van Wezel</a> (<a href=\"https://www.drstp.nl/events/advanced-topics-in-theoretical-physics/\" target=\"_blank\" rel=\"noopener noreferrer\">course page</a>)",
         "Condensed Matter Theory Advanced — Vladimir Gritsev",
         "String Theory I & II — Lorenz Eberhardt",
         "Topology in Physics — Marcel Vonk, Hessel Posthuma",
@@ -103,7 +103,7 @@ const SITE = {
         "Nuclear and Subnuclear Physics — Francesco Terranova, Luca Gironi",
         "Structure of Matter — Francesco Montalenti",
         "Geometry 3 — Alberto Della Vedova",
-        "Computational Physics — Michele Pepe",
+        "Computational Physics — Michele Pepe (<a href=\"https://elearning.unimib.it/course/view.php?id=42985\" target=\"_blank\" rel=\"noopener noreferrer\">course page</a>)",
       ],
     },
     {
@@ -113,9 +113,9 @@ const SITE = {
       items: [
         "Classical Mechanics — Giampaolo Cristadoro",
         "Electromagnetism — Tommaso Tabarelli de Fatis",
-        "Mathematical Methods for Physics — Silvia Penati",
+        "Mathematical Methods for Physics — Silvia Penati (<a href=\"https://elearning.unimib.it/course/info.php?id=29588#en\" target=\"_blank\" rel=\"noopener noreferrer\">course page</a>)",
         "Geometry 1 — Alberto Della Vedova",
-        "Physics Laboratory 2 — Pietro Govoni",
+        "Physics Laboratory 2 — Pietro Govoni (<a href=\"https://elearning.unimib.it/course/view.php?id=36328\" target=\"_blank\" rel=\"noopener noreferrer\">course page</a>)",
       ],
     },
     {
@@ -125,8 +125,8 @@ const SITE = {
       items: [
         "Mathematical Analysis 1 — Simone Secchi",
         "Linear Algebra and Geometry — Sonia Brivio",
-        "Physics Laboratory 1 — Claudia Riccardi",
-        "Laboratory of Computer Science — Federico Nati",
+        "Physics Laboratory 1 — Claudia Riccardi (<a href=\"https://elearning.unimib.it/course/info.php?id=32534#en\" target=\"_blank\" rel=\"noopener noreferrer\">course page</a>)",
+        "Laboratory of Computer Science — Federico Nati (<a href=\"https://elearning.unimib.it/course/info.php?id=29579#en\" target=\"_blank\" rel=\"noopener noreferrer\">course page</a>)",
       ],
     },
     {
