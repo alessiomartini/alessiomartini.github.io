@@ -320,9 +320,9 @@ const SITE = {
       years: "2015–2021",
       items: [
         { name: "Introduction to Cryptography", professor: "Andrea Previtali (Math Professor at Univ. of Milano-Bicocca)", professorHref: "https://www.unimib.it/andrea-previtali" },
-        "Sistemi e Reti — Vincenzo Villa",
-        "Telecomunicazioni — Calogero Cancellieri",
-        "Theory of Coding — Samuele Redaelli",
+        { name: "Sistemi e Reti", professor: "Vincenzo Villa", professorHref: "https://www.vincenzov.net/" },
+        { name: "Telecomunicazioni", professor: "Calogero Cancellieri", professorHref: "https://www.linkedin.com/in/calogero-cancellieri-718b3523/" },
+        { name: "Theory of Coding", professor: "Samuele Redaelli", professorHref: "https://www.linkedin.com/in/samuele-redaelli-b837ab14b/" },
         "History and Italian Literature — Paola Fumagalli",
       ],
     },
