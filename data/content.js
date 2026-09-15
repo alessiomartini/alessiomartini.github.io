@@ -82,7 +82,7 @@ const SITE = {
     "computational-physics-lab": {
       title: "Computational Physics Lab",
       professor: "Michele Pepe",
-      professorHref: "https://www.unimib.it/michele-pepe",
+      professorHref: "https://inspirehep.net/authors/993845",
       meta: "University of Milano-Bicocca",
       links: [{ label: "e-learning course page", href: "https://elearning.unimib.it/course/view.php?id=42985" }],
       sections: [
@@ -129,7 +129,7 @@ const SITE = {
     "physical-lab-1": {
       title: "Physics Laboratory 1",
       professor: "Claudia Riccardi",
-      professorHref: "https://www.unimib.it/claudia-riccardi",
+      professorHref: "https://scholar.google.com/citations?user=GJCUZC0AAAAJ&hl=en",
       meta: "University of Milano-Bicocca",
       links: [{ label: "e-learning course page", href: "https://elearning.unimib.it/course/info.php?id=32534#en" }],
       sections: [
@@ -157,7 +157,7 @@ const SITE = {
     "physical-lab-2": {
       title: "Physics Laboratory 2",
       professor: "Pietro Govoni",
-      professorHref: "https://www.unimib.it/pietro-govoni",
+      professorHref: "https://inspirehep.net/authors/1062192",
       meta: "University of Milano-Bicocca",
       links: [{ label: "e-learning course page", href: "https://elearning.unimib.it/course/view.php?id=36328" }],
       sections: [
@@ -241,7 +241,7 @@ const SITE = {
       items: [
         { name: "Asymptotic symmetries, Soft Theorems, and Memory Effects: The Infrared Triangle", professor: "Mitra Prahar", professorHref: "https://scholar.google.com/citations?user=_4w2bqcAAAAJ&hl=en" },
         { name: "Introduction to higher form symmetries and their applications", professor: "Nabil Iqbal", professorHref: "https://www.nabiliqbal.com/" },
-        { name: "Quantum Mechanics in the everyday world", professor: "J. van Wezel", professorHref: "https://jvanwezel.com/" },
+        { name: "Quantum Mechanics in the everyday world", professor: "Jasper van Wezel", professorHref: "https://jvanwezel.com/" },
         { name: "Introduction to advanced statistical physics for neural networks", courseHref: "https://www.drstp.nl/events/advanced-topics-in-theoretical-physics-autumn-2026/", professor: "Tuan Pham", professorHref: "https://scholar.google.com/citations?user=LKzkz-kAAAAJ&hl=en" },
       ],
     },
@@ -284,12 +284,12 @@ const SITE = {
       years: "2021–2024",
       items: [
         "<strong>Bachelor's Thesis</strong> — Anomalies in Quantum Mechanics (<a class=\"text-link\" href=\"https://github.com/alessiomartini/bsc-thesis-scale-anomaly-in-qm\" target=\"_blank\" rel=\"noopener noreferrer\">repo</a>)",
-        { name: "Quantum Mechanics", professor: "Carlo Oleari", professorHref: "https://www.unimib.it/carlo-oleari" },
-        { name: "Special Relativity", professor: "Emanuele Re", professorHref: "https://www.unimib.it/emanuele-re" },
-        "Nuclear and Subnuclear Physics — <a class=\"text-link\" href=\"https://en.unimib.it/francesco-terranova\" target=\"_blank\" rel=\"noopener noreferrer\">Francesco Terranova</a>, <a class=\"text-link\" href=\"https://scholar.google.com/citations?hl=en&user=hWsp_owAAAAJ\" target=\"_blank\" rel=\"noopener noreferrer\">Luca Gironi</a>",
+        { name: "Quantum Mechanics", professor: "Carlo Oleari", professorHref: "https://inspirehep.net/authors/994959" },
+        { name: "Special Relativity", professor: "Emanuele Re", professorHref: "https://inspirehep.net/authors/1058529" },
+        "Nuclear and Subnuclear Physics — <a class=\"text-link\" href=\"https://www.dunescience.org/facesofdune/francesco-terranova/\" target=\"_blank\" rel=\"noopener noreferrer\">Francesco Terranova</a>, <a class=\"text-link\" href=\"https://scholar.google.com/citations?hl=en&user=hWsp_owAAAAJ\" target=\"_blank\" rel=\"noopener noreferrer\">Luca Gironi</a>",
         { name: "Structure of Matter", professor: "Francesco Montalenti", professorHref: "https://lness.como.polimi.it/francescomontalenti.php" },
-        { name: "Geometry 3", professor: "Alberto Della Vedova", professorHref: "https://www.unimib.it/alberto-della-vedova" },
-        { name: "Computational Physics", courseHref: "course.html?id=computational-physics-lab", professor: "Michele Pepe", professorHref: "https://www.unimib.it/michele-pepe" },
+        { name: "Geometry 3", professor: "Alberto Della Vedova", professorHref: "https://www.researchgate.net/profile/Alberto-Della-Vedova" },
+        { name: "Computational Physics", courseHref: "course.html?id=computational-physics-lab", professor: "Michele Pepe", professorHref: "https://inspirehep.net/authors/993845" },
       ],
     },
     {
@@ -298,10 +298,10 @@ const SITE = {
       years: "2021–2024",
       items: [
         { name: "Classical Mechanics", professor: "Giampaolo Cristadoro", professorHref: "https://scholar.google.com/citations?user=-lNxulgAAAAJ&hl=en" },
-        { name: "Electromagnetism", professor: "Tommaso Tabarelli de Fatis", professorHref: "https://en.unimib.it/tommaso-tabarelli-de-fatis" },
+        { name: "Electromagnetism", professor: "Tommaso Tabarelli de Fatis", professorHref: "https://inspirehep.net/authors/1010312" },
         { name: "Mathematical Methods for Physics", courseHref: "course.html?id=mathematical-methods-for-physics", professor: "Silvia Penati", professorHref: "https://scholar.google.com/citations?user=DRw8L7oAAAAJ&hl=en" },
-        { name: "Geometry 1", professor: "Alberto Della Vedova", professorHref: "https://www.unimib.it/alberto-della-vedova" },
-        { name: "Physics Laboratory 2", courseHref: "course.html?id=physical-lab-2", professor: "Pietro Govoni", professorHref: "https://www.unimib.it/pietro-govoni" },
+        { name: "Geometry 1", professor: "Alberto Della Vedova", professorHref: "https://www.researchgate.net/profile/Alberto-Della-Vedova" },
+        { name: "Physics Laboratory 2", courseHref: "course.html?id=physical-lab-2", professor: "Pietro Govoni", professorHref: "https://inspirehep.net/authors/1062192" },
       ],
     },
     {
@@ -311,7 +311,7 @@ const SITE = {
       items: [
         { name: "Mathematical Analysis 1", professor: "Simone Secchi", professorHref: "https://scholar.google.com/citations?hl=en&user=KWW--qUAAAAJ" },
         { name: "Linear Algebra and Geometry", professor: "Sonia Brivio", professorHref: "https://en.unimib.it/sonia-brivio" },
-        { name: "Physics Laboratory 1", courseHref: "course.html?id=physical-lab-1", professor: "Claudia Riccardi", professorHref: "https://www.unimib.it/claudia-riccardi" },
+        { name: "Physics Laboratory 1", courseHref: "course.html?id=physical-lab-1", professor: "Claudia Riccardi", professorHref: "https://scholar.google.com/citations?user=GJCUZC0AAAAJ&hl=en" },
         { name: "Laboratory of Computer Science", courseHref: "course.html?id=laboratory-of-computer-science", professor: "Federico Nati", professorHref: "https://federiconati.it/" },
       ],
     },
@@ -320,7 +320,7 @@ const SITE = {
       place: "ITIS Greppi",
       years: "2015–2021",
       items: [
-        { name: "Introduction to Cryptography", professor: "Andrea Previtali (Math Professor at Univ. of Milano-Bicocca)", professorHref: "https://www.unimib.it/andrea-previtali" },
+        { name: "Introduction to Cryptography", professor: "Andrea Previtali (Math Professor at Univ. of Milano-Bicocca)", professorHref: "https://scholar.google.com/citations?user=9qJGd8YAAAAJ&hl=en" },
         { name: "Sistemi e Reti", professor: "Vincenzo Villa", professorHref: "https://www.vincenzov.net/" },
         { name: "Telecomunicazioni", professor: "Calogero Cancellieri", professorHref: "https://www.linkedin.com/in/calogero-cancellieri-718b3523/" },
         { name: "Theory of Coding", professor: "Samuele Redaelli", professorHref: "https://www.linkedin.com/in/samuele-redaelli-b837ab14b/" },
