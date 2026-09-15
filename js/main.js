@@ -33,7 +33,8 @@
 
   function renderBio(bio) {
     const container = document.getElementById("bio-text");
-    container.innerHTML = bio.paragraphs.join("");
+    container.innerHTML =
+      bio.intro.join("") + `<h3>${bio.researchHeading}</h3>` + bio.research.join("");
   }
 
   function renderEducation(groups) {
@@ -67,10 +68,13 @@
   function renderTeaching(teaching) {
     const container = document.getElementById("teaching-list");
     teaching.assistant.forEach((t) => {
+      const personHtml = t.personHref
+        ? `<a class="text-link" href="${t.personHref}" target="_blank" rel="noopener noreferrer">${t.person}</a>`
+        : t.person;
       const card = el(
         "div",
         "card",
-        `<div class="role">${t.role}</div><h4>${t.course}</h4><p>${t.person} &middot; ${t.place} (${t.year})</p>`
+        `<div class="role">${t.role}</div><h4>${t.course}</h4><p>${personHtml} &middot; ${t.place} (${t.year})</p>`
       );
       container.appendChild(card);
     });
@@ -134,17 +138,13 @@
   }
 
   function renderElsewhere(items) {
-    const container = document.getElementById("elsewhere-list");
-    items.forEach((item) => {
-      const card = el("div", "cv-item");
-      const target = item.external ? ' target="_blank" rel="noopener noreferrer"' : "";
-      card.innerHTML = `
-        <h4>${item.title}</h4>
-        <p>${item.description}</p>
-        <a href="${item.href}"${target}>${item.linkText}</a>
-      `;
-      container.appendChild(card);
-    });
+    const container = document.getElementById("elsewhere-note");
+    container.innerHTML = items
+      .map((item) => {
+        const target = item.external ? ' target="_blank" rel="noopener noreferrer"' : "";
+        return `${item.description} <a class="text-link" href="${item.href}"${target}>${item.linkText}</a>`;
+      })
+      .join(" &middot; ");
   }
 
   function renderContact(contacts) {
@@ -156,7 +156,7 @@
         <a href="${c.href}"${isMail ? "" : ' target="_blank" rel="noopener noreferrer"'}>
           ${svg(c.icon)}
           <span class="contact-text">
-            <span class="contact-label">${c.label}</span><br>
+            <span class="contact-label">${c.label}</span>
             <span class="contact-value">${c.value}</span>
           </span>
         </a>
@@ -220,7 +220,7 @@
     if (document.getElementById("projects-list")) renderProjects(SITE.projects);
     if (document.getElementById("resources-educators")) renderResources(SITE.resources);
     if (document.getElementById("cv-list")) renderCVs(SITE.cvs);
-    if (document.getElementById("elsewhere-list")) renderElsewhere(SITE.elsewhere);
+    if (document.getElementById("elsewhere-note")) renderElsewhere(SITE.elsewhere);
     if (document.getElementById("contact-list")) renderContact(SITE.contacts);
 
     document.getElementById("year").textContent = new Date().getFullYear();

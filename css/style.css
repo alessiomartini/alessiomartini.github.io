@@ -539,8 +539,9 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
 }
 
 .contact-grid .contact-text { min-width: 0; }
-.contact-grid .contact-label { font-weight: 700; font-size: 0.85rem; }
+.contact-grid .contact-label { display: block; font-weight: 700; font-size: 0.85rem; }
 .contact-grid .contact-value {
+  display: block;
   color: var(--text-muted);
   font-size: 0.85rem;
   overflow: hidden;
@@ -556,6 +557,12 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
   font-size: 0.85rem;
   border-top: 1px solid var(--border);
 }
+
+.footer-note {
+  font-size: 0.8rem;
+  margin: 0 0 0.75rem;
+}
+.footer-note:empty { display: none; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 760px) {

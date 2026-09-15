@@ -31,8 +31,8 @@ const SITE = {
           body: "<p>As the complexity of (quantum) experiments grows, control methods that tune, optimize and design those experiments have to keep up. When full characterisation is no longer possible, machine learning methods may be able to extract control schemes from data. In this set of lectures we will explore several machine learning techniques and optimisation algorithms in their application to physics. We will also touch upon the topic of quantum games, both from a theoretical point of view and for their use as a playground for developing quantum machine learning models and AI agents.</p>",
         },
         {
-          heading: "Practical info",
-          body: "<p>Lectures and exercises: Oct 13, 20, 27, Nov 3. Exam: Nov 10.<br>Location: Gorlaeus — EM1.21 for lectures (11:00–12:45), EM1.19 for the TA session (13:15–16:00).</p>",
+          heading: "When & where",
+          body: "<p>October–November 2025, at Leiden University.</p>",
         },
       ],
     },
@@ -48,8 +48,8 @@ const SITE = {
           body: "<p>Two-dimensional quantum systems with topological order are characterized by ground state degeneracies and anyonic excitations. The local indistinguishability of degenerate states makes them ideal candidates for storing quantum information. This course gives a detailed account of topological order in (fractional and non-abelian) quantum Hall systems and in lattice models (toric code and quantum double models), elucidating connections with Quantum Error Correction (QEC), Quantum Memory and schemes for Topological Quantum Computing (TQC).</p>",
         },
         {
-          heading: "Practical info",
-          body: "<p>Lectures and exercises: Sep 8, 15, 29, Oct 6 (no lecture on Sept 22). Exam: home essay.<br>Location: Science Park G2.02, Amsterdam.</p>",
+          heading: "When & where",
+          body: "<p>September–October 2025, at the University of Amsterdam.</p>",
         },
         {
           heading: "Prerequisites",
@@ -70,8 +70,8 @@ const SITE = {
           body: "<p>Lattice gauge theories are prevalent both in high and low energy physics, either as discrete approximations to a continuous field theory, or as a direct implementation of lattice models. Besides their inherent interest, they also provide a particularly nice background for illustrating the correspondence between quantum dynamics and classical equilibrium descriptions, the presence or absence of symmetry-breaking phase transitions, the use of duality transformations, and the role of topological defects in mediating phase transitions.</p><p>In this lecture series, we follow one of the classic texts on lattice gauge theory and discover how all these aspects emerge from very simple building blocks, starting from the famous Kramers–Wannier duality in the Ising model and, time permitting, ending up with accessible lattice descriptions of confinement and the Kosterlitz–Thouless phase transition.</p>",
         },
         {
-          heading: "Practical info",
-          body: "<p>Lectures and exercises: Feb 3, 10, 17, 24. Exam: March 3.<br>Location: Science Park G3.10, Amsterdam.</p>",
+          heading: "When & where",
+          body: "<p>February–March 2025, at the University of Amsterdam.</p>",
         },
         {
           heading: "Recommended prior knowledge",
@@ -82,6 +82,7 @@ const SITE = {
     "computational-physics-lab": {
       title: "Computational Physics Lab",
       professor: "Michele Pepe",
+      professorHref: "https://www.unimib.it/michele-pepe",
       meta: "University of Milano-Bicocca",
       links: [{ label: "e-learning course page", href: "https://elearning.unimib.it/course/view.php?id=42985" }],
       sections: [
@@ -105,6 +106,7 @@ const SITE = {
     "mathematical-methods-for-physics": {
       title: "Mathematical Methods for Physics",
       professor: "Silvia Penati",
+      professorHref: "https://scholar.google.com/citations?user=DRw8L7oAAAAJ&hl=en",
       meta: "University of Milano-Bicocca",
       links: [{ label: "e-learning course page", href: "https://elearning.unimib.it/course/info.php?id=29588#en" }],
       sections: [
@@ -127,6 +129,7 @@ const SITE = {
     "physical-lab-1": {
       title: "Physics Laboratory 1",
       professor: "Claudia Riccardi",
+      professorHref: "https://www.unimib.it/claudia-riccardi",
       meta: "University of Milano-Bicocca",
       links: [{ label: "e-learning course page", href: "https://elearning.unimib.it/course/info.php?id=32534#en" }],
       sections: [
@@ -154,6 +157,7 @@ const SITE = {
     "physical-lab-2": {
       title: "Physics Laboratory 2",
       professor: "Pietro Govoni",
+      professorHref: "https://www.unimib.it/pietro-govoni",
       meta: "University of Milano-Bicocca",
       links: [{ label: "e-learning course page", href: "https://elearning.unimib.it/course/view.php?id=36328" }],
       sections: [
@@ -166,6 +170,7 @@ const SITE = {
     "laboratory-of-computer-science": {
       title: "Laboratory of Computer Science",
       professor: "Federico Nati",
+      professorHref: "https://federiconati.it/",
       meta: "University of Milano-Bicocca",
       links: [{ label: "e-learning course page", href: "https://elearning.unimib.it/course/info.php?id=29579#en" }],
       sections: [
@@ -195,10 +200,13 @@ const SITE = {
   },
 
   bio: {
-    paragraphs: [
+    intro: [
       "<p>Hello! My name is Alessio Martini. I am a Master&rsquo;s student in Theoretical Physics at the University of Amsterdam (ITFA), after completing my Bachelor&rsquo;s degree in Physics at the University of Milano-Bicocca.</p>",
       "<p>My academic path has been shaped by a strong interest in geometric and structural approaches to physics. During my Bachelor&rsquo;s and Master&rsquo;s I focused on quantum field theory, string theory, differential geometry, and topology in physics, culminating in a Master&rsquo;s thesis on generalized symmetries and modern symmetry structures in quantum field theory and gravity. This training has given me a rigorous background in abstract modelling, mathematical methods, and conceptual aspects of quantum theory.</p>",
       "<p>In parallel, I have always been deeply interested in social and political questions: how collective behaviour emerges, how institutions shape individual choices, and how crises and inequalities propagate through societies. Over time, this has led me to look for ways to connect my theoretical and computational skills with the quantitative study of social phenomena.</p>",
+    ],
+    researchHeading: "Research Interests",
+    research: [
       "<p>My main interest is now in socio-physics and the quantitative modelling of complex social systems. I am particularly drawn to questions such as:</p>",
       "<ul><li>How attitudes, beliefs, and perceptions spread on social and institutional networks;</li><li>How feedback between individual behaviour and social structure can generate tipping dynamics and phase transitions in collective outcomes;</li><li>How tools from statistical physics, dynamical systems, and information theory can be adapted to study phenomena like distrust, polarization, cooperation, and governance under stress.</li></ul>",
       "<p>I am interested in building and analysing models that remain structurally grounded&mdash;using geometric, field-theoretic, and complex-systems perspectives&mdash;while being empirically informed and relevant to real-world social and political issues.</p>",
@@ -231,9 +239,9 @@ const SITE = {
       place: "University of Amsterdam",
       years: "2024–",
       items: [
-        "Asymptotic symmetries, Soft Theorems, and Memory Effects: The Infrared Triangle — Mitra Prahar",
-        "Introduction to higher form symmetries and their applications — Nabil Iqbal",
-        "Quantum Mechanics in the everyday world — J. van Wezel",
+        { name: "Asymptotic symmetries, Soft Theorems, and Memory Effects: The Infrared Triangle", professor: "Mitra Prahar", professorHref: "https://scholar.google.com/citations?user=_4w2bqcAAAAJ&hl=en" },
+        { name: "Introduction to higher form symmetries and their applications", professor: "Nabil Iqbal", professorHref: "https://www.nabiliqbal.com/" },
+        { name: "Quantum Mechanics in the everyday world", professor: "J. van Wezel", professorHref: "https://jvanwezel.com/" },
       ],
     },
     {
@@ -242,20 +250,20 @@ const SITE = {
       years: "2024–",
       items: [
         "<strong>Master's Thesis</strong> — Non-invertible Symmetries in QFT and Gravity (<a class=\"text-link\" href=\"https://github.com/alessiomartini/msc-thesis-non-invertible-symmetries\" target=\"_blank\" rel=\"noopener noreferrer\">repo</a>)",
-        "Generalised Symmetries in QFT and Gravity — Nabil Iqbal (Jena TPI School on QFT & Holography)",
+        { name: "Generalised Symmetries in QFT and Gravity (Jena TPI School on QFT & Holography)", professor: "Nabil Iqbal", professorHref: "https://www.nabiliqbal.com/" },
         { name: "Exploring artificial intelligence for (quantum) physics (Adv. Topics in Theo. Phys.)", courseHref: "course.html?id=exploring-ai-for-q-physics", professor: "Evert van Nieuwenburg", professorHref: "https://www.linkedin.com/in/evert-van-nieuwenburg/" },
         { name: "Topological Order and Quantum Information (Adv. Topics in Theo. Phys.)", courseHref: "course.html?id=topological-order-and-quantum-information", professor: "Kareljan Schoutens", professorHref: "https://www.linkedin.com/in/kareljan-schoutens-39b30849/" },
         { name: "Lattice Gauge Theory (Adv. Topics in Theo. Phys.)", courseHref: "course.html?id=lattice-gauge-theory", professor: "Jasper van Wezel", professorHref: "https://jvanwezel.com/" },
-        "Condensed Matter Theory Advanced — Vladimir Gritsev",
-        "String Theory I & II — Lorenz Eberhardt",
-        "Topology in Physics — Marcel Vonk, Hessel Posthuma",
-        "Hydrodynamics — Mazi Jalaal, Pedro Cosme",
-        "Quantum Field Theory III & Advanced — Andrea Puhm",
-        "Quantum Field Theory I & II — Diego Hofman",
-        "Non-equilibrium Statistical Physics — Edan Lerner",
-        "Algebraic Topology 1 — Inbar Klang, Lennart Meier (Mastermath)",
-        "Differential Geometry — Marius Crainic (Mastermath)",
-        "Categories and Modules — Bas Edixhoven, David Holmes, Rob de Jeu, Arno Kret, Steffen Sagave (Mastermath)",
+        { name: "Condensed Matter Theory Advanced", professor: "Vladimir Gritsev", professorHref: "https://scholar.google.com/citations?user=Xw_CHScAAAAJ&hl=en" },
+        { name: "String Theory I & II", professor: "Lorenz Eberhardt", professorHref: "https://scholar.google.com/citations?user=eL5X9zMAAAAJ&hl=en" },
+        "Topology in Physics — <a class=\"text-link\" href=\"https://www.uva.nl/en/profile/v/o/m.l.vonk/m.l.vonk.html\" target=\"_blank\" rel=\"noopener noreferrer\">Marcel Vonk</a>, <a class=\"text-link\" href=\"https://scholar.google.com/citations?user=PyTE1DIAAAAJ&hl=en\" target=\"_blank\" rel=\"noopener noreferrer\">Hessel Posthuma</a>",
+        "Hydrodynamics — <a class=\"text-link\" href=\"https://scholar.google.com/citations?user=FE8TQeUAAAAJ&hl=en\" target=\"_blank\" rel=\"noopener noreferrer\">Mazi Jalaal</a>, <a class=\"text-link\" href=\"https://scholar.google.com/citations?user=FLVIUUEAAAAJ&hl=en\" target=\"_blank\" rel=\"noopener noreferrer\">Pedro Cosme</a>",
+        { name: "Quantum Field Theory III & Advanced", professor: "Andrea Puhm", professorHref: "https://scholar.google.com/citations?user=gZX3C2oAAAAJ&hl=en" },
+        { name: "Quantum Field Theory I & II", professor: "Diego Hofman", professorHref: "https://www.uva.nl/en/profile/h/o/d.m.hofman/d.m.hofman.html" },
+        { name: "Non-equilibrium Statistical Physics", professor: "Edan Lerner", professorHref: "https://scholar.google.com/citations?user=fNQJKtUAAAAJ&hl=en" },
+        "Algebraic Topology 1 — <a class=\"text-link\" href=\"https://research.vu.nl/en/persons/inbar-klang/\" target=\"_blank\" rel=\"noopener noreferrer\">Inbar Klang</a>, <a class=\"text-link\" href=\"https://scholar.google.com/citations?user=JanZktsAAAAJ&hl=en\" target=\"_blank\" rel=\"noopener noreferrer\">Lennart Meier</a> (Mastermath)",
+        { name: "Differential Geometry (Mastermath)", professor: "Marius Crainic", professorHref: "https://scholar.google.com/citations?user=HSmygYcAAAAJ&hl=en" },
+        "Categories and Modules — <a class=\"text-link\" href=\"https://www.math.leidenuniv.nl/~edix/\" target=\"_blank\" rel=\"noopener noreferrer\">Bas Edixhoven</a>, <a class=\"text-link\" href=\"https://davidholmes.nl/\" target=\"_blank\" rel=\"noopener noreferrer\">David Holmes</a>, <a class=\"text-link\" href=\"https://research.vu.nl/en/persons/rob-de-jeu/\" target=\"_blank\" rel=\"noopener noreferrer\">Rob de Jeu</a>, <a class=\"text-link\" href=\"https://staff.fnwi.uva.nl/a.l.kret/\" target=\"_blank\" rel=\"noopener noreferrer\">Arno Kret</a>, <a class=\"text-link\" href=\"https://www.math.ru.nl/~sagave/\" target=\"_blank\" rel=\"noopener noreferrer\">Steffen Sagave</a> (Mastermath)",
       ],
     },
     {
@@ -263,10 +271,10 @@ const SITE = {
       place: "Wien / UniMiB",
       years: "2024",
       items: [
-        "Geometrical Anatomy of Theoretical Physics — Frederic Schuller (Wien)",
-        "General Relativity — Frederic Schuller (Wien)",
-        "Fisica Teorica 1 — Alberto Zaffaroni (UniMiB)",
-        "Quantum Information Theory & Computing — Alberto Zaffaroni (UniMiB)",
+        { name: "Geometrical Anatomy of Theoretical Physics (Wien)", professor: "Frederic Schuller", professorHref: "https://people.utwente.nl/f.p.schuller?tab=education" },
+        { name: "General Relativity (Wien)", professor: "Frederic Schuller", professorHref: "https://people.utwente.nl/f.p.schuller?tab=education" },
+        { name: "Fisica Teorica 1 (UniMiB)", professor: "Alberto Zaffaroni", professorHref: "https://virgilio.mib.infn.it/~zaffaron/" },
+        { name: "Quantum Information Theory & Computing (UniMiB)", professor: "Alberto Zaffaroni", professorHref: "https://virgilio.mib.infn.it/~zaffaron/" },
       ],
     },
     {
@@ -275,12 +283,12 @@ const SITE = {
       years: "2021–2024",
       items: [
         "<strong>Bachelor's Thesis</strong> — Anomalies in Quantum Mechanics (<a class=\"text-link\" href=\"https://github.com/alessiomartini/bsc-thesis-scale-anomaly-in-qm\" target=\"_blank\" rel=\"noopener noreferrer\">repo</a>)",
-        "Quantum Mechanics — Carlo Oleari",
-        "Special Relativity — Emanuele Re",
-        "Nuclear and Subnuclear Physics — Francesco Terranova, Luca Gironi",
-        "Structure of Matter — Francesco Montalenti",
-        "Geometry 3 — Alberto Della Vedova",
-        { name: "Computational Physics", courseHref: "course.html?id=computational-physics-lab", professor: "Michele Pepe" },
+        { name: "Quantum Mechanics", professor: "Carlo Oleari", professorHref: "https://www.unimib.it/carlo-oleari" },
+        { name: "Special Relativity", professor: "Emanuele Re", professorHref: "https://www.unimib.it/emanuele-re" },
+        "Nuclear and Subnuclear Physics — <a class=\"text-link\" href=\"https://en.unimib.it/francesco-terranova\" target=\"_blank\" rel=\"noopener noreferrer\">Francesco Terranova</a>, <a class=\"text-link\" href=\"https://scholar.google.com/citations?hl=en&user=hWsp_owAAAAJ\" target=\"_blank\" rel=\"noopener noreferrer\">Luca Gironi</a>",
+        { name: "Structure of Matter", professor: "Francesco Montalenti", professorHref: "https://lness.como.polimi.it/francescomontalenti.php" },
+        { name: "Geometry 3", professor: "Alberto Della Vedova", professorHref: "https://www.unimib.it/alberto-della-vedova" },
+        { name: "Computational Physics", courseHref: "course.html?id=computational-physics-lab", professor: "Michele Pepe", professorHref: "https://www.unimib.it/michele-pepe" },
       ],
     },
     {
@@ -288,11 +296,11 @@ const SITE = {
       place: "University of Milano-Bicocca",
       years: "2021–2024",
       items: [
-        "Classical Mechanics — Giampaolo Cristadoro",
-        "Electromagnetism — Tommaso Tabarelli de Fatis",
-        { name: "Mathematical Methods for Physics", courseHref: "course.html?id=mathematical-methods-for-physics", professor: "Silvia Penati" },
-        "Geometry 1 — Alberto Della Vedova",
-        { name: "Physics Laboratory 2", courseHref: "course.html?id=physical-lab-2", professor: "Pietro Govoni" },
+        { name: "Classical Mechanics", professor: "Giampaolo Cristadoro", professorHref: "https://scholar.google.com/citations?user=-lNxulgAAAAJ&hl=en" },
+        { name: "Electromagnetism", professor: "Tommaso Tabarelli de Fatis", professorHref: "https://en.unimib.it/tommaso-tabarelli-de-fatis" },
+        { name: "Mathematical Methods for Physics", courseHref: "course.html?id=mathematical-methods-for-physics", professor: "Silvia Penati", professorHref: "https://scholar.google.com/citations?user=DRw8L7oAAAAJ&hl=en" },
+        { name: "Geometry 1", professor: "Alberto Della Vedova", professorHref: "https://www.unimib.it/alberto-della-vedova" },
+        { name: "Physics Laboratory 2", courseHref: "course.html?id=physical-lab-2", professor: "Pietro Govoni", professorHref: "https://www.unimib.it/pietro-govoni" },
       ],
     },
     {
@@ -300,10 +308,10 @@ const SITE = {
       place: "University of Milano-Bicocca",
       years: "2021–2024",
       items: [
-        "Mathematical Analysis 1 — Simone Secchi",
-        "Linear Algebra and Geometry — Sonia Brivio",
-        { name: "Physics Laboratory 1", courseHref: "course.html?id=physical-lab-1", professor: "Claudia Riccardi" },
-        { name: "Laboratory of Computer Science", courseHref: "course.html?id=laboratory-of-computer-science", professor: "Federico Nati" },
+        { name: "Mathematical Analysis 1", professor: "Simone Secchi", professorHref: "https://scholar.google.com/citations?hl=en&user=KWW--qUAAAAJ" },
+        { name: "Linear Algebra and Geometry", professor: "Sonia Brivio", professorHref: "https://en.unimib.it/sonia-brivio" },
+        { name: "Physics Laboratory 1", courseHref: "course.html?id=physical-lab-1", professor: "Claudia Riccardi", professorHref: "https://www.unimib.it/claudia-riccardi" },
+        { name: "Laboratory of Computer Science", courseHref: "course.html?id=laboratory-of-computer-science", professor: "Federico Nati", professorHref: "https://federiconati.it/" },
       ],
     },
     {
@@ -311,7 +319,7 @@ const SITE = {
       place: "ITIS Greppi",
       years: "2015–2021",
       items: [
-        "Introduction to Cryptography — Andrea Previtali (Math Professor at Univ. of Milano-Bicocca)",
+        { name: "Introduction to Cryptography", professor: "Andrea Previtali (Math Professor at Univ. of Milano-Bicocca)", professorHref: "https://www.unimib.it/andrea-previtali" },
         "Sistemi e Reti — Vincenzo Villa",
         "Telecomunicazioni — Calogero Cancellieri",
         "Theory of Coding — Samuele Redaelli",
@@ -322,8 +330,8 @@ const SITE = {
 
   teaching: {
     assistant: [
-      { role: "Teacher Assistant", course: "Quantum Field Theory I & II", person: "Diego Hofman", place: "University of Amsterdam", year: "2025" },
-      { role: "Teacher Assistant", course: "Electrodynamics", person: "Kareljan Schoutens", place: "University of Amsterdam", year: "2025" },
+      { role: "Teacher Assistant", course: "Quantum Field Theory I & II", person: "Diego Hofman", personHref: "https://www.uva.nl/en/profile/h/o/d.m.hofman/d.m.hofman.html", place: "University of Amsterdam", year: "2025" },
+      { role: "Teacher Assistant", course: "Electrodynamics", person: "Kareljan Schoutens", personHref: "https://www.linkedin.com/in/kareljan-schoutens-39b30849/", place: "University of Amsterdam", year: "2025" },
     ],
     note: "Not teaching independently yet — stay tuned.",
   },
@@ -462,10 +470,9 @@ const SITE = {
 
   elsewhere: [
     {
-      title: "Daniele Martini",
-      description: "My brother — transportation engineer and business consultant, now running his own consulting startup.",
+      description: "My brother, Daniele Martini, is a transportation engineer and business consultant who now runs his own consulting startup —",
       href: "https://www.danielemartini.eu/",
-      linkText: "Visit site",
+      linkText: "his site",
       external: true,
     },
   ],
