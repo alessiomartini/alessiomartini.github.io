@@ -64,6 +64,7 @@ const SITE = {
       place: "University of Amsterdam",
       years: "2024–",
       items: [
+        "<strong>Master's Thesis</strong> — Non-invertible Symmetries in QFT and Gravity (<a href=\"https://github.com/alessiomartini/msc-thesis-non-invertible-symmetries\" target=\"_blank\" rel=\"noopener noreferrer\">repo</a>)",
         "Generalised Symmetries in QFT and Gravity — Nabil Iqbal (Jena TPI School on QFT & Holography)",
         "Exploring artificial intelligence for (quantum) physics (Adv. Topics in Theo. Phys.) — Evert van Nieuwenburg",
         "Topological Order and Quantum Information (Adv. Topics in Theo. Phys.) — Kareljan Schoutens",
@@ -96,6 +97,7 @@ const SITE = {
       place: "University of Milano-Bicocca",
       years: "2021–2024",
       items: [
+        "<strong>Bachelor's Thesis</strong> — Anomalies in Quantum Mechanics (<a href=\"https://github.com/alessiomartini/bsc-thesis-scale-anomaly-in-qm\" target=\"_blank\" rel=\"noopener noreferrer\">repo</a>)",
         "Quantum Mechanics — Carlo Oleari",
         "Special Relativity — Emanuele Re",
         "Nuclear and Subnuclear Physics — Francesco Terranova, Luca Gironi",
@@ -147,14 +149,6 @@ const SITE = {
       { role: "Teacher Assistant", course: "Electrodynamics", person: "Kareljan Schoutens", place: "University of Amsterdam", year: "2025" },
     ],
     note: "Not teaching independently yet — stay tuned.",
-  },
-
-  publications: {
-    intro: "Currently, I am working on research projects and preparing manuscripts. Check back soon for updates on my publications!",
-    items: [
-      { title: "Master's Thesis — Non-invertible Symmetries in QFT and Gravity", href: "https://github.com/alessiomartini/msc-thesis-non-invertible-symmetries", external: true },
-      { title: "Bachelor's Thesis — Anomalies in Quantum Mechanics", href: "https://github.com/alessiomartini/bsc-thesis-scale-anomaly-in-qm", external: true },
-    ],
   },
 
   projects: [

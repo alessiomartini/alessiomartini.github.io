@@ -74,17 +74,6 @@
     container.parentElement.appendChild(el("p", "note-card", teaching.note));
   }
 
-  function renderPublications(publications) {
-    document.getElementById("publications-intro").textContent = publications.intro;
-    const list = document.getElementById("publications-list");
-    publications.items.forEach((pub) => {
-      const li = el("li");
-      const target = pub.external ? ' target="_blank" rel="noopener noreferrer"' : "";
-      li.innerHTML = `<a href="${pub.href}"${target}>${pub.title}</a>`;
-      list.appendChild(li);
-    });
-  }
-
   function renderProjects(categories) {
     const container = document.getElementById("projects-list");
     categories.forEach((category) => {
@@ -220,7 +209,6 @@
     renderResearch(SITE.research);
     renderEducation(SITE.education);
     renderTeaching(SITE.teaching);
-    renderPublications(SITE.publications);
     renderProjects(SITE.projects);
     renderResources(SITE.resources);
     renderCVs(SITE.cvs);
