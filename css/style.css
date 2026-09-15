@@ -585,13 +585,13 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
 .back-link:hover { color: var(--accent); }
 .back-link .icon { width: 16px; height: 16px; }
 
-.et-hero {
+.page-hero {
   padding: 3rem 1.25rem 2rem;
   text-align: center;
   background: linear-gradient(180deg, var(--bg-alt), var(--bg));
 }
-.et-hero h1 { font-size: 2rem; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
-.et-hero p { color: var(--text-muted); max-width: 60ch; margin: 0 auto; }
+.page-hero h1 { font-size: 2rem; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+.page-hero p { color: var(--text-muted); max-width: 60ch; margin: 0 auto; }
 
 .et-group { margin-bottom: 0.5rem; }
 

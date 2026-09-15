@@ -14,23 +14,13 @@ const SITE = {
 
   bio: {
     paragraphs: [
-      "Hello! My name is Alessio Martini. I am a Master&rsquo;s student in Theoretical Physics at the University of Amsterdam (ITFA), after completing my Bachelor&rsquo;s degree in Physics at the University of Milano-Bicocca.",
-      "My academic path has been shaped by a strong interest in geometric and structural approaches to physics. During my Bachelor&rsquo;s and Master&rsquo;s I focused on quantum field theory, string theory, differential geometry, and topology in physics, culminating in a Master&rsquo;s thesis on generalized symmetries and modern symmetry structures in quantum field theory and gravity. This training has given me a rigorous background in abstract modelling, mathematical methods, and conceptual aspects of quantum theory.",
-      "In parallel, I have always been deeply interested in social and political questions: how collective behaviour emerges, how institutions shape individual choices, and how crises and inequalities propagate through societies. Over time, this has led me to look for ways to connect my theoretical and computational skills with the quantitative study of social phenomena.",
-      "My brother <a href=\"https://www.danielemartini.eu/\" target=\"_blank\" rel=\"noopener noreferrer\">Daniele Martini</a> is a transportation engineer and business consultant who founded his own consulting startup &mdash; you can explore his work at his personal site.",
-    ],
-  },
-
-  research: {
-    intro: "My main interest is now in socio-physics and the quantitative modelling of complex social systems. I am particularly drawn to questions such as:",
-    bullets: [
-      "How attitudes, beliefs, and perceptions spread on social and institutional networks;",
-      "How feedback between individual behaviour and social structure can generate tipping dynamics and phase transitions in collective outcomes;",
-      "How tools from statistical physics, dynamical systems, and information theory can be adapted to study phenomena like distrust, polarization, cooperation, and governance under stress.",
-    ],
-    outro: [
-      "I am interested in building and analysing models that remain structurally grounded&mdash;using geometric, field-theoretic, and complex-systems perspectives&mdash;while being empirically informed and relevant to real-world social and political issues.",
-      "More broadly, I see my work as an attempt to bridge rigorous theoretical physics with socially oriented research, contributing quantitative tools and structural insight to the understanding of contemporary social challenges.",
+      "<p>Hello! My name is Alessio Martini. I am a Master&rsquo;s student in Theoretical Physics at the University of Amsterdam (ITFA), after completing my Bachelor&rsquo;s degree in Physics at the University of Milano-Bicocca.</p>",
+      "<p>My academic path has been shaped by a strong interest in geometric and structural approaches to physics. During my Bachelor&rsquo;s and Master&rsquo;s I focused on quantum field theory, string theory, differential geometry, and topology in physics, culminating in a Master&rsquo;s thesis on generalized symmetries and modern symmetry structures in quantum field theory and gravity. This training has given me a rigorous background in abstract modelling, mathematical methods, and conceptual aspects of quantum theory.</p>",
+      "<p>In parallel, I have always been deeply interested in social and political questions: how collective behaviour emerges, how institutions shape individual choices, and how crises and inequalities propagate through societies. Over time, this has led me to look for ways to connect my theoretical and computational skills with the quantitative study of social phenomena.</p>",
+      "<p>My main interest is now in socio-physics and the quantitative modelling of complex social systems. I am particularly drawn to questions such as:</p>",
+      "<ul><li>How attitudes, beliefs, and perceptions spread on social and institutional networks;</li><li>How feedback between individual behaviour and social structure can generate tipping dynamics and phase transitions in collective outcomes;</li><li>How tools from statistical physics, dynamical systems, and information theory can be adapted to study phenomena like distrust, polarization, cooperation, and governance under stress.</li></ul>",
+      "<p>I am interested in building and analysing models that remain structurally grounded&mdash;using geometric, field-theoretic, and complex-systems perspectives&mdash;while being empirically informed and relevant to real-world social and political issues.</p>",
+      "<p>More broadly, I see my work as an attempt to bridge rigorous theoretical physics with socially oriented research, contributing quantitative tools and structural insight to the understanding of contemporary social challenges.</p>",
     ],
   },
 
@@ -265,17 +255,6 @@ const SITE = {
   ],
 
   resources: {
-    lectureNotes: [
-      { title: "Quantum Field Theory", author: "David Tong" },
-      { title: "String Theory", author: "David Tong" },
-      { title: "Advanced QFT", author: "David Skinner" },
-      { title: "Supersymmetry", author: "David Skinner" },
-      { title: "QFT I, II & III", author: "John McGreevy" },
-    ],
-    articles: [
-      { title: "Quantum mechanics of the $\\frac{1}{x^2}$ potential", author: "Andrew M. Essin, David J. Griffiths" },
-      { title: "Generalized Symmetries", author: "Gaiotto, Kapustin, Seiberg, et al." },
-    ],
     educators: [
       { name: "Frederic Schuller", href: "https://people.utwente.nl/f.p.schuller?tab=education" },
       { name: "David Skinner", href: "https://www.damtp.cam.ac.uk/user/dbs26/teaching.html" },
@@ -285,6 +264,9 @@ const SITE = {
       { name: "Mehran Kardar", href: "https://www.mit.edu/~kardar/teaching/index.html" },
       { name: "EigenChris", href: "https://www.youtube.com/@eigenchris" },
       { name: "Alberto Zaffaroni", href: "https://virgilio.mib.infn.it/~zaffaron/" },
+      { name: "Luca Delacrétaz", href: "https://scholar.google.com/citations?user=1E8Z9iYAAAAJ&hl=en" },
+      { name: "Shu-Heng Shao", href: "https://scholar.google.com/citations?user=U9it6rEAAAAJ&hl=en" },
+      { name: "Sakura Schäfer-Nameki", href: "https://scholar.google.com/citations?user=uOuzik8AAAAJ&hl=en" },
     ],
   },
 
@@ -294,6 +276,22 @@ const SITE = {
     { label: "LinkedIn", value: "linkedin.com/in/alessio-martini", href: "https://www.linkedin.com/in/alessio-martini-a329181b4/", icon: "linkedin" },
     { label: "Stack Overflow", value: "stackoverflow.com/users/32032937/alessio", href: "https://stackoverflow.com/users/32032937/alessio", icon: "stackoverflow" },
     { label: "SoloLearn", value: "sololearn.com/en/profile/8992711", href: "https://www.sololearn.com/en/profile/8992711", icon: "code" },
+  ],
+
+  elsewhere: [
+    {
+      title: "Extra Things I Did",
+      description: "Sports, music, builds, hacks, hikes and other adventures outside physics.",
+      href: "extra-things.html",
+      linkText: "Explore",
+    },
+    {
+      title: "Daniele Martini",
+      description: "My brother — transportation engineer and business consultant, now running his own consulting startup.",
+      href: "https://www.danielemartini.eu/",
+      linkText: "Visit site",
+      external: true,
+    },
   ],
 
   extraThings: {

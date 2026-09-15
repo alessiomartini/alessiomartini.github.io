@@ -33,15 +33,7 @@
 
   function renderBio(bio) {
     const container = document.getElementById("bio-text");
-    container.innerHTML = bio.paragraphs.map((p) => `<p>${p}</p>`).join("");
-  }
-
-  function renderResearch(research) {
-    const container = document.getElementById("research-text");
-    const bullets = research.bullets.map((b) => `<li>${b}</li>`).join("");
-    container.innerHTML =
-      `<p>${research.intro}</p><ul>${bullets}</ul>` +
-      research.outro.map((p) => `<p>${p}</p>`).join("");
+    container.innerHTML = bio.paragraphs.join("");
   }
 
   function renderEducation(groups) {
@@ -109,16 +101,6 @@
   }
 
   function renderResources(resources) {
-    const notes = document.getElementById("resources-notes");
-    resources.lectureNotes.forEach((n) => {
-      notes.appendChild(el("li", "", `<strong>${n.title}</strong> — ${n.author}`));
-    });
-
-    const articles = document.getElementById("resources-articles");
-    resources.articles.forEach((a) => {
-      articles.appendChild(el("li", "", `<strong>${a.title}</strong> — ${a.author}`));
-    });
-
     const educators = document.getElementById("resources-educators");
     resources.educators.forEach((edu) => {
       const li = el("li");
@@ -137,6 +119,20 @@
         <a href="${cv.href}" target="_blank" rel="noopener noreferrer">${cv.linkText || "Download PDF"}</a>
       `;
       container.appendChild(item);
+    });
+  }
+
+  function renderElsewhere(items) {
+    const container = document.getElementById("elsewhere-list");
+    items.forEach((item) => {
+      const card = el("div", "cv-item");
+      const target = item.external ? ' target="_blank" rel="noopener noreferrer"' : "";
+      card.innerHTML = `
+        <h4>${item.title}</h4>
+        <p>${item.description}</p>
+        <a href="${item.href}"${target}>${item.linkText}</a>
+      `;
+      container.appendChild(card);
     });
   }
 
@@ -204,24 +200,22 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    renderHero(SITE.profile);
-    renderBio(SITE.bio);
-    renderResearch(SITE.research);
-    renderEducation(SITE.education);
-    renderTeaching(SITE.teaching);
-    renderProjects(SITE.projects);
-    renderResources(SITE.resources);
-    renderCVs(SITE.cvs);
-    renderContact(SITE.contacts);
+    // Each page only has some of these containers — main.js is shared
+    // across index.html, education.html and projects.html.
+    if (document.getElementById("hero-photo")) renderHero(SITE.profile);
+    if (document.getElementById("bio-text")) renderBio(SITE.bio);
+    if (document.getElementById("education-list")) renderEducation(SITE.education);
+    if (document.getElementById("teaching-list")) renderTeaching(SITE.teaching);
+    if (document.getElementById("projects-list")) renderProjects(SITE.projects);
+    if (document.getElementById("resources-educators")) renderResources(SITE.resources);
+    if (document.getElementById("cv-list")) renderCVs(SITE.cvs);
+    if (document.getElementById("elsewhere-list")) renderElsewhere(SITE.elsewhere);
+    if (document.getElementById("contact-list")) renderContact(SITE.contacts);
 
     document.getElementById("year").textContent = new Date().getFullYear();
 
     setupThemeToggle();
     setupMobileNav();
     setupScrollSpy();
-
-    if (window.MathJax && MathJax.typesetPromise) {
-      MathJax.typesetPromise().catch((err) => console.error("MathJax typeset error:", err));
-    }
   });
 })();

@@ -15,12 +15,6 @@
     document.documentElement.setAttribute("data-theme", theme);
   })();
 </script>
-<script>
-  window.MathJax = {
-    tex: { inlineMath: [["\\(", "\\)"], ["$", "$"]] }
-  };
-</script>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -36,10 +30,9 @@
 
     <nav class="site-nav" id="site-nav" aria-label="Primary">
       <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#education">Education</a>
+      <a href="education.html">Education</a>
       <a href="#teaching">Teaching</a>
-      <a href="#projects">Projects</a>
+      <a href="projects.html">Projects</a>
       <a href="#resources">Resources</a>
       <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
@@ -81,21 +74,6 @@
     </div>
   </section>
 
-  <section id="research" class="section section-alt">
-    <div class="section-inner">
-      <h2>Research Interests</h2>
-      <div id="research-text" class="prose"></div>
-    </div>
-  </section>
-
-  <section id="education" class="section">
-    <div class="section-inner">
-      <h2>Education &amp; Courses</h2>
-      <p class="section-hint">Grouped by programme — click a group to expand.</p>
-      <div id="education-list" class="accordion"></div>
-    </div>
-  </section>
-
   <section id="teaching" class="section section-alt">
     <div class="section-inner">
       <h2>Teaching</h2>
@@ -103,33 +81,24 @@
     </div>
   </section>
 
-  <section id="projects" class="section">
+  <section id="resources" class="section">
     <div class="section-inner">
-      <h2>Projects</h2>
-      <p class="section-hint">Other things I've built and put online.</p>
-      <div id="projects-list"></div>
-    </div>
-  </section>
-
-  <section id="resources" class="section section-alt">
-    <div class="section-inner">
-      <h2>Resources</h2>
-
-      <h3>Lecture Notes</h3>
-      <ul id="resources-notes" class="link-list plain"></ul>
-
-      <h3>Articles</h3>
-      <ul id="resources-articles" class="link-list plain"></ul>
-
-      <h3>Educators I've Learned From</h3>
+      <h2>Educators &amp; Researchers I've Learned From</h2>
       <ul id="resources-educators" class="chip-list"></ul>
     </div>
   </section>
 
-  <section id="cv" class="section">
+  <section id="cv" class="section section-alt">
     <div class="section-inner">
       <h2>Curriculum Vitae</h2>
       <div id="cv-list" class="cv-grid"></div>
+    </div>
+  </section>
+
+  <section id="elsewhere" class="section">
+    <div class="section-inner">
+      <h2>Elsewhere</h2>
+      <div id="elsewhere-list" class="cv-grid"></div>
     </div>
   </section>
 
@@ -144,10 +113,9 @@
 
 <footer class="site-footer">
   <p>&copy; <span id="year"></span> Alessio Martini. Built with plain HTML, CSS and JS.</p>
-  <p><a href="extra-things.html">Extra Things I Did</a></p>
 </footer>
 
-<script src="data/content.js?v=15"></script>
-<script src="js/main.js?v=15"></script>
+<script src="data/content.js?v=16"></script>
+<script src="js/main.js?v=16"></script>
 </body>
 </html>
