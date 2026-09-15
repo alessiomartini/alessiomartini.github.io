@@ -85,42 +85,37 @@
     });
   }
 
-  function renderProjects(projects) {
+  function renderProjects(categories) {
     const container = document.getElementById("projects-list");
-    projects.forEach((project) => {
-      const card = el("div", "card project-card");
-      const repoLink = project.repo
-        ? `<a class="project-source" href="${project.repo}" target="_blank" rel="noopener noreferrer">Source</a>`
-        : "";
-      const statusTag = project.status ? `<span class="project-status">${project.status}</span>` : "";
-      card.innerHTML = `
-        <h4>${project.name} ${statusTag}</h4>
-        <p>${project.description}</p>
-        <div class="project-links">
-          <a class="btn btn-ghost btn-sm" href="${project.href}" target="_blank" rel="noopener noreferrer">Visit project</a>
-          ${repoLink}
-        </div>
-      `;
-      container.appendChild(card);
-    });
-  }
+    categories.forEach((category) => {
+      const group = el("div", "project-group");
+      const heading = el("h3", "project-category", category.category);
+      group.appendChild(heading);
 
-  function renderApps(apps) {
-    const container = document.getElementById("apps-list");
-    apps.forEach((app) => {
-      const card = el("div", "card");
-      const repoLink = app.repo
-        ? `<a class="project-source" href="${app.repo}" target="_blank" rel="noopener noreferrer">Source</a>`
-        : "";
-      card.innerHTML = `
-        <h4>${app.name}</h4>
-        <p>${app.description}</p>
-        <div class="project-links">
-          <span style="font-size: 0.9rem; color: var(--text-muted);">📱 ${app.platform}</span>
-          ${repoLink}
-        </div>
-      `;
-      container.appendChild(card);
+      const grid = el("div", "card-list");
+      category.items.forEach((project) => {
+        const card = el("div", "card project-card");
+        const visitLink = project.href
+          ? `<a class="btn btn-ghost btn-sm" href="${project.href}" target="_blank" rel="noopener noreferrer">Visit project</a>`
+          : "";
+        const repoLink = project.repo
+          ? `<a class="project-source" href="${project.repo}" target="_blank" rel="noopener noreferrer">Source</a>`
+          : "";
+        const typeTag = project.type ? `<span class="project-type project-type-${project.type.toLowerCase()}">${project.type}</span>` : "";
+        const statusTag = project.status ? `<span class="project-status project-status-${project.status.toLowerCase().replace(/\s+/g, "-")}">${project.status}</span>` : "";
+        card.innerHTML = `
+          <h4>${project.name}</h4>
+          <div class="project-tags">${typeTag}${statusTag}</div>
+          <p>${project.description}</p>
+          <div class="project-links">
+            ${visitLink}
+            ${repoLink}
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+      group.appendChild(grid);
+      container.appendChild(group);
     });
   }
 
@@ -227,7 +222,6 @@
     renderTeaching(SITE.teaching);
     renderPublications(SITE.publications);
     renderProjects(SITE.projects);
-    renderApps(SITE.apps);
     renderResources(SITE.resources);
     renderCVs(SITE.cvs);
     renderContact(SITE.contacts);
