@@ -556,3 +556,78 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
 
   .site-nav a { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
 }
+
+/* ---------- Extra Things I Did (standalone page) ---------- */
+.simple-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.simple-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.back-link:hover { color: var(--accent); }
+.back-link .icon { width: 16px; height: 16px; }
+
+.et-hero {
+  padding: 3rem 1.25rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg-alt), var(--bg));
+}
+.et-hero h1 { font-size: 2rem; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+.et-hero p { color: var(--text-muted); max-width: 60ch; margin: 0 auto; }
+
+.et-group { margin-bottom: 0.5rem; }
+
+.et-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+.et-list li { color: var(--text-muted); }
+.et-list .et-note { display: block; font-size: 0.88rem; margin-top: 0.15rem; }
+.et-list .et-note a { font-weight: 600; }
+
+.et-card-list { display: grid; gap: 0.9rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 1.25rem; }
+
+.et-card { padding: 0; overflow: hidden; }
+.et-card-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  background: var(--bg-alt);
+}
+.et-card-photo-pending {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-alt);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-style: italic;
+}
+.et-card-body { padding: 1rem 1.1rem; }
+.et-card-body h4 { margin: 0 0 0.35rem; font-size: 1rem; }
+.et-card-body p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.et-card-body .et-note { display: block; margin-top: 0.5rem; font-size: 0.85rem; font-weight: 600; }
+
+.et-sublist-card { padding: 1.1rem 1.25rem; }
+.et-sublist-card h4 { margin: 0 0 0.6rem; font-size: 1rem; }
+.et-sublist-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.4rem; }
+.et-sublist-card li { color: var(--text-muted); font-size: 0.92rem; }
+.et-sublist-card .et-empty-note { color: var(--text-muted); font-size: 0.88rem; font-style: italic; }
