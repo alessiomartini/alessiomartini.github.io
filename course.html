@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Alessio Martini — Education & Courses: Master's and Bachelor's coursework in Theoretical Physics, from the University of Amsterdam and the University of Milano-Bicocca.">
-<title>Education | Alessio Martini</title>
+<meta name="description" content="Alessio Martini — Course details.">
+<title>Course | Alessio Martini</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" type="image/svg+xml" href="physics.svg">
 <script>
@@ -55,13 +55,19 @@
 <main id="main">
 
   <section class="page-hero">
-    <h1>Education &amp; Courses</h1>
-    <p>Grouped by programme — click a group to expand.</p>
+    <a class="back-link" href="education.html" style="display: inline-flex; margin-bottom: 1rem;">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      Back to Education
+    </a>
+    <h1 id="course-title"></h1>
+    <p id="course-subtitle" hidden></p>
+    <p id="course-meta" class="section-hint"></p>
   </section>
 
   <section class="section">
     <div class="section-inner">
-      <div id="education-list" class="accordion"></div>
+      <div id="course-links" class="project-links"></div>
+      <div id="course-sections"></div>
     </div>
   </section>
 
@@ -73,5 +79,6 @@
 
 <script src="data/content.js?v=16"></script>
 <script src="js/main.js?v=16"></script>
+<script src="js/course.js?v=1"></script>
 </body>
 </html>

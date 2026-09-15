@@ -48,7 +48,16 @@ body {
 
 img { max-width: 100%; display: block; }
 
-a { color: var(--accent); }
+a { color: var(--accent); text-decoration: none; }
+
+/* Inline text links (professor names, course pages, media links) — a
+   subtle underline instead of the harsh browser-default blue+underline. */
+.text-link {
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+.text-link:hover { border-color: var(--accent); }
 
 h1, h2, h3 { line-height: 1.2; font-weight: 700; }
 
@@ -124,6 +133,22 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
 .site-nav a.active {
   color: var(--text);
   border-color: var(--accent);
+}
+
+/* Separates same-page sections from links that navigate to another page. */
+.nav-sep {
+  width: 1px;
+  height: 18px;
+  background: var(--border);
+  align-self: center;
+}
+
+.nav-page-link::after {
+  content: "↗";
+  display: inline-block;
+  margin-left: 0.3em;
+  font-size: 0.8em;
+  opacity: 0.55;
 }
 
 .header-actions {
@@ -555,24 +580,11 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
   .site-nav.open { display: flex; }
 
   .site-nav a { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
+
+  .nav-sep { width: 100%; height: 1px; margin: 0.25rem 0; }
 }
 
 /* ---------- Extra Things I Did (standalone page) ---------- */
-.simple-header {
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-}
-
-.simple-header-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0.75rem 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
 .back-link {
   display: inline-flex;
   align-items: center;
@@ -603,13 +615,21 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
 .et-card-list { display: grid; gap: 0.9rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 1.25rem; }
 
 .et-card { padding: 0; overflow: hidden; }
-.et-card-photo {
+
+.et-card-media {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+}
+.et-card-media img,
+.et-card-media video {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
   background: var(--bg-alt);
 }
+
 .et-card-photo-pending {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -631,3 +651,7 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
 .et-sublist-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.4rem; }
 .et-sublist-card li { color: var(--text-muted); font-size: 0.92rem; }
 .et-sublist-card .et-empty-note { color: var(--text-muted); font-size: 0.88rem; font-style: italic; }
+
+/* ---------- Course detail page ---------- */
+.course-section { margin-bottom: 1.75rem; }
+.course-section:last-child { margin-bottom: 0; }

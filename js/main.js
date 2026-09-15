@@ -41,7 +41,18 @@
     groups.forEach((group, index) => {
       const details = el("details", "");
       if (index === 0) details.open = true;
-      const items = group.items.map((item) => `<li>${item}</li>`).join("");
+      const items = group.items
+        .map((item) => {
+          if (typeof item === "string") return `<li>${item}</li>`;
+          const nameHtml = item.courseHref ? `<a class="text-link" href="${item.courseHref}">${item.name}</a>` : item.name;
+          const profHtml = item.professor
+            ? item.professorHref
+              ? ` — <a class="text-link" href="${item.professorHref}" target="_blank" rel="noopener noreferrer">${item.professor}</a>`
+              : ` — ${item.professor}`
+            : "";
+          return `<li>${nameHtml}${profHtml}</li>`;
+        })
+        .join("");
       details.innerHTML = `
         <summary>
           <span>${group.group}<br><span class="meta">${group.place} &middot; ${group.years}</span></span>

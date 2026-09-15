@@ -12,6 +12,188 @@ const SITE = {
     intro: "Bridging quantum field theory and geometric physics with the quantitative study of complex social systems.",
   },
 
+  // Detail pages for individual courses, rendered by course.html?id=<slug>.
+  // Linked to from the matching entry in `education` below.
+  courses: {
+    "exploring-ai-for-q-physics": {
+      title: "Exploring AI for (Q) physics",
+      subtitle: "Exploring artificial intelligence for (quantum) physics",
+      professor: "Evert van Nieuwenburg",
+      professorHref: "https://www.linkedin.com/in/evert-van-nieuwenburg/",
+      meta: "Adv. Topics in Theoretical Physics — DRSTP",
+      links: [
+        { label: "DRSTP course page", href: "https://www.drstp.nl/events/advanced-topics-in-theoretical-physics-autumn-2025/" },
+        { label: "Materials (GitHub)", href: "https://github.com/everthemore/ATTP-2025" },
+      ],
+      sections: [
+        {
+          heading: "Abstract",
+          body: "<p>As the complexity of (quantum) experiments grows, control methods that tune, optimize and design those experiments have to keep up. When full characterisation is no longer possible, machine learning methods may be able to extract control schemes from data. In this set of lectures we will explore several machine learning techniques and optimisation algorithms in their application to physics. We will also touch upon the topic of quantum games, both from a theoretical point of view and for their use as a playground for developing quantum machine learning models and AI agents.</p>",
+        },
+        {
+          heading: "Practical info",
+          body: "<p>Lectures and exercises: Oct 13, 20, 27, Nov 3. Exam: Nov 10.<br>Location: Gorlaeus — EM1.21 for lectures (11:00–12:45), EM1.19 for the TA session (13:15–16:00).</p>",
+        },
+      ],
+    },
+    "topological-order-and-quantum-information": {
+      title: "Topological Order and Quantum Information",
+      professor: "Kareljan Schoutens",
+      professorHref: "https://www.linkedin.com/in/kareljan-schoutens-39b30849/",
+      meta: "Adv. Topics in Theoretical Physics — DRSTP",
+      links: [{ label: "DRSTP course page", href: "https://www.drstp.nl/events/advanced-topics-in-theoretical-physics-autumn-2025/" }],
+      sections: [
+        {
+          heading: "Abstract",
+          body: "<p>Two-dimensional quantum systems with topological order are characterized by ground state degeneracies and anyonic excitations. The local indistinguishability of degenerate states makes them ideal candidates for storing quantum information. This course gives a detailed account of topological order in (fractional and non-abelian) quantum Hall systems and in lattice models (toric code and quantum double models), elucidating connections with Quantum Error Correction (QEC), Quantum Memory and schemes for Topological Quantum Computing (TQC).</p>",
+        },
+        {
+          heading: "Practical info",
+          body: "<p>Lectures and exercises: Sep 8, 15, 29, Oct 6 (no lecture on Sept 22). Exam: home essay.<br>Location: Science Park G2.02, Amsterdam.</p>",
+        },
+        {
+          heading: "Prerequisites",
+          body: "<p>It will be helpful if students have seen elements of quantum many-body theory, conformal field theory and mathematical structures such as fusion and braiding categories — but this prior knowledge is not required.</p>",
+        },
+      ],
+    },
+    "lattice-gauge-theory": {
+      title: "Lattice Gauge Theory",
+      subtitle: "Symmetry, duality, and topology in lattice gauge theories",
+      professor: "Jasper van Wezel",
+      professorHref: "https://jvanwezel.com/",
+      meta: "Adv. Topics in Theoretical Physics — DRSTP",
+      links: [{ label: "DRSTP course page", href: "https://www.drstp.nl/events/advanced-topics-in-theoretical-physics/" }],
+      sections: [
+        {
+          heading: "Abstract",
+          body: "<p>Lattice gauge theories are prevalent both in high and low energy physics, either as discrete approximations to a continuous field theory, or as a direct implementation of lattice models. Besides their inherent interest, they also provide a particularly nice background for illustrating the correspondence between quantum dynamics and classical equilibrium descriptions, the presence or absence of symmetry-breaking phase transitions, the use of duality transformations, and the role of topological defects in mediating phase transitions.</p><p>In this lecture series, we follow one of the classic texts on lattice gauge theory and discover how all these aspects emerge from very simple building blocks, starting from the famous Kramers–Wannier duality in the Ising model and, time permitting, ending up with accessible lattice descriptions of confinement and the Kosterlitz–Thouless phase transition.</p>",
+        },
+        {
+          heading: "Practical info",
+          body: "<p>Lectures and exercises: Feb 3, 10, 17, 24. Exam: March 3.<br>Location: Science Park G3.10, Amsterdam.</p>",
+        },
+        {
+          heading: "Recommended prior knowledge",
+          body: "<ul><li><strong>Necessary</strong> — working knowledge of basic Quantum Field Theory.</li><li><strong>Useful</strong> — some familiarity with spin systems in condensed matter theory.</li></ul>",
+        },
+      ],
+    },
+    "computational-physics-lab": {
+      title: "Computational Physics Lab",
+      professor: "Michele Pepe",
+      meta: "University of Milano-Bicocca",
+      links: [{ label: "e-learning course page", href: "https://elearning.unimib.it/course/view.php?id=42985" }],
+      sections: [
+        { heading: "Aims", body: "<p>Learning the basis of numerical calculus and how to solve scientific problems with a computer.</p>" },
+        {
+          heading: "Contents",
+          body: "<p>Basic concepts of numerical analysis; deterministic methods for computing integrals; Monte Carlo methods and stochastic integration; probability distributions and the central limit theorem; numerical solution of differential equations; zeros of a function.</p>",
+        },
+        {
+          heading: "Detailed program",
+          body: "<ul><li><strong>Basic concepts</strong> — rounding and truncation error, storing numbers in a computer, conditioning and stability.</li><li><strong>Deterministic integration</strong> — trapezoidal rule, Simpson, Bode, Romberg and Gauss methods, with a focus on expected numerical accuracy.</li><li><strong>Monte Carlo methods</strong> — stochastic integration compared with deterministic techniques.</li><li><strong>Differential equations</strong> — Euler, leap-frog and Runge-Kutta methods.</li><li><strong>Zeros of a function</strong> — bisection and Newton-Raphson methods.</li></ul>",
+        },
+        { heading: "Prerequisites", body: "<p>Teachings of previous years. No special prerequisites beyond very basic coding concepts (variables, arrays, functions, loops). The coding language can be chosen between C and Fortran.</p>" },
+        { heading: "Teaching form", body: "<p>Activity carried out in the computer lab: a few initial theoretical lectures present the numerical techniques, then each student works individually with the teacher's support.</p>" },
+        { heading: "Textbook and teaching resource", body: "<p>Teacher's notes on the e-learning page; <em>Numerical Recipes</em> — Press, Teukolsky, Vetterling, Flannery (Cambridge University Press).</p>" },
+        { heading: "Semester", body: "<p>Twice a week, first semester.</p>" },
+        { heading: "Assessment method", body: "<p>Lab exercises write-up as a report (PDF, sent in advance), plus an oral exam discussing the exercises, the lab activity and the report.</p>" },
+        { heading: "Office hours", body: "<p>Anytime, after an e-mail appointment.</p>" },
+      ],
+    },
+    "mathematical-methods-for-physics": {
+      title: "Mathematical Methods for Physics",
+      professor: "Silvia Penati",
+      meta: "University of Milano-Bicocca",
+      links: [{ label: "e-learning course page", href: "https://elearning.unimib.it/course/info.php?id=29588#en" }],
+      sections: [
+        { heading: "Aims", body: "<p>Generalize the basic notions of analysis to the complex plane. Introduce the mathematical concepts required in the formulation of Quantum Mechanics.</p>" },
+        {
+          heading: "Contents",
+          body: "<ol><li>Complex analysis: holomorphic functions, power series in the complex domain, Cauchy theorem, Laurent series, residue theorem, analytic continuation.</li><li>Linear, topological and Banach spaces; Hilbert spaces; Lp spaces; orthonormal bases; Fourier series; linear operators in Hilbert spaces; self-adjoint and unitary operators; spectral decomposition; Fourier and Laplace transforms.</li><li>Distributions.</li></ol>",
+        },
+        { heading: "Prerequisites", body: "<p>Contents of Analysis I, II, and \"Algebra and Geometry\".</p>" },
+        { heading: "Teaching form", body: "<p>Class lectures (5 CFU) and tutorials (3 CFU).</p>" },
+        {
+          heading: "Textbook and teaching resource",
+          body: "<p>Michela Petrini, Gianfranco Pradisi, Alberto Zaffaroni — <em>A Guide to Mathematical Methods for Physicists</em> (World Scientific); J. Bak, D.J. Newman — <em>Complex Analysis</em> (Springer); L. Debnath, P. Mikusiński — <em>Hilbert Spaces with Applications</em> (Elsevier); G. Cicogna — <em>Metodi Matematici della Fisica</em> (Springer). Exercises: M.R. Spiegel, <em>Complex Variables</em> and <em>Fourier Analysis</em> (Schaum Outline Series).</p>",
+        },
+        { heading: "Semester", body: "<p>Second semester.</p>" },
+        { heading: "Assessment method", body: "<p>Written exercises plus a compulsory oral part covering the whole program.</p>" },
+        { heading: "Office hours", body: "<p>By appointment — sara.pasquetti@unimib.it, silvia.penati@unimib.it.</p>" },
+      ],
+    },
+    "physical-lab-1": {
+      title: "Physics Laboratory 1",
+      professor: "Claudia Riccardi",
+      meta: "University of Milano-Bicocca",
+      links: [{ label: "e-learning course page", href: "https://elearning.unimib.it/course/info.php?id=32534#en" }],
+      sections: [
+        {
+          heading: "Aims",
+          body: "<p>Get a deeper understanding of the laws of mechanics and thermodynamics from direct observation of phenomena. Learn how to perform physics measurements, elaborate data and critically evaluate the uncertainties in the results. Teamworking.</p>",
+        },
+        {
+          heading: "Contents",
+          body: "<p><strong>Lectures:</strong> statistical methods in experimental physics — laws of probability, statistical analysis of random errors, frequency distribution, probability density function, Gaussian/Binomial/Poisson distributions, error propagation, maximum likelihood, fits to data, χ² test, weighted mean.</p><p><strong>Experiments:</strong> motion, elastic and inelastic collisions, friction, pendulum, springs, elasticity, torsion, moments of inertia, standing waves, acoustic waves and speed of sound, harmonic oscillator, resonance, the gravitational constant, Coulomb's law, density/viscosity/fluid dynamics, calorimetry, gas expansion/compression, geometric optics.</p>",
+        },
+        {
+          heading: "Detailed program",
+          body: "<ul><li>Acceleration of gravity — Kater pendulum, free-fall motion.</li><li>General gravity — measurements with a Cavendish balance.</li><li>Elastic and inelastic collisions; inclined plane.</li><li>Torsion pendulum and moments of inertia.</li><li>Hooke's law; spring and harmonic oscillations.</li><li>Forced and damped oscillations, resonance.</li><li>Steady waves on a string, and in a pipe filled with various gases (speed of sound).</li><li>Stokes' law and viscosity of glycerol.</li><li>Archimedes' principle and density measurements.</li><li>Bernoulli's principle and the Venturi pipe.</li><li>Calorimetry.</li><li>Thermodynamics — adiabatic and isothermic compression/expansion.</li><li>Electrostatics — Coulomb balance.</li><li>Geometric optics — reflection, refraction, thin lenses.</li></ul>",
+        },
+        { heading: "Prerequisites", body: "<p>Basic knowledge of the contents of Physics I.</p>" },
+        { heading: "Teaching form", body: "<p>Lectures on lab content and statistics, followed by exercises with tutors; experiments in the lab in groups of three, discussed in class afterwards.</p>" },
+        {
+          heading: "Textbook and teaching resource",
+          body: "<p>M. Loreti, <em>Teoria degli errori e fondamenti di statistica</em> (Decibel, Zanichelli); J.R. Taylor, <em>An Introduction to Error Analysis</em> (Zanichelli); reference: W.J. Metzger, <em>Statistical Methods in Data Analysis</em>.</p>",
+        },
+        { heading: "Semester", body: "<p>First and second semesters.</p>" },
+      ],
+    },
+    "physical-lab-2": {
+      title: "Physics Laboratory 2",
+      professor: "Pietro Govoni",
+      meta: "University of Milano-Bicocca",
+      links: [{ label: "e-learning course page", href: "https://elearning.unimib.it/course/view.php?id=36328" }],
+      sections: [
+        {
+          heading: "Course description",
+          body: "<p><strong>Module I (1st semester)</strong> — Probability and statistics, introduction to C++ programming and data analysis.</p><p><strong>Module II (2nd semester)</strong> — Optics and electromagnetism measurements, applying the data-analysis techniques from Module I to interpret and discuss the results.</p>",
+        },
+      ],
+    },
+    "laboratory-of-computer-science": {
+      title: "Laboratory of Computer Science",
+      professor: "Federico Nati",
+      meta: "University of Milano-Bicocca",
+      links: [{ label: "e-learning course page", href: "https://elearning.unimib.it/course/info.php?id=29579#en" }],
+      sections: [
+        {
+          heading: "Aims",
+          body: "<p>Acquire the conceptual basis of computer programming and fundamental notions about the structure of digital computers and operating systems. Acquire the ability to design and implement, in C, data structures and algorithms for scientific and general problems.</p>",
+        },
+        {
+          heading: "Contents",
+          body: "<p>The notion of an algorithm and its computational cost; basics of imperative programming (data structures and algorithms); the functional structure of computers and operating systems; data representation, errors and approximations in numerical computation; strategies for algorithm design.</p>",
+        },
+        {
+          heading: "Detailed program",
+          body: "<p>The functional structure of digital computers and the role of operating systems. Imperative programming: variables and types, control structures, functions and parameter passing (in C). Structured types — arrays, matrices, records; dynamic types — linked lists, trees (in C). Data representation — binary notation, integers, floating point, approximation and errors. Strategies for algorithm and data-structure design, with relevant examples.</p>",
+        },
+        { heading: "Prerequisites", body: "<p>Basic propositional logic; basic mathematics (functions and relations, simple combinatorics).</p>" },
+        { heading: "Teaching form", body: "<p>Lectures (2 CFU) and lab activity (2 CFU), given in Italian.</p>" },
+        {
+          heading: "Textbook and teaching resource",
+          body: "<p>Teacher's notes and commented exercises; J.G. Brookshear, S.G. Kochan, <em>Fondamenti di informatica e programmazione in C</em> (Pearson, 2014); B.W. Kernighan, D.M. Ritchie, <em>Il linguaggio C</em>, 2nd ed. (Pearson, 2004).</p>",
+        },
+        { heading: "Semester", body: "<p>Second semester.</p>" },
+        { heading: "Assessment method", body: "<p>Written exam (a C program solving a given problem) followed by an oral exam discussing it.</p>" },
+        { heading: "Office hours", body: "<p>Every Tuesday, 10:30–12:00, or by appointment.</p>" },
+      ],
+    },
+  },
+
   bio: {
     paragraphs: [
       "<p>Hello! My name is Alessio Martini. I am a Master&rsquo;s student in Theoretical Physics at the University of Amsterdam (ITFA), after completing my Bachelor&rsquo;s degree in Physics at the University of Milano-Bicocca.</p>",
@@ -59,11 +241,11 @@ const SITE = {
       place: "University of Amsterdam",
       years: "2024–",
       items: [
-        "<strong>Master's Thesis</strong> — Non-invertible Symmetries in QFT and Gravity (<a href=\"https://github.com/alessiomartini/msc-thesis-non-invertible-symmetries\" target=\"_blank\" rel=\"noopener noreferrer\">repo</a>)",
+        "<strong>Master's Thesis</strong> — Non-invertible Symmetries in QFT and Gravity (<a class=\"text-link\" href=\"https://github.com/alessiomartini/msc-thesis-non-invertible-symmetries\" target=\"_blank\" rel=\"noopener noreferrer\">repo</a>)",
         "Generalised Symmetries in QFT and Gravity — Nabil Iqbal (Jena TPI School on QFT & Holography)",
-        "Exploring artificial intelligence for (quantum) physics (Adv. Topics in Theo. Phys.) — <a href=\"https://www.linkedin.com/in/evert-van-nieuwenburg/\" target=\"_blank\" rel=\"noopener noreferrer\">Evert van Nieuwenburg</a> (<a href=\"https://www.drstp.nl/events/advanced-topics-in-theoretical-physics-autumn-2025/\" target=\"_blank\" rel=\"noopener noreferrer\">course page</a>, <a href=\"https://github.com/everthemore/ATTP-2025\" target=\"_blank\" rel=\"noopener noreferrer\">materials</a>)",
-        "Topological Order and Quantum Information (Adv. Topics in Theo. Phys.) — <a href=\"https://www.linkedin.com/in/kareljan-schoutens-39b30849/\" target=\"_blank\" rel=\"noopener noreferrer\">Kareljan Schoutens</a> (<a href=\"https://www.drstp.nl/events/advanced-topics-in-theoretical-physics-autumn-2025/\" target=\"_blank\" rel=\"noopener noreferrer\">course page</a>)",
-        "Lattice Gauge Theory (Adv. Topics in Theo. Phys.) — <a href=\"https://jvanwezel.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Jasper van Wezel</a> (<a href=\"https://www.drstp.nl/events/advanced-topics-in-theoretical-physics/\" target=\"_blank\" rel=\"noopener noreferrer\">course page</a>)",
+        { name: "Exploring artificial intelligence for (quantum) physics (Adv. Topics in Theo. Phys.)", courseHref: "course.html?id=exploring-ai-for-q-physics", professor: "Evert van Nieuwenburg", professorHref: "https://www.linkedin.com/in/evert-van-nieuwenburg/" },
+        { name: "Topological Order and Quantum Information (Adv. Topics in Theo. Phys.)", courseHref: "course.html?id=topological-order-and-quantum-information", professor: "Kareljan Schoutens", professorHref: "https://www.linkedin.com/in/kareljan-schoutens-39b30849/" },
+        { name: "Lattice Gauge Theory (Adv. Topics in Theo. Phys.)", courseHref: "course.html?id=lattice-gauge-theory", professor: "Jasper van Wezel", professorHref: "https://jvanwezel.com/" },
         "Condensed Matter Theory Advanced — Vladimir Gritsev",
         "String Theory I & II — Lorenz Eberhardt",
         "Topology in Physics — Marcel Vonk, Hessel Posthuma",
@@ -92,13 +274,13 @@ const SITE = {
       place: "University of Milano-Bicocca",
       years: "2021–2024",
       items: [
-        "<strong>Bachelor's Thesis</strong> — Anomalies in Quantum Mechanics (<a href=\"https://github.com/alessiomartini/bsc-thesis-scale-anomaly-in-qm\" target=\"_blank\" rel=\"noopener noreferrer\">repo</a>)",
+        "<strong>Bachelor's Thesis</strong> — Anomalies in Quantum Mechanics (<a class=\"text-link\" href=\"https://github.com/alessiomartini/bsc-thesis-scale-anomaly-in-qm\" target=\"_blank\" rel=\"noopener noreferrer\">repo</a>)",
         "Quantum Mechanics — Carlo Oleari",
         "Special Relativity — Emanuele Re",
         "Nuclear and Subnuclear Physics — Francesco Terranova, Luca Gironi",
         "Structure of Matter — Francesco Montalenti",
         "Geometry 3 — Alberto Della Vedova",
-        "Computational Physics — Michele Pepe (<a href=\"https://elearning.unimib.it/course/view.php?id=42985\" target=\"_blank\" rel=\"noopener noreferrer\">course page</a>)",
+        { name: "Computational Physics", courseHref: "course.html?id=computational-physics-lab", professor: "Michele Pepe" },
       ],
     },
     {
@@ -108,9 +290,9 @@ const SITE = {
       items: [
         "Classical Mechanics — Giampaolo Cristadoro",
         "Electromagnetism — Tommaso Tabarelli de Fatis",
-        "Mathematical Methods for Physics — Silvia Penati (<a href=\"https://elearning.unimib.it/course/info.php?id=29588#en\" target=\"_blank\" rel=\"noopener noreferrer\">course page</a>)",
+        { name: "Mathematical Methods for Physics", courseHref: "course.html?id=mathematical-methods-for-physics", professor: "Silvia Penati" },
         "Geometry 1 — Alberto Della Vedova",
-        "Physics Laboratory 2 — Pietro Govoni (<a href=\"https://elearning.unimib.it/course/view.php?id=36328\" target=\"_blank\" rel=\"noopener noreferrer\">course page</a>)",
+        { name: "Physics Laboratory 2", courseHref: "course.html?id=physical-lab-2", professor: "Pietro Govoni" },
       ],
     },
     {
@@ -120,8 +302,8 @@ const SITE = {
       items: [
         "Mathematical Analysis 1 — Simone Secchi",
         "Linear Algebra and Geometry — Sonia Brivio",
-        "Physics Laboratory 1 — Claudia Riccardi (<a href=\"https://elearning.unimib.it/course/info.php?id=32534#en\" target=\"_blank\" rel=\"noopener noreferrer\">course page</a>)",
-        "Laboratory of Computer Science — Federico Nati (<a href=\"https://elearning.unimib.it/course/info.php?id=29579#en\" target=\"_blank\" rel=\"noopener noreferrer\">course page</a>)",
+        { name: "Physics Laboratory 1", courseHref: "course.html?id=physical-lab-1", professor: "Claudia Riccardi" },
+        { name: "Laboratory of Computer Science", courseHref: "course.html?id=laboratory-of-computer-science", professor: "Federico Nati" },
       ],
     },
     {
@@ -279,12 +461,6 @@ const SITE = {
   ],
 
   elsewhere: [
-    {
-      title: "Extra Things I Did",
-      description: "Sports, music, builds, hacks, hikes and other adventures outside physics.",
-      href: "extra-things.html",
-      linkText: "Explore",
-    },
     {
       title: "Daniele Martini",
       description: "My brother — transportation engineer and business consultant, now running his own consulting startup.",
