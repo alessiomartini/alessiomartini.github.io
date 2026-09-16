@@ -22,6 +22,10 @@
     return node;
   }
 
+  function escapeAttr(str) {
+    return String(str).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+  }
+
   function renderHero(profile) {
     document.getElementById("hero-photo").src = profile.photo;
     document.getElementById("hero-photo").alt = profile.name;
@@ -102,7 +106,21 @@
           : "";
         const typeTag = project.type ? `<span class="project-type project-type-${project.type.toLowerCase()}">${project.type}</span>` : "";
         const statusTag = project.status ? `<span class="project-status project-status-${project.status.toLowerCase().replace(/\s+/g, "-")}">${project.status}</span>` : "";
+        const screenshots = project.screenshots || [];
+        const gallery = screenshots.length
+          ? `<div class="project-screenshots">
+              ${screenshots
+                .map(
+                  (src, i) =>
+                    `<button type="button" class="project-screenshot-btn" data-shots="${encodeURIComponent(JSON.stringify(screenshots))}" data-index="${i}" data-name="${escapeAttr(project.name)}">
+                      <img src="${src}" alt="${escapeAttr(project.name)} screenshot ${i + 1}" loading="lazy">
+                    </button>`
+                )
+                .join("")}
+            </div>`
+          : "";
         card.innerHTML = `
+          ${gallery}
           <h4>${project.name}</h4>
           <div class="project-tags">${typeTag}${statusTag}</div>
           <p>${project.description}</p>
@@ -193,6 +211,72 @@
     );
   }
 
+  function setupProjectLightbox() {
+    const lightbox = el(
+      "div",
+      "project-lightbox",
+      `
+        <button type="button" class="project-lightbox-close" aria-label="Close">&times;</button>
+        <button type="button" class="project-lightbox-nav project-lightbox-prev" aria-label="Previous screenshot">&lsaquo;</button>
+        <img class="project-lightbox-img" src="" alt="">
+        <button type="button" class="project-lightbox-nav project-lightbox-next" aria-label="Next screenshot">&rsaquo;</button>
+        <div class="project-lightbox-count"></div>
+      `
+    );
+    document.body.appendChild(lightbox);
+
+    const img = lightbox.querySelector(".project-lightbox-img");
+    const count = lightbox.querySelector(".project-lightbox-count");
+    let shots = [];
+    let index = 0;
+    let name = "";
+
+    function show() {
+      img.src = shots[index];
+      img.alt = `${name} screenshot ${index + 1}`;
+      count.textContent = shots.length > 1 ? `${index + 1} / ${shots.length}` : "";
+    }
+
+    function open(newShots, startIndex, projectName) {
+      shots = newShots;
+      index = startIndex;
+      name = projectName;
+      show();
+      lightbox.classList.add("open");
+      document.body.classList.add("no-scroll");
+    }
+
+    function close() {
+      lightbox.classList.remove("open");
+      document.body.classList.remove("no-scroll");
+    }
+
+    function step(delta) {
+      index = (index + delta + shots.length) % shots.length;
+      show();
+    }
+
+    document.querySelectorAll(".project-screenshot-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const parsed = JSON.parse(decodeURIComponent(btn.dataset.shots));
+        open(parsed, Number(btn.dataset.index), btn.dataset.name);
+      });
+    });
+
+    lightbox.querySelector(".project-lightbox-close").addEventListener("click", close);
+    lightbox.querySelector(".project-lightbox-prev").addEventListener("click", () => step(-1));
+    lightbox.querySelector(".project-lightbox-next").addEventListener("click", () => step(1));
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) close();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (!lightbox.classList.contains("open")) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") step(-1);
+      if (e.key === "ArrowRight") step(1);
+    });
+  }
+
   function setupScrollSpy() {
     const links = Array.from(document.querySelectorAll(".site-nav a"));
     const sections = links
@@ -220,7 +304,10 @@
     if (document.getElementById("bio-text")) renderBio(SITE.bio);
     if (document.getElementById("education-list")) renderEducation(SITE.education);
     if (document.getElementById("teaching-list")) renderTeaching(SITE.teaching);
-    if (document.getElementById("projects-list")) renderProjects(SITE.projects);
+    if (document.getElementById("projects-list")) {
+      renderProjects(SITE.projects);
+      setupProjectLightbox();
+    }
     if (document.getElementById("resources-educators")) renderResources(SITE.resources);
     if (document.getElementById("cv-list")) renderCVs(SITE.cvs);
     if (document.getElementById("elsewhere-note")) renderElsewhere(SITE.elsewhere);
