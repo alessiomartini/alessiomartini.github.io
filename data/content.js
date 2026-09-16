@@ -348,6 +348,7 @@ const SITE = {
           href: "https://alessiomartini.github.io/markets-first-principles/",
           repo: "https://github.com/alessiomartini/markets-first-principles",
           status: "In progress",
+          screenshots: ["images/projects/markets-first-principles/1.png"],
         },
         {
           name: "Wikipedia Attention & ETF Volatility",
@@ -366,6 +367,7 @@ const SITE = {
           type: "Website",
           href: "https://alessiomartini.github.io/geopolitics-atlas/",
           repo: "https://github.com/alessiomartini/geopolitics-atlas",
+          screenshots: ["images/projects/geopolitics-atlas/1.png"],
         },
         {
           name: "Mountain Huts Map",
@@ -374,6 +376,7 @@ const SITE = {
           href: "https://mountain-huts-map.alemarti-2001.workers.dev/",
           repo: "https://github.com/alessiomartini/mountain-huts-map",
           status: "In progress",
+          screenshots: ["images/projects/mountain-huts-map/1.png"],
         },
         {
           name: "Eating Amsterdam",
@@ -381,6 +384,7 @@ const SITE = {
           type: "Website",
           href: "https://alessiomartini.github.io/eating-amsterdam/",
           repo: "https://github.com/alessiomartini/eating-amsterdam",
+          screenshots: ["images/projects/eating-amsterdam/1.png"],
         },
         {
           name: "Amsterdam Events",
@@ -388,6 +392,7 @@ const SITE = {
           type: "Website",
           href: "https://alessiomartini.github.io/amsterdam-events/",
           repo: "https://github.com/alessiomartini/amsterdam-events",
+          screenshots: ["images/projects/amsterdam-events/1.png"],
         },
         {
           name: "The Real-Time Earth",
@@ -396,6 +401,7 @@ const SITE = {
           href: "https://realtime-earth.alemarti-2001.workers.dev",
           repo: "https://github.com/alessiomartini/realtime-earth",
           status: "In progress",
+          screenshots: ["images/projects/realtime-earth/1.png"],
         },
       ],
     },
@@ -432,6 +438,7 @@ const SITE = {
           type: "Website",
           href: "https://alessiomartini.github.io/music-library/",
           repo: "https://github.com/alessiomartini/music-library",
+          screenshots: ["images/projects/music-library/1.png"],
         },
         {
           name: "Harmonic Ear Training",
@@ -440,6 +447,7 @@ const SITE = {
           href: "https://alessiomartini.github.io/ear-training/",
           repo: "https://github.com/alessiomartini/ear-training",
           status: "Outdated",
+          screenshots: ["images/projects/ear-training/1.png"],
         },
       ],
     },
