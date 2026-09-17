@@ -41,32 +41,38 @@
       bio.intro.join("") + `<h3>${bio.researchHeading}</h3>` + bio.research.join("");
   }
 
+  function renderEduItem(item) {
+    if (typeof item === "string") return `<li>${item}</li>`;
+    const isExternal = item.courseHref && item.courseHref.startsWith("http");
+    const nameHtml = item.courseHref
+      ? `<a class="text-link" href="${item.courseHref}"${isExternal ? ' target="_blank" rel="noopener noreferrer"' : ""}>${item.name}</a>`
+      : item.name;
+    const profHtml = item.professor
+      ? item.professorHref
+        ? ` — <a class="text-link" href="${item.professorHref}" target="_blank" rel="noopener noreferrer">${item.professor}</a>`
+        : ` — ${item.professor}`
+      : "";
+    const placeHtml = item.place ? ` <span class="edu-item-place">(${item.place})</span>` : "";
+    return `<li>${nameHtml}${profHtml}${placeHtml}</li>`;
+  }
+
   function renderEducation(groups) {
     const container = document.getElementById("education-list");
     groups.forEach((group, index) => {
       const details = el("details", "");
       if (index === 0) details.open = true;
-      const items = group.items
-        .map((item) => {
-          if (typeof item === "string") return `<li>${item}</li>`;
-          const isExternal = item.courseHref && item.courseHref.startsWith("http");
-          const nameHtml = item.courseHref
-            ? `<a class="text-link" href="${item.courseHref}"${isExternal ? ' target="_blank" rel="noopener noreferrer"' : ""}>${item.name}</a>`
-            : item.name;
-          const profHtml = item.professor
-            ? item.professorHref
-              ? ` — <a class="text-link" href="${item.professorHref}" target="_blank" rel="noopener noreferrer">${item.professor}</a>`
-              : ` — ${item.professor}`
-            : "";
-          return `<li>${nameHtml}${profHtml}</li>`;
-        })
-        .join("");
+      const metaHtml = group.place ? `${group.place} &middot; ${group.years}` : group.years;
+      const body = group.subgroups
+        ? group.subgroups
+            .map((sg) => `<h5 class="edu-subheading">${sg.heading}</h5><ul>${sg.items.map(renderEduItem).join("")}</ul>`)
+            .join("")
+        : `<ul>${group.items.map(renderEduItem).join("")}</ul>`;
       details.innerHTML = `
         <summary>
-          <span>${group.group}<br><span class="meta">${group.place} &middot; ${group.years}</span></span>
+          <span>${group.group}<br><span class="meta">${metaHtml}</span></span>
           ${svg("chevron", "chevron")}
         </summary>
-        <ul>${items}</ul>
+        ${body}
       `;
       container.appendChild(details);
     });
@@ -153,12 +159,21 @@
       const img = media.querySelector(".project-media-img");
       const dots = media.querySelectorAll(".project-media-dot");
 
+      function updateOrientation() {
+        if (img.naturalWidth && img.naturalHeight) {
+          media.classList.toggle("portrait", img.naturalHeight > img.naturalWidth);
+        }
+      }
+      if (img.complete) updateOrientation();
+      else img.addEventListener("load", updateOrientation, { once: true });
+
       function setIndex(i) {
         const index = (i + shots.length) % shots.length;
         media.dataset.index = String(index);
         img.src = shots[index];
         img.alt = `${name} screenshot ${index + 1}`;
         dots.forEach((dot, di) => dot.classList.toggle("active", di === index));
+        img.addEventListener("load", updateOrientation, { once: true });
       }
 
       const prev = media.querySelector(".project-media-prev");
