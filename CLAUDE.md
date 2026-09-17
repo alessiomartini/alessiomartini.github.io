@@ -40,15 +40,39 @@ in English.
   (same-page anchors, sticky header nav). Footer has an `#elsewhere-note`
   (discreet "elsewhere" mentions, e.g. brother's business) above the
   copyright line.
-- `education.html` — full Education & Courses accordion (grouped by
-  programme: Master's Courses, Master's Seminars, Bachelor's, etc.).
-- `projects.html` — project cards. Each project item supports an optional
-  `screenshots: [path, ...]` array (paths under `images/projects/<slug>/`);
-  when present, a thumbnail strip renders at the top of the card and opens
-  a full-size lightbox (with prev/next when there's more than one) on
-  click. Screenshots are supplied by the owner — Claude Code on the web has
-  no outbound network access to capture them itself, so don't fabricate or
-  guess screenshot paths that don't exist in the repo.
+- `education.html` — full Education & Courses accordion. Top-level groups:
+  "Seminars, Workshops & Extra Courses" (open-ended, `subgroups` by rough
+  period — since graduating / during the Master's / between Bachelor's and
+  Master's — this is where new seminars/workshops keep landing, degree or
+  no degree), "Master's Degree", "Bachelor's Degree" (`subgroups` by year:
+  Third/Second/First), "High School Courses". A group either has flat
+  `items` or `subgroups: [{heading, items}]` — `renderEducation` in
+  `js/main.js` handles both. Individual items can carry an optional
+  `place` tag (rendered as `(Place)`) for groups that mix locations.
+- `projects.html` — one full-width row per project: description on the
+  left, screenshot(s) on the right. Each project item supports an optional
+  `screenshots: [path, ...]` array (paths under `images/projects/<slug>/`,
+  slug = the last path segment of its `repo` URL when it has one); when
+  present, a carousel (arrows + dots, only shown when there's more than
+  one shot) lets visitors step through them in place, and clicking opens a
+  full-size lightbox synced to the carousel's position. Portrait (phone)
+  screenshots are auto-detected at load time (`naturalHeight >
+  naturalWidth`) and rendered with `object-fit: contain` in a taller box
+  instead of the desktop-site `cover` crop — don't reuse the 16:10 cover
+  box for phone screenshots, they'll get cut off.
+  For projects with a live `href`, `.github/workflows/capture-screenshots.yml`
+  (+ `.github/scripts/capture-screenshots.js`) runs a headless Chromium in
+  CI — this sandbox has no outbound network access to the live sites
+  itself — and walks down the page taking one shot per screenful (up to 4,
+  stopping early if the page stops scrolling) into
+  `images/projects/<slug>/1.png`, `2.png`, etc. It's wired to fire on any
+  push to this branch that touches the workflow or script file, or run
+  manually from the Actions tab; after a run, pull the new commit and
+  update the matching project's `screenshots` array. For apps with no
+  public URL (native/self-hosted), there's no automated path — ask the
+  owner for real screenshots (or, for a runnable local web app, run it
+  locally against fake/seed data — never real personal data — and
+  screenshot that) rather than fabricating or guessing paths.
 - `course.html?id=<slug>` — generic per-course detail template.
 - `extra-things.html` — Sports / Music / Projects / Adventures, each item
   supports a `media: []` array (`{type, src, alt?}`) for future images/
