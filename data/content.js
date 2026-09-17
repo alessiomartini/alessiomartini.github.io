@@ -413,6 +413,12 @@ const SITE = {
           description: "Native Android app for managing groceries, pantry inventory, product expiration dates, and recipe ideas generated from what you have available.",
           type: "App",
           repo: "https://github.com/alessiomartini/grocery-list",
+          screenshots: [
+            "images/projects/grocery-list/1.jpg",
+            "images/projects/grocery-list/2.jpg",
+            "images/projects/grocery-list/3.jpg",
+            "images/projects/grocery-list/4.jpg",
+          ],
         },
         {
           name: "Health Log",
@@ -425,6 +431,12 @@ const SITE = {
           description: "Superseded by Anki once it became clear this project was reinventing Anki's spaced repetition and note types — vocabulary now lives there day to day. Kept as a reference/prototype for language-learning ideas Anki doesn't cover.",
           type: "App",
           repo: "https://github.com/alessiomartini/flash-cards-app",
+          screenshots: [
+            "images/projects/flash-cards-app/1.jpg",
+            "images/projects/flash-cards-app/2.jpg",
+            "images/projects/flash-cards-app/3.jpg",
+            "images/projects/flash-cards-app/4.jpg",
+          ],
           status: "Outdated",
         },
       ],

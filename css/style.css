@@ -414,6 +414,7 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
   height: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
+  object-position: top;
 }
 
 .project-media-arrow {
