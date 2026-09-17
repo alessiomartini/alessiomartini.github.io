@@ -42,7 +42,13 @@ in English.
   copyright line.
 - `education.html` — full Education & Courses accordion (grouped by
   programme: Master's Courses, Master's Seminars, Bachelor's, etc.).
-- `projects.html` — project cards.
+- `projects.html` — project cards. Each project item supports an optional
+  `screenshots: [path, ...]` array (paths under `images/projects/<slug>/`);
+  when present, a thumbnail strip renders at the top of the card and opens
+  a full-size lightbox (with prev/next when there's more than one) on
+  click. Screenshots are supplied by the owner — Claude Code on the web has
+  no outbound network access to capture them itself, so don't fabricate or
+  guess screenshot paths that don't exist in the repo.
 - `course.html?id=<slug>` — generic per-course detail template.
 - `extra-things.html` — Sports / Music / Projects / Adventures, each item
   supports a `media: []` array (`{type, src, alt?}`) for future images/

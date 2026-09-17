@@ -22,6 +22,10 @@
     return node;
   }
 
+  function escapeAttr(str) {
+    return String(str).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+  }
+
   function renderHero(profile) {
     document.getElementById("hero-photo").src = profile.photo;
     document.getElementById("hero-photo").alt = profile.name;
@@ -91,9 +95,10 @@
       const heading = el("h3", "project-category", category.category);
       group.appendChild(heading);
 
-      const grid = el("div", "card-list");
+      const list = el("div", "project-cards");
       category.items.forEach((project) => {
-        const card = el("div", "card project-card");
+        const screenshots = project.screenshots || [];
+        const card = el("div", `project-card-row${screenshots.length ? "" : " no-media"}`);
         const visitLink = project.href
           ? `<a class="btn btn-ghost btn-sm" href="${project.href}" target="_blank" rel="noopener noreferrer">Visit project</a>`
           : "";
@@ -102,19 +107,69 @@
           : "";
         const typeTag = project.type ? `<span class="project-type project-type-${project.type.toLowerCase()}">${project.type}</span>` : "";
         const statusTag = project.status ? `<span class="project-status project-status-${project.status.toLowerCase().replace(/\s+/g, "-")}">${project.status}</span>` : "";
+
+        const media = screenshots.length
+          ? `<div class="project-media" data-shots="${encodeURIComponent(JSON.stringify(screenshots))}" data-index="0" data-name="${escapeAttr(project.name)}">
+              <button type="button" class="project-media-img-btn">
+                <img class="project-media-img" src="${screenshots[0]}" alt="${escapeAttr(project.name)} screenshot 1">
+              </button>
+              ${
+                screenshots.length > 1
+                  ? `
+                    <button type="button" class="project-media-arrow project-media-prev" aria-label="Previous screenshot">&lsaquo;</button>
+                    <button type="button" class="project-media-arrow project-media-next" aria-label="Next screenshot">&rsaquo;</button>
+                    <div class="project-media-dots">
+                      ${screenshots.map((_, i) => `<span class="project-media-dot${i === 0 ? " active" : ""}"></span>`).join("")}
+                    </div>
+                  `
+                  : ""
+              }
+            </div>`
+          : "";
+
         card.innerHTML = `
-          <h4>${project.name}</h4>
-          <div class="project-tags">${typeTag}${statusTag}</div>
-          <p>${project.description}</p>
-          <div class="project-links">
-            ${visitLink}
-            ${repoLink}
+          <div class="project-info">
+            <h4>${project.name}</h4>
+            <div class="project-tags">${typeTag}${statusTag}</div>
+            <p>${project.description}</p>
+            <div class="project-links">
+              ${visitLink}
+              ${repoLink}
+            </div>
           </div>
+          ${media}
         `;
-        grid.appendChild(card);
+        list.appendChild(card);
       });
-      group.appendChild(grid);
+      group.appendChild(list);
       container.appendChild(group);
+    });
+  }
+
+  function setupProjectMedia(openLightbox) {
+    document.querySelectorAll(".project-media").forEach((media) => {
+      const shots = JSON.parse(decodeURIComponent(media.dataset.shots));
+      const name = media.dataset.name;
+      const img = media.querySelector(".project-media-img");
+      const dots = media.querySelectorAll(".project-media-dot");
+
+      function setIndex(i) {
+        const index = (i + shots.length) % shots.length;
+        media.dataset.index = String(index);
+        img.src = shots[index];
+        img.alt = `${name} screenshot ${index + 1}`;
+        dots.forEach((dot, di) => dot.classList.toggle("active", di === index));
+      }
+
+      const prev = media.querySelector(".project-media-prev");
+      const next = media.querySelector(".project-media-next");
+      if (prev) prev.addEventListener("click", () => setIndex(Number(media.dataset.index) - 1));
+      if (next) next.addEventListener("click", () => setIndex(Number(media.dataset.index) + 1));
+      dots.forEach((dot, i) => dot.addEventListener("click", () => setIndex(i)));
+
+      media.querySelector(".project-media-img-btn").addEventListener("click", () => {
+        openLightbox(shots, Number(media.dataset.index), name);
+      });
     });
   }
 
@@ -193,6 +248,67 @@
     );
   }
 
+  function setupProjectLightbox() {
+    const lightbox = el(
+      "div",
+      "project-lightbox",
+      `
+        <button type="button" class="project-lightbox-close" aria-label="Close">&times;</button>
+        <button type="button" class="project-lightbox-nav project-lightbox-prev" aria-label="Previous screenshot">&lsaquo;</button>
+        <img class="project-lightbox-img" src="" alt="">
+        <button type="button" class="project-lightbox-nav project-lightbox-next" aria-label="Next screenshot">&rsaquo;</button>
+        <div class="project-lightbox-count"></div>
+      `
+    );
+    document.body.appendChild(lightbox);
+
+    const img = lightbox.querySelector(".project-lightbox-img");
+    const count = lightbox.querySelector(".project-lightbox-count");
+    let shots = [];
+    let index = 0;
+    let name = "";
+
+    function show() {
+      img.src = shots[index];
+      img.alt = `${name} screenshot ${index + 1}`;
+      count.textContent = shots.length > 1 ? `${index + 1} / ${shots.length}` : "";
+    }
+
+    function open(newShots, startIndex, projectName) {
+      shots = newShots;
+      index = startIndex;
+      name = projectName;
+      show();
+      lightbox.classList.add("open");
+      document.body.classList.add("no-scroll");
+    }
+
+    function close() {
+      lightbox.classList.remove("open");
+      document.body.classList.remove("no-scroll");
+    }
+
+    function step(delta) {
+      index = (index + delta + shots.length) % shots.length;
+      show();
+    }
+
+    lightbox.querySelector(".project-lightbox-close").addEventListener("click", close);
+    lightbox.querySelector(".project-lightbox-prev").addEventListener("click", () => step(-1));
+    lightbox.querySelector(".project-lightbox-next").addEventListener("click", () => step(1));
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) close();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (!lightbox.classList.contains("open")) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") step(-1);
+      if (e.key === "ArrowRight") step(1);
+    });
+
+    return { open };
+  }
+
   function setupScrollSpy() {
     const links = Array.from(document.querySelectorAll(".site-nav a"));
     const sections = links
@@ -220,7 +336,11 @@
     if (document.getElementById("bio-text")) renderBio(SITE.bio);
     if (document.getElementById("education-list")) renderEducation(SITE.education);
     if (document.getElementById("teaching-list")) renderTeaching(SITE.teaching);
-    if (document.getElementById("projects-list")) renderProjects(SITE.projects);
+    if (document.getElementById("projects-list")) {
+      renderProjects(SITE.projects);
+      const lightbox = setupProjectLightbox();
+      setupProjectMedia(lightbox.open);
+    }
     if (document.getElementById("resources-educators")) renderResources(SITE.resources);
     if (document.getElementById("cv-list")) renderCVs(SITE.cvs);
     if (document.getElementById("elsewhere-note")) renderElsewhere(SITE.elsewhere);

@@ -348,6 +348,7 @@ const SITE = {
           href: "https://alessiomartini.github.io/markets-first-principles/",
           repo: "https://github.com/alessiomartini/markets-first-principles",
           status: "In progress",
+          screenshots: ["images/projects/markets-first-principles/1.png"],
         },
         {
           name: "Wikipedia Attention & ETF Volatility",
@@ -366,6 +367,7 @@ const SITE = {
           type: "Website",
           href: "https://alessiomartini.github.io/geopolitics-atlas/",
           repo: "https://github.com/alessiomartini/geopolitics-atlas",
+          screenshots: ["images/projects/geopolitics-atlas/1.png"],
         },
         {
           name: "Mountain Huts Map",
@@ -374,6 +376,7 @@ const SITE = {
           href: "https://mountain-huts-map.alemarti-2001.workers.dev/",
           repo: "https://github.com/alessiomartini/mountain-huts-map",
           status: "In progress",
+          screenshots: ["images/projects/mountain-huts-map/1.png"],
         },
         {
           name: "Eating Amsterdam",
@@ -381,6 +384,7 @@ const SITE = {
           type: "Website",
           href: "https://alessiomartini.github.io/eating-amsterdam/",
           repo: "https://github.com/alessiomartini/eating-amsterdam",
+          screenshots: ["images/projects/eating-amsterdam/1.png"],
         },
         {
           name: "Amsterdam Events",
@@ -388,6 +392,7 @@ const SITE = {
           type: "Website",
           href: "https://alessiomartini.github.io/amsterdam-events/",
           repo: "https://github.com/alessiomartini/amsterdam-events",
+          screenshots: ["images/projects/amsterdam-events/1.png"],
         },
         {
           name: "The Real-Time Earth",
@@ -396,6 +401,7 @@ const SITE = {
           href: "https://realtime-earth.alemarti-2001.workers.dev",
           repo: "https://github.com/alessiomartini/realtime-earth",
           status: "In progress",
+          screenshots: ["images/projects/realtime-earth/1.png"],
         },
       ],
     },
@@ -407,6 +413,12 @@ const SITE = {
           description: "Native Android app for managing groceries, pantry inventory, product expiration dates, and recipe ideas generated from what you have available.",
           type: "App",
           repo: "https://github.com/alessiomartini/grocery-list",
+          screenshots: [
+            "images/projects/grocery-list/1.jpg",
+            "images/projects/grocery-list/2.jpg",
+            "images/projects/grocery-list/3.jpg",
+            "images/projects/grocery-list/4.jpg",
+          ],
         },
         {
           name: "Health Log",
@@ -419,6 +431,12 @@ const SITE = {
           description: "Superseded by Anki once it became clear this project was reinventing Anki's spaced repetition and note types — vocabulary now lives there day to day. Kept as a reference/prototype for language-learning ideas Anki doesn't cover.",
           type: "App",
           repo: "https://github.com/alessiomartini/flash-cards-app",
+          screenshots: [
+            "images/projects/flash-cards-app/1.jpg",
+            "images/projects/flash-cards-app/2.jpg",
+            "images/projects/flash-cards-app/3.jpg",
+            "images/projects/flash-cards-app/4.jpg",
+          ],
           status: "Outdated",
         },
       ],
@@ -432,6 +450,7 @@ const SITE = {
           type: "Website",
           href: "https://alessiomartini.github.io/music-library/",
           repo: "https://github.com/alessiomartini/music-library",
+          screenshots: ["images/projects/music-library/1.png"],
         },
         {
           name: "Harmonic Ear Training",
@@ -440,6 +459,7 @@ const SITE = {
           href: "https://alessiomartini.github.io/ear-training/",
           repo: "https://github.com/alessiomartini/ear-training",
           status: "Outdated",
+          screenshots: ["images/projects/ear-training/1.png"],
         },
       ],
     },

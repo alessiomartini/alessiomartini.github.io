@@ -1,0 +1,49 @@
+name: Capture project screenshots
+
+# One-off utility: screenshots the live URL of every project in
+# data/content.js that has one, and commits the images to images/projects/.
+# Not part of the site's deploy pipeline (GitHub Pages deploys straight from
+# a push to main, no build step). Re-run manually from the Actions tab when
+# a project's UI changes, or push a change to the script/workflow file
+# itself to trigger it on this branch.
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - claude/vibrant-fermi-4yeb4u
+    paths:
+      - ".github/workflows/capture-screenshots.yml"
+      - ".github/scripts/capture-screenshots.js"
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Playwright
+        run: |
+          npm install playwright@1.48.0
+          npx playwright install --with-deps chromium
+
+      - name: Capture screenshots
+        run: node .github/scripts/capture-screenshots.js
+
+      - name: Commit screenshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add images/projects
+          if git diff --cached --quiet; then
+            echo "No screenshot changes to commit"
+          else
+            git commit -m "Capture project screenshots via Playwright"
+            git push
+          fi
