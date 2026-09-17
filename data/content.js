@@ -235,18 +235,43 @@ const SITE = {
 
   education: [
     {
-      group: "Master's Seminars",
-      place: "University of Amsterdam",
+      // Seminars/workshops/extra courses taken alongside the formal degrees —
+      // and, now that the Master's is done, alongside no degree at all.
+      // Open-ended on purpose: new entries keep landing here as they happen,
+      // instead of forcing a "Master's Seminars"-style group to be reopened
+      // after graduation. Grouped by rough period since individual exact
+      // dates for the seminars aren't tracked — only the DRSTP one has a
+      // known term (Autumn 2026, confirmed by its event page).
+      group: "Seminars, Workshops & Extra Courses",
       years: "2024–",
-      items: [
-        { name: "Asymptotic symmetries, Soft Theorems, and Memory Effects: The Infrared Triangle", professor: "Mitra Prahar", professorHref: "https://scholar.google.com/citations?user=_4w2bqcAAAAJ&hl=en" },
-        { name: "Introduction to higher form symmetries and their applications", professor: "Nabil Iqbal", professorHref: "https://www.nabiliqbal.com/" },
-        { name: "Quantum Mechanics in the everyday world", professor: "Jasper van Wezel", professorHref: "https://jvanwezel.com/" },
-        { name: "Introduction to advanced statistical physics for neural networks", courseHref: "https://www.drstp.nl/events/advanced-topics-in-theoretical-physics-autumn-2026/", professor: "Tuan Pham", professorHref: "https://scholar.google.com/citations?user=LKzkz-kAAAAJ&hl=en" },
+      subgroups: [
+        {
+          heading: "Since graduating (2026–)",
+          items: [
+            { name: "Introduction to advanced statistical physics for neural networks", courseHref: "https://www.drstp.nl/events/advanced-topics-in-theoretical-physics-autumn-2026/", professor: "Tuan Pham", professorHref: "https://scholar.google.com/citations?user=LKzkz-kAAAAJ&hl=en", place: "DRSTP" },
+          ],
+        },
+        {
+          heading: "During the Master's (2024–2026)",
+          items: [
+            { name: "Asymptotic symmetries, Soft Theorems, and Memory Effects: The Infrared Triangle", professor: "Mitra Prahar", professorHref: "https://scholar.google.com/citations?user=_4w2bqcAAAAJ&hl=en", place: "University of Amsterdam" },
+            { name: "Introduction to higher form symmetries and their applications", professor: "Nabil Iqbal", professorHref: "https://www.nabiliqbal.com/", place: "University of Amsterdam" },
+            { name: "Quantum Mechanics in the everyday world", professor: "Jasper van Wezel", professorHref: "https://jvanwezel.com/", place: "University of Amsterdam" },
+          ],
+        },
+        {
+          heading: "Between Bachelor's and Master's (2024)",
+          items: [
+            { name: "Geometrical Anatomy of Theoretical Physics", professor: "Frederic Schuller", professorHref: "https://people.utwente.nl/f.p.schuller?tab=education", place: "Wien" },
+            { name: "General Relativity", professor: "Frederic Schuller", professorHref: "https://people.utwente.nl/f.p.schuller?tab=education", place: "Wien" },
+            { name: "Fisica Teorica 1", professor: "Alberto Zaffaroni", professorHref: "https://virgilio.mib.infn.it/~zaffaron/", place: "UniMiB" },
+            { name: "Quantum Information Theory & Computing", professor: "Alberto Zaffaroni", professorHref: "https://virgilio.mib.infn.it/~zaffaron/", place: "UniMiB" },
+          ],
+        },
       ],
     },
     {
-      group: "Master's Courses",
+      group: "Master's Degree",
       place: "University of Amsterdam",
       years: "2024–2026",
       items: [
@@ -268,51 +293,41 @@ const SITE = {
       ],
     },
     {
-      group: "In Between",
-      place: "Wien / UniMiB",
-      years: "2024",
-      items: [
-        { name: "Geometrical Anatomy of Theoretical Physics (Wien)", professor: "Frederic Schuller", professorHref: "https://people.utwente.nl/f.p.schuller?tab=education" },
-        { name: "General Relativity (Wien)", professor: "Frederic Schuller", professorHref: "https://people.utwente.nl/f.p.schuller?tab=education" },
-        { name: "Fisica Teorica 1 (UniMiB)", professor: "Alberto Zaffaroni", professorHref: "https://virgilio.mib.infn.it/~zaffaron/" },
-        { name: "Quantum Information Theory & Computing (UniMiB)", professor: "Alberto Zaffaroni", professorHref: "https://virgilio.mib.infn.it/~zaffaron/" },
-      ],
-    },
-    {
-      group: "Bachelor's Courses — Third Year",
+      group: "Bachelor's Degree",
       place: "University of Milano-Bicocca",
       years: "2021–2024",
-      items: [
-        "<strong>Bachelor's Thesis</strong> — Anomalies in Quantum Mechanics (<a class=\"text-link\" href=\"https://github.com/alessiomartini/bsc-thesis-scale-anomaly-in-qm\" target=\"_blank\" rel=\"noopener noreferrer\">repo</a>)",
-        { name: "Quantum Mechanics", professor: "Carlo Oleari", professorHref: "https://inspirehep.net/authors/994959" },
-        { name: "Special Relativity", professor: "Emanuele Re", professorHref: "https://inspirehep.net/authors/1058529" },
-        "Nuclear and Subnuclear Physics — <a class=\"text-link\" href=\"https://www.dunescience.org/facesofdune/francesco-terranova/\" target=\"_blank\" rel=\"noopener noreferrer\">Francesco Terranova</a>, <a class=\"text-link\" href=\"https://scholar.google.com/citations?hl=en&user=hWsp_owAAAAJ\" target=\"_blank\" rel=\"noopener noreferrer\">Luca Gironi</a>",
-        { name: "Structure of Matter", professor: "Francesco Montalenti", professorHref: "https://lness.como.polimi.it/francescomontalenti.php" },
-        { name: "Geometry 3", professor: "Alberto Della Vedova", professorHref: "https://www.researchgate.net/profile/Alberto-Della-Vedova" },
-        { name: "Computational Physics", courseHref: "course.html?id=computational-physics-lab", professor: "Michele Pepe", professorHref: "https://inspirehep.net/authors/993845" },
-      ],
-    },
-    {
-      group: "Bachelor's Courses — Second Year",
-      place: "University of Milano-Bicocca",
-      years: "2021–2024",
-      items: [
-        { name: "Classical Mechanics", professor: "Giampaolo Cristadoro", professorHref: "https://scholar.google.com/citations?user=-lNxulgAAAAJ&hl=en" },
-        { name: "Electromagnetism", professor: "Tommaso Tabarelli de Fatis", professorHref: "https://inspirehep.net/authors/1010312" },
-        { name: "Mathematical Methods for Physics", courseHref: "course.html?id=mathematical-methods-for-physics", professor: "Silvia Penati", professorHref: "https://scholar.google.com/citations?user=DRw8L7oAAAAJ&hl=en" },
-        { name: "Geometry 1", professor: "Alberto Della Vedova", professorHref: "https://www.researchgate.net/profile/Alberto-Della-Vedova" },
-        { name: "Physics Laboratory 2", courseHref: "course.html?id=physical-lab-2", professor: "Pietro Govoni", professorHref: "https://inspirehep.net/authors/1062192" },
-      ],
-    },
-    {
-      group: "Bachelor's Courses — First Year",
-      place: "University of Milano-Bicocca",
-      years: "2021–2024",
-      items: [
-        { name: "Mathematical Analysis 1", professor: "Simone Secchi", professorHref: "https://scholar.google.com/citations?hl=en&user=KWW--qUAAAAJ" },
-        { name: "Linear Algebra and Geometry", professor: "Sonia Brivio", professorHref: "https://en.unimib.it/sonia-brivio" },
-        { name: "Physics Laboratory 1", courseHref: "course.html?id=physical-lab-1", professor: "Claudia Riccardi", professorHref: "https://scholar.google.com/citations?user=GJCUZC0AAAAJ&hl=en" },
-        { name: "Laboratory of Computer Science", courseHref: "course.html?id=laboratory-of-computer-science", professor: "Federico Nati", professorHref: "https://federiconati.it/" },
+      subgroups: [
+        {
+          heading: "Third Year",
+          items: [
+            "<strong>Bachelor's Thesis</strong> — Anomalies in Quantum Mechanics (<a class=\"text-link\" href=\"https://github.com/alessiomartini/bsc-thesis-scale-anomaly-in-qm\" target=\"_blank\" rel=\"noopener noreferrer\">repo</a>)",
+            { name: "Quantum Mechanics", professor: "Carlo Oleari", professorHref: "https://inspirehep.net/authors/994959" },
+            { name: "Special Relativity", professor: "Emanuele Re", professorHref: "https://inspirehep.net/authors/1058529" },
+            "Nuclear and Subnuclear Physics — <a class=\"text-link\" href=\"https://www.dunescience.org/facesofdune/francesco-terranova/\" target=\"_blank\" rel=\"noopener noreferrer\">Francesco Terranova</a>, <a class=\"text-link\" href=\"https://scholar.google.com/citations?hl=en&user=hWsp_owAAAAJ\" target=\"_blank\" rel=\"noopener noreferrer\">Luca Gironi</a>",
+            { name: "Structure of Matter", professor: "Francesco Montalenti", professorHref: "https://lness.como.polimi.it/francescomontalenti.php" },
+            { name: "Geometry 3", professor: "Alberto Della Vedova", professorHref: "https://www.researchgate.net/profile/Alberto-Della-Vedova" },
+            { name: "Computational Physics", courseHref: "course.html?id=computational-physics-lab", professor: "Michele Pepe", professorHref: "https://inspirehep.net/authors/993845" },
+          ],
+        },
+        {
+          heading: "Second Year",
+          items: [
+            { name: "Classical Mechanics", professor: "Giampaolo Cristadoro", professorHref: "https://scholar.google.com/citations?user=-lNxulgAAAAJ&hl=en" },
+            { name: "Electromagnetism", professor: "Tommaso Tabarelli de Fatis", professorHref: "https://inspirehep.net/authors/1010312" },
+            { name: "Mathematical Methods for Physics", courseHref: "course.html?id=mathematical-methods-for-physics", professor: "Silvia Penati", professorHref: "https://scholar.google.com/citations?user=DRw8L7oAAAAJ&hl=en" },
+            { name: "Geometry 1", professor: "Alberto Della Vedova", professorHref: "https://www.researchgate.net/profile/Alberto-Della-Vedova" },
+            { name: "Physics Laboratory 2", courseHref: "course.html?id=physical-lab-2", professor: "Pietro Govoni", professorHref: "https://inspirehep.net/authors/1062192" },
+          ],
+        },
+        {
+          heading: "First Year",
+          items: [
+            { name: "Mathematical Analysis 1", professor: "Simone Secchi", professorHref: "https://scholar.google.com/citations?hl=en&user=KWW--qUAAAAJ" },
+            { name: "Linear Algebra and Geometry", professor: "Sonia Brivio", professorHref: "https://en.unimib.it/sonia-brivio" },
+            { name: "Physics Laboratory 1", courseHref: "course.html?id=physical-lab-1", professor: "Claudia Riccardi", professorHref: "https://scholar.google.com/citations?user=GJCUZC0AAAAJ&hl=en" },
+            { name: "Laboratory of Computer Science", courseHref: "course.html?id=laboratory-of-computer-science", professor: "Federico Nati", professorHref: "https://federiconati.it/" },
+          ],
+        },
       ],
     },
     {
@@ -348,7 +363,7 @@ const SITE = {
           href: "https://alessiomartini.github.io/markets-first-principles/",
           repo: "https://github.com/alessiomartini/markets-first-principles",
           status: "In progress",
-          screenshots: ["images/projects/markets-first-principles/1.png"],
+          screenshots: ["images/projects/markets-first-principles/1.png", "images/projects/markets-first-principles/2.png"],
         },
         {
           name: "Wikipedia Attention & ETF Volatility",
@@ -376,7 +391,7 @@ const SITE = {
           href: "https://mountain-huts-map.alemarti-2001.workers.dev/",
           repo: "https://github.com/alessiomartini/mountain-huts-map",
           status: "In progress",
-          screenshots: ["images/projects/mountain-huts-map/1.png"],
+          screenshots: ["images/projects/mountain-huts-map/1.png", "images/projects/mountain-huts-map/2.png"],
         },
         {
           name: "Eating Amsterdam",
@@ -392,7 +407,7 @@ const SITE = {
           type: "Website",
           href: "https://alessiomartini.github.io/amsterdam-events/",
           repo: "https://github.com/alessiomartini/amsterdam-events",
-          screenshots: ["images/projects/amsterdam-events/1.png"],
+          screenshots: ["images/projects/amsterdam-events/1.png", "images/projects/amsterdam-events/2.png"],
         },
         {
           name: "The Real-Time Earth",
@@ -401,7 +416,7 @@ const SITE = {
           href: "https://realtime-earth.alemarti-2001.workers.dev",
           repo: "https://github.com/alessiomartini/realtime-earth",
           status: "In progress",
-          screenshots: ["images/projects/realtime-earth/1.png"],
+          screenshots: ["images/projects/realtime-earth/1.png", "images/projects/realtime-earth/2.png"],
         },
       ],
     },
@@ -459,7 +474,7 @@ const SITE = {
           href: "https://alessiomartini.github.io/ear-training/",
           repo: "https://github.com/alessiomartini/ear-training",
           status: "Outdated",
-          screenshots: ["images/projects/ear-training/1.png"],
+          screenshots: ["images/projects/ear-training/1.png", "images/projects/ear-training/2.png"],
         },
       ],
     },

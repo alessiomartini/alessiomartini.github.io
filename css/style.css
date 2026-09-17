@@ -337,6 +337,22 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
 
 .accordion li { margin-bottom: 0.4rem; color: var(--text-muted); }
 
+.edu-subheading {
+  margin: 1rem 0 0.3rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.accordion h5.edu-subheading:first-of-type { margin-top: 0.9rem; }
+
+.edu-item-place {
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
 /* ---------- Cards (teaching) ---------- */
 .card-list { display: grid; gap: 0.9rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 
@@ -415,6 +431,14 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
   aspect-ratio: 16 / 10;
   object-fit: cover;
   object-position: top;
+}
+
+/* Phone screenshots are much taller than wide — cropping them into the
+   16:10 desktop-site box would cut off most of the screen. Use a taller
+   box and letterbox instead of cropping once we know it's portrait. */
+.project-media.portrait .project-media-img {
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
 }
 
 .project-media-arrow {
