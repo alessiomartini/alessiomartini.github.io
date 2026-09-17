@@ -343,7 +343,7 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--accent);
+  color: var(--text-muted);
 }
 
 .accordion h5.edu-subheading:first-of-type { margin-top: 0.9rem; }

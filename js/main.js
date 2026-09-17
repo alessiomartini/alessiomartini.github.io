@@ -61,7 +61,8 @@
     groups.forEach((group, index) => {
       const details = el("details", "");
       if (index === 0) details.open = true;
-      const metaHtml = group.place ? `${group.place} &middot; ${group.years}` : group.years;
+      const metaText = group.place && group.years ? `${group.place} &middot; ${group.years}` : group.place || group.years || "";
+      const metaHtml = metaText ? `<br><span class="meta">${metaText}</span>` : "";
       const body = group.subgroups
         ? group.subgroups
             .map((sg) => `<h5 class="edu-subheading">${sg.heading}</h5><ul>${sg.items.map(renderEduItem).join("")}</ul>`)
@@ -69,7 +70,7 @@
         : `<ul>${group.items.map(renderEduItem).join("")}</ul>`;
       details.innerHTML = `
         <summary>
-          <span>${group.group}<br><span class="meta">${metaHtml}</span></span>
+          <span>${group.group}${metaHtml}</span>
           ${svg("chevron", "chevron")}
         </summary>
         ${body}

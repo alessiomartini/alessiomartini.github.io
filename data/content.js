@@ -241,14 +241,15 @@ const SITE = {
       // instead of forcing a "Master's Seminars"-style group to be reopened
       // after graduation. Grouped by rough period since individual exact
       // dates for the seminars aren't tracked — only the DRSTP one has a
-      // known term (Autumn 2026, confirmed by its event page).
+      // known term (Autumn 2026, confirmed by its event page). No group-level
+      // `years` here on purpose — it now spans High School through today.
       group: "Seminars, Workshops & Extra Courses",
-      years: "2024–",
       subgroups: [
         {
           heading: "Since graduating (2026–)",
           items: [
             { name: "Introduction to advanced statistical physics for neural networks", courseHref: "https://www.drstp.nl/events/advanced-topics-in-theoretical-physics-autumn-2026/", professor: "Tuan Pham", professorHref: "https://scholar.google.com/citations?user=LKzkz-kAAAAJ&hl=en", place: "DRSTP" },
+            { name: "Emergent NeuroSystems (Workshop)", courseHref: "https://www.d-iep.org/workshopemergentneurosystems", place: "D-IEP" },
           ],
         },
         {
@@ -257,6 +258,11 @@ const SITE = {
             { name: "Asymptotic symmetries, Soft Theorems, and Memory Effects: The Infrared Triangle", professor: "Mitra Prahar", professorHref: "https://scholar.google.com/citations?user=_4w2bqcAAAAJ&hl=en", place: "University of Amsterdam" },
             { name: "Introduction to higher form symmetries and their applications", professor: "Nabil Iqbal", professorHref: "https://www.nabiliqbal.com/", place: "University of Amsterdam" },
             { name: "Quantum Mechanics in the everyday world", professor: "Jasper van Wezel", professorHref: "https://jvanwezel.com/", place: "University of Amsterdam" },
+            { name: "Generalised Symmetries in QFT and Gravity", professor: "Nabil Iqbal", professorHref: "https://www.nabiliqbal.com/", place: "Jena TPI School on QFT & Holography" },
+            { name: "Exploring artificial intelligence for (quantum) physics", courseHref: "course.html?id=exploring-ai-for-q-physics", professor: "Evert van Nieuwenburg", professorHref: "https://www.linkedin.com/in/evert-van-nieuwenburg/", place: "DRSTP" },
+            { name: "Topological Order and Quantum Information", courseHref: "course.html?id=topological-order-and-quantum-information", professor: "Kareljan Schoutens", professorHref: "https://www.linkedin.com/in/kareljan-schoutens-39b30849/", place: "DRSTP" },
+            { name: "Lattice Gauge Theory", courseHref: "course.html?id=lattice-gauge-theory", professor: "Jasper van Wezel", professorHref: "https://jvanwezel.com/", place: "DRSTP" },
+            "Categories and Modules — <a class=\"text-link\" href=\"https://www.math.leidenuniv.nl/~edix/\" target=\"_blank\" rel=\"noopener noreferrer\">Bas Edixhoven</a>, <a class=\"text-link\" href=\"https://davidholmes.nl/\" target=\"_blank\" rel=\"noopener noreferrer\">David Holmes</a>, <a class=\"text-link\" href=\"https://research.vu.nl/en/persons/rob-de-jeu/\" target=\"_blank\" rel=\"noopener noreferrer\">Rob de Jeu</a>, <a class=\"text-link\" href=\"https://staff.fnwi.uva.nl/a.l.kret/\" target=\"_blank\" rel=\"noopener noreferrer\">Arno Kret</a>, <a class=\"text-link\" href=\"https://www.math.ru.nl/~sagave/\" target=\"_blank\" rel=\"noopener noreferrer\">Steffen Sagave</a> (Mastermath)",
           ],
         },
         {
@@ -268,6 +274,18 @@ const SITE = {
             { name: "Quantum Information Theory & Computing", professor: "Alberto Zaffaroni", professorHref: "https://virgilio.mib.infn.it/~zaffaron/", place: "UniMiB" },
           ],
         },
+        {
+          heading: "During the Bachelor's (2021–2024)",
+          items: [
+            { name: "Geometry 1", professor: "Alberto Della Vedova", professorHref: "https://www.researchgate.net/profile/Alberto-Della-Vedova" },
+          ],
+        },
+        {
+          heading: "During High School (2015–2021)",
+          items: [
+            { name: "Introduction to Cryptography", professor: "Andrea Previtali (Math Professor at Univ. of Milano-Bicocca)", professorHref: "https://scholar.google.com/citations?user=9qJGd8YAAAAJ&hl=en" },
+          ],
+        },
       ],
     },
     {
@@ -275,11 +293,7 @@ const SITE = {
       place: "University of Amsterdam",
       years: "2024–2026",
       items: [
-        "<strong>Master's Thesis</strong> — Non-invertible Symmetries in QFT and Gravity (<a class=\"text-link\" href=\"https://github.com/alessiomartini/msc-thesis-non-invertible-symmetries\" target=\"_blank\" rel=\"noopener noreferrer\">repo</a>)",
-        { name: "Generalised Symmetries in QFT and Gravity (Jena TPI School on QFT & Holography)", professor: "Nabil Iqbal", professorHref: "https://www.nabiliqbal.com/" },
-        { name: "Exploring artificial intelligence for (quantum) physics (Adv. Topics in Theo. Phys.)", courseHref: "course.html?id=exploring-ai-for-q-physics", professor: "Evert van Nieuwenburg", professorHref: "https://www.linkedin.com/in/evert-van-nieuwenburg/" },
-        { name: "Topological Order and Quantum Information (Adv. Topics in Theo. Phys.)", courseHref: "course.html?id=topological-order-and-quantum-information", professor: "Kareljan Schoutens", professorHref: "https://www.linkedin.com/in/kareljan-schoutens-39b30849/" },
-        { name: "Lattice Gauge Theory (Adv. Topics in Theo. Phys.)", courseHref: "course.html?id=lattice-gauge-theory", professor: "Jasper van Wezel", professorHref: "https://jvanwezel.com/" },
+        "<strong>Master's Thesis</strong> — Non-invertible Symmetries in QFT and Gravity, supervised by <a class=\"text-link\" href=\"https://www.uva.nl/en/profile/h/o/d.m.hofman/d.m.hofman.html\" target=\"_blank\" rel=\"noopener noreferrer\">Diego Hofman</a> (<a class=\"text-link\" href=\"https://github.com/alessiomartini/msc-thesis-non-invertible-symmetries\" target=\"_blank\" rel=\"noopener noreferrer\">repo</a>)",
         { name: "Condensed Matter Theory Advanced", professor: "Vladimir Gritsev", professorHref: "https://scholar.google.com/citations?user=Xw_CHScAAAAJ&hl=en" },
         { name: "String Theory I & II", professor: "Lorenz Eberhardt", professorHref: "https://scholar.google.com/citations?user=eL5X9zMAAAAJ&hl=en" },
         "Topology in Physics — <a class=\"text-link\" href=\"https://www.uva.nl/en/profile/v/o/m.l.vonk/m.l.vonk.html\" target=\"_blank\" rel=\"noopener noreferrer\">Marcel Vonk</a>, <a class=\"text-link\" href=\"https://scholar.google.com/citations?user=PyTE1DIAAAAJ&hl=en\" target=\"_blank\" rel=\"noopener noreferrer\">Hessel Posthuma</a>",
@@ -289,7 +303,6 @@ const SITE = {
         { name: "Non-equilibrium Statistical Physics", professor: "Edan Lerner", professorHref: "https://scholar.google.com/citations?user=fNQJKtUAAAAJ&hl=en" },
         "Algebraic Topology 1 — <a class=\"text-link\" href=\"https://research.vu.nl/en/persons/inbar-klang/\" target=\"_blank\" rel=\"noopener noreferrer\">Inbar Klang</a>, <a class=\"text-link\" href=\"https://scholar.google.com/citations?user=JanZktsAAAAJ&hl=en\" target=\"_blank\" rel=\"noopener noreferrer\">Lennart Meier</a> (Mastermath)",
         { name: "Differential Geometry (Mastermath)", professor: "Marius Crainic", professorHref: "https://scholar.google.com/citations?user=HSmygYcAAAAJ&hl=en" },
-        "Categories and Modules — <a class=\"text-link\" href=\"https://www.math.leidenuniv.nl/~edix/\" target=\"_blank\" rel=\"noopener noreferrer\">Bas Edixhoven</a>, <a class=\"text-link\" href=\"https://davidholmes.nl/\" target=\"_blank\" rel=\"noopener noreferrer\">David Holmes</a>, <a class=\"text-link\" href=\"https://research.vu.nl/en/persons/rob-de-jeu/\" target=\"_blank\" rel=\"noopener noreferrer\">Rob de Jeu</a>, <a class=\"text-link\" href=\"https://staff.fnwi.uva.nl/a.l.kret/\" target=\"_blank\" rel=\"noopener noreferrer\">Arno Kret</a>, <a class=\"text-link\" href=\"https://www.math.ru.nl/~sagave/\" target=\"_blank\" rel=\"noopener noreferrer\">Steffen Sagave</a> (Mastermath)",
       ],
     },
     {
@@ -300,7 +313,7 @@ const SITE = {
         {
           heading: "Third Year",
           items: [
-            "<strong>Bachelor's Thesis</strong> — Anomalies in Quantum Mechanics (<a class=\"text-link\" href=\"https://github.com/alessiomartini/bsc-thesis-scale-anomaly-in-qm\" target=\"_blank\" rel=\"noopener noreferrer\">repo</a>)",
+            "<strong>Bachelor's Thesis</strong> — Anomalies in Quantum Mechanics, supervised by Noppadol Mekareeya (<a class=\"text-link\" href=\"https://github.com/alessiomartini/bsc-thesis-scale-anomaly-in-qm\" target=\"_blank\" rel=\"noopener noreferrer\">repo</a>)",
             { name: "Quantum Mechanics", professor: "Carlo Oleari", professorHref: "https://inspirehep.net/authors/994959" },
             { name: "Special Relativity", professor: "Emanuele Re", professorHref: "https://inspirehep.net/authors/1058529" },
             "Nuclear and Subnuclear Physics — <a class=\"text-link\" href=\"https://www.dunescience.org/facesofdune/francesco-terranova/\" target=\"_blank\" rel=\"noopener noreferrer\">Francesco Terranova</a>, <a class=\"text-link\" href=\"https://scholar.google.com/citations?hl=en&user=hWsp_owAAAAJ\" target=\"_blank\" rel=\"noopener noreferrer\">Luca Gironi</a>",
@@ -315,7 +328,6 @@ const SITE = {
             { name: "Classical Mechanics", professor: "Giampaolo Cristadoro", professorHref: "https://scholar.google.com/citations?user=-lNxulgAAAAJ&hl=en" },
             { name: "Electromagnetism", professor: "Tommaso Tabarelli de Fatis", professorHref: "https://inspirehep.net/authors/1010312" },
             { name: "Mathematical Methods for Physics", courseHref: "course.html?id=mathematical-methods-for-physics", professor: "Silvia Penati", professorHref: "https://scholar.google.com/citations?user=DRw8L7oAAAAJ&hl=en" },
-            { name: "Geometry 1", professor: "Alberto Della Vedova", professorHref: "https://www.researchgate.net/profile/Alberto-Della-Vedova" },
             { name: "Physics Laboratory 2", courseHref: "course.html?id=physical-lab-2", professor: "Pietro Govoni", professorHref: "https://inspirehep.net/authors/1062192" },
           ],
         },
@@ -335,7 +347,6 @@ const SITE = {
       place: "ITIS Greppi",
       years: "2015–2021",
       items: [
-        { name: "Introduction to Cryptography", professor: "Andrea Previtali (Math Professor at Univ. of Milano-Bicocca)", professorHref: "https://scholar.google.com/citations?user=9qJGd8YAAAAJ&hl=en" },
         { name: "Sistemi e Reti", professor: "Vincenzo Villa", professorHref: "https://www.vincenzov.net/" },
         { name: "Telecomunicazioni", professor: "Calogero Cancellieri", professorHref: "https://www.linkedin.com/in/calogero-cancellieri-718b3523/" },
         { name: "Theory of Coding", professor: "Samuele Redaelli", professorHref: "https://www.linkedin.com/in/samuele-redaelli-b837ab14b/" },
