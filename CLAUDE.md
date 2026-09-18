@@ -16,7 +16,14 @@ approval; this is a live personal site, not an app.
 
 - **Syntax-check JS after any edit**: `node --check <file>.js` (e.g.
   `node --check data/content.js`, `node --check js/main.js`). This is the
-  closest thing to a lint/build step this repo has.
+  closest thing to a lint/build step this repo has. A PostToolUse hook
+  (`.claude/hooks/check-js-syntax.py`, wired in `.claude/settings.json`)
+  already runs this automatically after every Edit/Write to a `.js` file
+  and blocks on failure — running it by hand is a backup, not a
+  requirement.
+- **Shipping a change**: use the `ship-website-change` skill (or follow
+  "Workflow for any content/style change" below) — verify, bump
+  cache-busting, commit, push, confirm live.
 - **Preview locally**: `python3 -m http.server 8000` from the repo root,
   then open `http://localhost:8000/` (plain `file://` can block
   `<script>`/`fetch` loading in some browsers).
