@@ -368,6 +368,13 @@ const SITE = {
       category: "Finance",
       items: [
         {
+          name: "Job Research Website",
+          description: "A private site for my job search: a full profile plus target-employer research (DNB, The Economist, model validation), ranked by tier. Access-protected behind a Cloudflare login, so the link only works for me.",
+          type: "Website",
+          href: "https://job-research-website.alemarti-2001.workers.dev",
+          status: "Private",
+        },
+        {
           name: "Markets from First Principles",
           description: "A single-author learning site that teaches finance and economics to someone who already thinks like a theoretical physicist. Eight tracks, 51 pages, one concept per page.",
           type: "Website",
