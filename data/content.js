@@ -365,6 +365,20 @@ const SITE = {
 
   projects: [
     {
+      category: "Physics & Mathematics",
+      items: [
+        {
+          name: "Big Picture",
+          description: "A conceptual map of physics, mathematics and the experiments behind them. Every field answers the same questions (what it asks, what it has established, what it rests on, where it breaks), links to the experiments that established or broke it, and cross-field threads follow one idea, like the action or universality, from field to field. Also exported as an Anki deck.",
+          type: "Website",
+          href: "https://alessiomartini.github.io/conceptual-map-physics-math/",
+          repo: "https://github.com/alessiomartini/conceptual-map-physics-math",
+          status: "In progress",
+          screenshots: ["images/projects/conceptual-map-physics-math/1.png", "images/projects/conceptual-map-physics-math/2.png"],
+        },
+      ],
+    },
+    {
       category: "Finance",
       items: [
         {
