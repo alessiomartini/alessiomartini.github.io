@@ -383,10 +383,18 @@ const SITE = {
       items: [
         {
           name: "Job Research Website",
-          description: "A private site for my job search: a full profile plus target-employer research (DNB, The Economist, model validation), ranked by tier. Access-protected behind a Cloudflare login, so the link only works for me.",
+          description: "A private tracker for my job search in quant roles around Amsterdam: a daily scraper reads the job feeds of about 70 companies, classifies every title into a role family and groups the jobs by company tier; a companies page says what each one does, and a guide holds my profile and target-employer research. Access-protected behind a Cloudflare login, so the link only works for me.",
           type: "Website",
           href: "https://job-research-website.alemarti-2001.workers.dev",
           status: "Private",
+          screenshots: ["images/projects/job-research-website/1.png", "images/projects/job-research-website/2.png"],
+        },
+        {
+          name: "Job News",
+          description: "Collects the events worth attending for my work interests (quant finance, complexity, econophysics, sociophysics): seminars, workshops, conferences and networking events, at companies and for PhD positions, in one page with a link to each original source, ready to add to my calendar. Just started: only the plan so far.",
+          type: "Website",
+          repo: "https://github.com/alessiomartini/job-news",
+          status: "In progress",
         },
         {
           name: "Markets from First Principles",
