@@ -60,7 +60,7 @@ approval; this is a live personal site, not an app.
   `:root` / `:root[data-theme="dark"]`. Dark mode is attribute-driven
   (`data-theme="dark"` on `<html>`), applied before first paint by an
   inline script in each page's `<head>` to avoid a flash.
-- **Cache-busting**: every `<script src="data/content.js?v=N">` and
+- **Cache-busting**: `css/style.css?v=N`, every `<script src="data/content.js?v=N">` and
   `<script src="js/main.js?v=N">` tag must have `?v=N` bumped on **every**
   edit to that file, across **all** HTML files that include it
   (`index.html`, `education.html`, `projects.html`, `course.html`,
@@ -92,9 +92,10 @@ approval; this is a live personal site, not an app.
   one shot) lets visitors step through them in place, and clicking opens a
   full-size lightbox synced to the carousel's position. Portrait (phone)
   screenshots are auto-detected at load time (`naturalHeight >
-  naturalWidth`) and rendered with `object-fit: contain` in a taller box
-  instead of the desktop-site `cover` crop — don't reuse the 16:10 cover
-  box for phone screenshots, they'll get cut off.
+  naturalWidth`): the card gets `.portrait-row`, the media column shrinks
+  to the image's own width (fixed 340px height, no letterboxing) — don't
+  reuse the 16:10 cover box for phone screenshots or PDF pages, they'll get
+  cut off. Theses/notes screenshots are PDF pages rendered with `pdftoppm`.
   For projects with a live `href`, `.github/workflows/capture-screenshots.yml`
   (+ `.github/scripts/capture-screenshots.js`) runs a headless Chromium in
   CI — this sandbox has no outbound network access to the live sites
