@@ -162,7 +162,9 @@
 
       function updateOrientation() {
         if (img.naturalWidth && img.naturalHeight) {
-          media.classList.toggle("portrait", img.naturalHeight > img.naturalWidth);
+          const portrait = img.naturalHeight > img.naturalWidth;
+          media.classList.toggle("portrait", portrait);
+          media.closest(".project-card-row").classList.toggle("portrait-row", portrait);
         }
       }
       if (img.complete) updateOrientation();

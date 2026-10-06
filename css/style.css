@@ -437,9 +437,16 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
    16:10 desktop-site box would cut off most of the screen. Use a taller
    box and letterbox instead of cropping once we know it's portrait. */
 .project-media.portrait .project-media-img {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: auto;
+  width: auto;
+  height: 340px;
   object-fit: contain;
 }
+
+/* Portrait shots (phones, PDF pages): the media column shrinks to the
+   image's own width so no space is lost to letterboxing. */
+.project-card-row.portrait-row { grid-template-columns: 1fr auto; }
+.project-card-row.portrait-row .project-media { min-height: 0; align-self: center; }
 
 .project-media-arrow {
   position: absolute;
@@ -489,6 +496,8 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
     grid-template-columns: 1fr;
   }
   .project-media { order: -1; }
+  .project-card-row.portrait-row { grid-template-columns: 1fr; }
+  .project-card-row.portrait-row .project-media { justify-self: center; }
 }
 
 /* ---------- Project screenshot lightbox ---------- */
