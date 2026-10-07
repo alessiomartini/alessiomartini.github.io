@@ -404,6 +404,7 @@ const SITE = {
           description: "LaTeX study notes of Perry Mehrling's Columbia course, one chapter per lecture across 22 lectures, with links to the exact moment in each video.",
           type: "Notes",
           repo: "https://github.com/alessiomartini/lecture-notes-economics-of-money-and-banking",
+          pdf: "pdfs/lecture-notes-economics-of-money-and-banking.pdf",
           status: "In progress",
           screenshots: ["images/projects/lecture-notes-economics-of-money-and-banking/1.jpg", "images/projects/lecture-notes-economics-of-money-and-banking/2.jpg", "images/projects/lecture-notes-economics-of-money-and-banking/3.jpg"],
         },
