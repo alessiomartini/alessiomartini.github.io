@@ -386,6 +386,7 @@ const SITE = {
         {
           name: "Data-Driven Dynamical Systems: Lecture Notes",
           description: "LaTeX study notes of Steve Brunton's video course on dynamical systems and machine learning, with every point linked to the second of the video where it is said and the Matlab demos rewritten in Python.",
+          repo: "https://github.com/alessiomartini/lecture-notes-dynamical-systems-data",
           pdf: "pdfs/lecture-notes-dynamical-systems-data.pdf",
           type: "Notes",
           status: "In progress",
@@ -394,6 +395,7 @@ const SITE = {
         {
           name: "MIT 18.642: Lecture Notes",
           description: "LaTeX study notes of MIT's Topics in Mathematics with Applications in Finance, with full derivations, exercises and historical asides.",
+          repo: "https://github.com/alessiomartini/mit-18642-lecture-notes",
           pdf: "pdfs/mit-18642-lecture-notes.pdf",
           type: "Notes",
           status: "In progress",
