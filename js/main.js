@@ -112,6 +112,9 @@
         const repoLink = project.repo
           ? `<a class="project-source" href="${project.repo}" target="_blank" rel="noopener noreferrer">Source</a>`
           : "";
+        const pdfLink = project.pdf
+          ? `<a class="btn btn-ghost btn-sm" href="${project.pdf}" target="_blank" rel="noopener noreferrer">Read PDF</a>`
+          : "";
         const typeTag = project.type ? `<span class="project-type project-type-${project.type.toLowerCase()}">${project.type}</span>` : "";
         const statusTag = project.status ? `<span class="project-status project-status-${project.status.toLowerCase().replace(/\s+/g, "-")}">${project.status}</span>` : "";
 
@@ -141,6 +144,7 @@
             <p>${project.description}</p>
             <div class="project-links">
               ${visitLink}
+              ${pdfLink}
               ${repoLink}
             </div>
           </div>

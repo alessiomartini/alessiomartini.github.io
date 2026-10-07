@@ -372,6 +372,7 @@ const SITE = {
           description: "Master's thesis at the University of Amsterdam (supervisor Diego Hofman): generalized global symmetries in the 3d XY model and the abelian Higgs model, related by particle–vortex duality. 103 pages, plus the defence talk.",
           type: "Thesis",
           repo: "https://github.com/alessiomartini/msc-thesis-non-invertible-symmetries",
+          pdf: "https://github.com/alessiomartini/msc-thesis-non-invertible-symmetries/raw/main/continuous_non_inv_sym_in_3d_OFFICIAL.pdf",
           screenshots: ["images/projects/msc-thesis-non-invertible-symmetries/1.jpg", "images/projects/msc-thesis-non-invertible-symmetries/2.jpg", "images/projects/msc-thesis-non-invertible-symmetries/3.jpg"],
         },
         {
@@ -379,11 +380,13 @@ const SITE = {
           description: "Bachelor's thesis at Milano-Bicocca (supervisor Noppadol Mekareeya): how quantization breaks the classical scale invariance of the attractive inverse-square potential, a fully solvable example of an anomaly.",
           type: "Thesis",
           repo: "https://github.com/alessiomartini/bsc-thesis-scale-anomaly-in-qm",
+          pdf: "pdfs/Tesi_Martini_867624_v3.pdf",
           screenshots: ["images/projects/bsc-thesis-scale-anomaly-in-qm/1.jpg", "images/projects/bsc-thesis-scale-anomaly-in-qm/2.jpg", "images/projects/bsc-thesis-scale-anomaly-in-qm/3.jpg"],
         },
         {
           name: "Data-Driven Dynamical Systems: Lecture Notes",
           description: "LaTeX study notes of Steve Brunton's video course on dynamical systems and machine learning, with every point linked to the second of the video where it is said and the Matlab demos rewritten in Python.",
+          pdf: "pdfs/lecture-notes-dynamical-systems-data.pdf",
           type: "Notes",
           status: "In progress",
           screenshots: ["images/projects/lecture-notes-dynamical-systems-data/1.jpg", "images/projects/lecture-notes-dynamical-systems-data/2.jpg", "images/projects/lecture-notes-dynamical-systems-data/3.jpg"],
@@ -391,6 +394,7 @@ const SITE = {
         {
           name: "MIT 18.642: Lecture Notes",
           description: "LaTeX study notes of MIT's Topics in Mathematics with Applications in Finance, with full derivations, exercises and historical asides.",
+          pdf: "pdfs/mit-18642-lecture-notes.pdf",
           type: "Notes",
           status: "In progress",
           screenshots: ["images/projects/mit-18642-lecture-notes/1.jpg", "images/projects/mit-18642-lecture-notes/2.jpg", "images/projects/mit-18642-lecture-notes/3.jpg"],
