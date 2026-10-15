@@ -53,7 +53,10 @@
         : ` — ${item.professor}`
       : "";
     const placeHtml = item.place ? ` <span class="edu-item-place">(${item.place})</span>` : "";
-    return `<li>${nameHtml}${profHtml}${placeHtml}</li>`;
+    const notesHtml = item.notesHref
+      ? ` &middot; <a class="text-link" href="${item.notesHref}" target="_blank" rel="noopener noreferrer">my LaTeX notes</a>`
+      : "";
+    return `<li>${nameHtml}${profHtml}${placeHtml}${notesHtml}</li>`;
   }
 
   function renderEducation(groups) {
