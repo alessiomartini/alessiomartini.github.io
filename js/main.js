@@ -8,6 +8,7 @@
     stackoverflow: '<path d="M6 21v-6h13v6H6z" fill="none"/><path d="M8 17h9M7.5 13.5l8.7 1.8M8.4 10l8.2 3.5M9.8 6.6l7.6 4.9" fill="none"/>',
     linkedin: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v10H2z" fill="none"/><circle cx="4" cy="4" r="1" fill="currentColor"/>',
     code: '<path d="M8 7 3 12l5 5M16 7l5 5-5 5" fill="none"/>',
+    book: '<path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2zM22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z" fill="none"/>',
     chevron: '<path d="M9 6l6 6-6 6" fill="none"/>',
   };
 
