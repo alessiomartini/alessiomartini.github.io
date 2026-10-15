@@ -54,7 +54,7 @@
       : "";
     const placeHtml = item.place ? ` <span class="edu-item-place">(${item.place})</span>` : "";
     const notesHtml = item.notesHref
-      ? ` &middot; <a class="text-link" href="${item.notesHref}" target="_blank" rel="noopener noreferrer">my LaTeX notes</a>`
+      ? ` &middot; <a class="text-link" href="${item.notesHref}" target="_blank" rel="noopener noreferrer">${item.notesLabel || "my LaTeX notes"}</a>`
       : "";
     return `<li>${nameHtml}${profHtml}${placeHtml}${notesHtml}</li>`;
   }
