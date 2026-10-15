@@ -822,6 +822,7 @@ body.no-scroll { overflow: hidden; }
 }
 .page-hero h1 { font-size: 2rem; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
 .page-hero p { color: var(--text-muted); max-width: 60ch; margin: 0 auto; }
+.page-hero .page-hero-cta { margin-top: 1.1rem; }
 
 .et-group { margin-bottom: 0.5rem; }
 

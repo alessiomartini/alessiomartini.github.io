@@ -535,6 +535,15 @@ const SITE = {
       category: "Useful Apps",
       items: [
         {
+          name: "Projects Overview",
+          description: "My personal dashboard for all these projects: a progress ring and the open to-do list for each one, read automatically from every repo's ROADMAP.md, colour-coded by kind (websites, research, self-study, Android apps, school). It also works as an inbox for quick ideas from my phone, using GitHub itself as the database.",
+          type: "Website",
+          href: "https://alessiomartini.github.io/projects-overview/",
+          repo: "https://github.com/alessiomartini/projects-overview",
+          status: "In progress",
+          screenshots: ["images/projects/projects-overview/1.png", "images/projects/projects-overview/2.png"],
+        },
+        {
           name: "Pantry",
           description: "Native Android app for managing groceries, pantry inventory, product expiration dates, and recipe ideas generated from what you have available.",
           type: "App",

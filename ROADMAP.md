@@ -8,9 +8,10 @@ ogni titolo "##" è una fase, le checkbox "- [ ]" / "- [x]" danno la percentuale
 
 ## Fatto
 - [x] Sito personale generato da `data/content.js`, tema chiaro/scuro
+- [x] Projects Overview nella pagina Projects (scheda + pulsante in alto)
 
 ## Idee
 - [ ] Nota/feedback dei visitatori su database Cloudflare (vedi `FUTURE-ARCHITECTURE.md`)
 
 ## Log
-- 2026-10-15: creata la roadmap per Projects Overview
+- 2026-10-15: creata la roadmap per Projects Overview; aggiunto Projects Overview alla pagina Projects (scheda e pulsante in alto)
