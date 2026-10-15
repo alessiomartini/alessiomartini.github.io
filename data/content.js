@@ -216,14 +216,9 @@ const SITE = {
 
   cvs: [
     {
-      title: "General CV",
-      description: "Comprehensive overview of education, experience, and skills.",
+      title: "CV",
+      description: "Education, projects, independent study and experience, in full (2 pages).",
       href: "pdfs/CV.pdf",
-    },
-    {
-      title: "Quant Research CV",
-      description: "Tailored CV for quantitative research and finance applications.",
-      href: "pdfs/CV_QuantResearch.pdf",
     },
     {
       title: "Europass CV",
