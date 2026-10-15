@@ -239,10 +239,10 @@ const SITE = {
         {
           heading: "In progress",
           items: [
-            { name: "Topics in Mathematics with Applications in Finance (MIT 18.642, Fall 2024)", courseHref: "https://ocw.mit.edu/courses/18-642-topics-in-mathematics-with-applications-in-finance-fall-2024/", professor: "Peter Kempthorne", professorHref: "https://math.mit.edu/directory/profile.html?pid=1521", place: "with Vasily Strela and Jake Xia, MIT OpenCourseWare", notesHref: "https://github.com/alessiomartini/mit-18642-lecture-notes" },
+            { name: "Topics in Mathematics with Applications in Finance (MIT 18.642, Fall 2024)", courseHref: "https://ocw.mit.edu/courses/18-642-topics-in-mathematics-with-applications-in-finance-fall-2024/", professor: "Peter Kempthorne", professorHref: "https://math.mit.edu/directory/profile.html?pid=1521", place: "with Vasily Strela and Jake Xia, MIT OpenCourseWare", notesHref: "https://github.com/alessiomartini/lecture-notes-mit-18642-math-finance" },
             { name: "Economics of Money and Banking", courseHref: "https://www.youtube.com/playlist?list=PLSuwqsAnJMtwZEwkJgHZCod2xP9b7skF5", professor: "Perry Mehrling", professorHref: "https://sites.bu.edu/perry/", place: "Columbia University", notesHref: "https://github.com/alessiomartini/lecture-notes-economics-of-money-and-banking" },
             { name: "Dynamical Systems (with Machine Learning)", courseHref: "https://www.youtube.com/playlist?list=PLMrJAkhIeNNR6DzT17-MM1GHLkuYVjhyt", professor: "Steve Brunton", professorHref: "https://scholar.google.com/citations?user=TjzWdigAAAAJ&hl=en", place: "University of Washington", notesHref: "https://github.com/alessiomartini/lecture-notes-dynamical-systems-data" },
-            { name: "Modelling Financial Markets: an Introduction to Econophysics", courseHref: "https://www.econophysix.com/resources", professor: "Michael Benzaquen", professorHref: "https://www.econophysix.com/michaelbenzaquen", place: "École Polytechnique", notesHref: "https://github.com/alessiomartini/econophysics-benzaquen-tutorials", notesLabel: "my tutorial notebooks" },
+            { name: "Modelling Financial Markets: an Introduction to Econophysics", courseHref: "https://www.econophysix.com/resources", professor: "Michael Benzaquen", professorHref: "https://www.econophysix.com/michaelbenzaquen", place: "École Polytechnique", notesHref: "https://github.com/alessiomartini/notebooks-econophysics-benzaquen", notesLabel: "my tutorial notebooks" },
           ],
         },
         {
@@ -250,8 +250,8 @@ const SITE = {
           // courses actually being followed.
           heading: "Just started",
           items: [
-            { name: "Deep Learning with PyTorch", professor: "Cristiano De Nobili", professorHref: "https://denocris.com", notesHref: "https://github.com/alessiomartini/ml-and-deep-learning-notebooks", notesLabel: "my notebooks" },
-            { name: "Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow (book, ch. 1–2)", courseHref: "https://github.com/ageron/handson-ml3", professor: "Aurélien Géron", notesHref: "https://github.com/alessiomartini/ml-and-deep-learning-notebooks", notesLabel: "my notebooks" },
+            { name: "Deep Learning with PyTorch", professor: "Cristiano De Nobili", professorHref: "https://denocris.com", notesHref: "https://github.com/alessiomartini/notebooks-ml-and-deep-learning", notesLabel: "my notebooks" },
+            { name: "Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow (book, ch. 1–2)", courseHref: "https://github.com/ageron/handson-ml3", professor: "Aurélien Géron", notesHref: "https://github.com/alessiomartini/notebooks-ml-and-deep-learning", notesLabel: "my notebooks" },
             { name: "A Mini-Introduction to Information Theory (reading)", courseHref: "https://arxiv.org/abs/1805.11965", professor: "Edward Witten", professorHref: "https://inspirehep.net/authors/983328" },
           ],
         },
@@ -418,11 +418,11 @@ const SITE = {
         {
           name: "MIT 18.642: Lecture Notes",
           description: "LaTeX study notes of MIT's Topics in Mathematics with Applications in Finance, with full derivations, exercises and historical asides.",
-          repo: "https://github.com/alessiomartini/mit-18642-lecture-notes",
-          pdf: "pdfs/mit-18642-lecture-notes.pdf",
+          repo: "https://github.com/alessiomartini/lecture-notes-mit-18642-math-finance",
+          pdf: "pdfs/lecture-notes-mit-18642-math-finance.pdf",
           type: "Notes",
           status: "In progress",
-          screenshots: ["images/projects/mit-18642-lecture-notes/1.jpg", "images/projects/mit-18642-lecture-notes/2.jpg", "images/projects/mit-18642-lecture-notes/3.jpg"],
+          screenshots: ["images/projects/lecture-notes-mit-18642-math-finance/1.jpg", "images/projects/lecture-notes-mit-18642-math-finance/2.jpg", "images/projects/lecture-notes-mit-18642-math-finance/3.jpg"],
         },
         {
           name: "Economics of Money and Banking: Lecture Notes",
