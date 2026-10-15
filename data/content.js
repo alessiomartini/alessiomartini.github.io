@@ -235,6 +235,18 @@ const SITE = {
 
   education: [
     {
+      // Self-paced courses followed outside any degree, each with its own
+      // LaTeX lecture-notes repo (also listed on the Projects page).
+      // First group = open by default in the accordion.
+      group: "Independent Study",
+      years: "2026–",
+      items: [
+        { name: "Topics in Mathematics with Applications in Finance (MIT 18.642, Fall 2024)", courseHref: "https://ocw.mit.edu/courses/18-642-topics-in-mathematics-with-applications-in-finance-fall-2024/", professor: "Peter Kempthorne", professorHref: "https://math.mit.edu/directory/profile.html?pid=1521", place: "with Vasily Strela and Jake Xia, MIT OpenCourseWare", notesHref: "https://github.com/alessiomartini/mit-18642-lecture-notes" },
+        { name: "Economics of Money and Banking", courseHref: "https://www.youtube.com/playlist?list=PLSuwqsAnJMtwZEwkJgHZCod2xP9b7skF5", professor: "Perry Mehrling", professorHref: "https://sites.bu.edu/perry/", place: "Columbia University", notesHref: "https://github.com/alessiomartini/lecture-notes-economics-of-money-and-banking" },
+        { name: "Dynamical Systems (with Machine Learning)", courseHref: "https://www.youtube.com/playlist?list=PLMrJAkhIeNNR6DzT17-MM1GHLkuYVjhyt", professor: "Steve Brunton", professorHref: "https://scholar.google.com/citations?user=TjzWdigAAAAJ&hl=en", place: "University of Washington", notesHref: "https://github.com/alessiomartini/lecture-notes-dynamical-systems-data" },
+      ],
+    },
+    {
       // Seminars/workshops/extra courses taken alongside the formal degrees —
       // and, now that the Master's is done, alongside no degree at all.
       // Open-ended on purpose: new entries keep landing here as they happen,
