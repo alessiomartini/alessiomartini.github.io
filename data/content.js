@@ -557,8 +557,8 @@ const SITE = {
         },
         {
           name: "Health Log",
-          description: "A private, password-protected personal health tracker: weight, blood pressure, symptoms, medical visits, blood tests, and an AI assistant for symptom triage. Built to be self-hosted on a private network, not exposed publicly — shown here as a portfolio piece, source only.",
-          type: "Website",
+          description: "A private personal health log: vitals with trend charts, symptoms, medical visits and blood tests. Data lives as JSON files in a private repo and a Python script builds one self-contained HTML page, opened locally — no server, nothing online.",
+          type: "Tool",
           repo: "https://github.com/alessiomartini/personal-healthcare",
         },
         {
