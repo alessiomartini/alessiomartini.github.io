@@ -10,7 +10,12 @@ Unico file per todo, idee, decisioni e diario, letto da Projects Overview
 - [x] Projects Overview nella pagina Projects (scheda + pulsante in alto)
 
 ## Idee
-- [ ] Nota/feedback dei visitatori su database Cloudflare (vedi `FUTURE-ARCHITECTURE.md`)
+- [ ] Sezione Projects più comoda per *raggiungere* i progetti (oggi per arrivare per es. a music-library bisogna scrollare tanto; `data/content.js`). Opzioni:
+  - ordinarli per i più cliccati (servirebbe contare i click, es. Worker + D1 come per il feedback)
+  - schede a griglia più piccole/compatte
+  - pagina a parte, solo nomi + link senza descrizioni, con poco scroll
+
+- [ ] Nota/feedback dei visitatori su database Cloudflare (dettagli sotto)
 
 ### Idea: nota/feedback utente su database Cloudflare condiviso
 
@@ -79,5 +84,6 @@ already been explicitly deferred/rejected so nobody re-proposes it.
   supply photos/videos later. Don't chase this unprompted.
 
 ## Log
+- 2026-10-18: aggiunte le idee da IDEE.md (protocollo unico)
 - 2026-10-18: FUTURE-ARCHITECTURE.md unito in ROADMAP.md (protocollo unico)
 - 2026-10-15: creata la roadmap per Projects Overview; aggiunto Projects Overview alla pagina Projects (scheda e pulsante in alto)
