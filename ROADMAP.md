@@ -9,6 +9,9 @@ Unico file per todo, idee, decisioni e diario, letto da Projects Overview
 - [x] Sito personale generato da `data/content.js`, tema chiaro/scuro
 - [x] Projects Overview nella pagina Projects (scheda + pulsante in alto)
 
+## Contenuti
+- [ ] Immagini e video nella sezione "Extra Things I Did" (`media: []` in `data/content.js`): alcune dal vecchio sito su Google Sites, le altre da Google Photos (vedi idea `google-photos-cleanup` in projects-overview)
+
 ## Idee
 - [ ] Sezione Projects più comoda per *raggiungere* i progetti (oggi per arrivare per es. a music-library bisogna scrollare tanto; `data/content.js`). Opzioni:
   - ordinarli per i più cliccati (servirebbe contare i click, es. Worker + D1 come per il feedback)
@@ -81,9 +84,10 @@ already been explicitly deferred/rejected so nobody re-proposes it.
   manually curated in `data/content.js`.
 - **Media for "Extra Things I Did".** Each item already has an empty
   `media: []` array ready to take `{type, src, alt?}` entries — owner will
-  supply photos/videos later. Don't chase this unprompted.
+  supply photos/videos later. 2026-10-19: now a todo (see "## Contenuti").
 
 ## Log
+- 2026-10-19: todo: media per "Extra Things I Did" (Google Sites + Google Photos)
 - 2026-10-19: installabile come app a sé dal telefono (manifest con nome, icona e perimetro propri)
 - 2026-10-18: aggiunte le idee da IDEE.md (protocollo unico)
 - 2026-10-18: FUTURE-ARCHITECTURE.md unito in ROADMAP.md (protocollo unico)
