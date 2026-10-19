@@ -13,7 +13,7 @@ Unico file per todo, idee, decisioni e diario, letto da Projects Overview
 - [ ] Immagini e video nella sezione "Extra Things I Did" (`media: []` in `data/content.js`): alcune dal vecchio sito su Google Sites, le altre da Google Photos (vedi idea `google-photos-cleanup` in projects-overview)
 
 ## Idee
-- [ ] Sezione Projects più comoda per *raggiungere* i progetti (oggi per arrivare per es. a music-library bisogna scrollare tanto; `data/content.js`). Opzioni:
+- [x] Sezione Projects più comoda per *raggiungere* i progetti (oggi per arrivare per es. a music-library bisogna scrollare tanto; `data/content.js`). Opzioni:
   - ordinarli per i più cliccati (servirebbe contare i click, es. Worker + D1 come per il feedback)
   - schede a griglia più piccole/compatte
   - pagina a parte, solo nomi + link senza descrizioni, con poco scroll
@@ -72,6 +72,8 @@ viene chiesto esplicitamente.
 
 ## Decisioni e cose provate
 
+- **Projects raggiungibili (2026-10-19)**: fatto un indice compatto di chip in cima a `projects.html` (generato da `SITE.projects`, raggruppato per categoria, con link "Back to index" in fondo). Non fatti: ordinamento per click (richiederebbe un backend per contare i click) e pagina separata solo nomi+link (l'indice compatto basta).
+
 This file collects ideas that are **not implemented yet** — ready for a
 future Claude Code session (or Alessio) to pick up. It is not a roadmap
 with deadlines, just a place to avoid losing ideas and to record what has
@@ -87,7 +89,7 @@ already been explicitly deferred/rejected so nobody re-proposes it.
   supply photos/videos later. 2026-10-19: now a todo (see "## Contenuti").
 
 ## Log
-- 2026-10-19: installabile come app a sé dal telefono (manifest con nome, icona e perimetro propri); todo: media per "Extra Things I Did" (Google Sites + Google Photos)
+- 2026-10-19: 🤖 indice rapido a chip in cima a Projects (generato da content.js, con ancore sulle schede); installabile come app a sé dal telefono (manifest con nome, icona e perimetro propri); todo: media per "Extra Things I Did" (Google Sites + Google Photos)
 - 2026-10-18: aggiunte le idee da IDEE.md (protocollo unico)
 - 2026-10-18: FUTURE-ARCHITECTURE.md unito in ROADMAP.md (protocollo unico)
 - 2026-10-15: creata la roadmap per Projects Overview; aggiunto Projects Overview alla pagina Projects (scheda e pulsante in alto)

@@ -101,15 +101,37 @@
 
   function renderProjects(categories) {
     const container = document.getElementById("projects-list");
+    const usedIds = new Set();
+    function projectId(project) {
+      const base = (project.repo ? project.repo.replace(/\/+$/, "").split("/").pop() : project.name)
+        .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "project";
+      let id = "p-" + base;
+      for (let n = 2; usedIds.has(id); n++) id = `p-${base}-${n}`;
+      usedIds.add(id);
+      return id;
+    }
+
+    const index = el("nav", "projects-index");
+    index.id = "projects-index";
+    index.setAttribute("aria-label", "Jump to a project");
+    container.parentNode.insertBefore(index, container);
+
     categories.forEach((category) => {
       const group = el("div", "project-group");
       const heading = el("h3", "project-category", category.category);
       group.appendChild(heading);
+      const chips = el("div", "projects-index-group");
+      chips.appendChild(el("span", "projects-index-label", category.category));
+      const chipList = el("div", "projects-index-chips");
+      chips.appendChild(chipList);
+      index.appendChild(chips);
 
       const list = el("div", "project-cards");
       category.items.forEach((project) => {
         const screenshots = project.screenshots || [];
         const card = el("div", `project-card-row${screenshots.length ? "" : " no-media"}`);
+        card.id = projectId(project);
+        chipList.appendChild(el("a", "projects-chip", escapeAttr(project.name).replace(/</g, "&lt;"))).setAttribute("href", "#" + card.id);
         const visitLink = project.href
           ? `<a class="btn btn-ghost btn-sm" href="${project.href}" target="_blank" rel="noopener noreferrer">Visit project</a>`
           : "";
@@ -159,6 +181,8 @@
       group.appendChild(list);
       container.appendChild(group);
     });
+    const top = el("p", "projects-top", '<a class="text-link" href="#projects-index">&uarr; Back to index</a>');
+    container.appendChild(top);
   }
 
   function setupProjectMedia(openLightbox) {

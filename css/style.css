@@ -874,3 +874,13 @@ body.no-scroll { overflow: hidden; }
 /* ---------- Course detail page ---------- */
 .course-section { margin-bottom: 1.75rem; }
 .course-section:last-child { margin-bottom: 0; }
+
+/* Projects quick index */
+.projects-index { margin: 0 0 2rem; padding: 1rem 1.1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; scroll-margin-top: var(--header-height); }
+.projects-index-group + .projects-index-group { margin-top: 0.8rem; }
+.projects-index-label { display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 0.4rem; }
+.projects-index-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.projects-chip { display: inline-block; max-width: 100%; padding: 0.25rem 0.7rem; border: 1px solid var(--border); border-radius: 999px; font-size: 0.85rem; color: var(--text); background: var(--bg); }
+.projects-chip:hover, .projects-chip:focus-visible { border-color: var(--accent); color: var(--accent); }
+.project-card-row { scroll-margin-top: calc(var(--header-height) + 0.5rem); }
+.projects-top { margin: 1.5rem 0 0; text-align: center; font-size: 0.9rem; }
