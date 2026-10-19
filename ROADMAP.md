@@ -84,6 +84,7 @@ already been explicitly deferred/rejected so nobody re-proposes it.
   supply photos/videos later. Don't chase this unprompted.
 
 ## Log
+- 2026-10-19: installabile come app a sé dal telefono (manifest con nome, icona e perimetro propri)
 - 2026-10-18: aggiunte le idee da IDEE.md (protocollo unico)
 - 2026-10-18: FUTURE-ARCHITECTURE.md unito in ROADMAP.md (protocollo unico)
 - 2026-10-15: creata la roadmap per Projects Overview; aggiunto Projects Overview alla pagina Projects (scheda e pulsante in alto)
