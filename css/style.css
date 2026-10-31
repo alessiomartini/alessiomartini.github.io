@@ -875,3 +875,5 @@ body.no-scroll { overflow: hidden; }
 /* ---------- Course detail page ---------- */
 .course-section { margin-bottom: 1.75rem; }
 .course-section:last-child { margin-bottom: 0; }
+
+/* Projects quick index */
