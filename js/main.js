@@ -99,66 +99,31 @@
     container.parentElement.appendChild(el("p", "note-card", teaching.note));
   }
 
+  // Flat, compact list sorted by how often I open each project (counts live in this browser only).
   function renderProjects(categories) {
     const container = document.getElementById("projects-list");
-    categories.forEach((category) => {
-      const group = el("div", "project-group");
-      const heading = el("h3", "project-category", category.category);
-      group.appendChild(heading);
+    let clicks = {};
+    try { clicks = JSON.parse(localStorage.getItem("project-clicks")) || {}; } catch (e) {}
+    const items = [];
+    categories.forEach((c) => c.items.forEach((p) => items.push(p)));
+    const order = new Map(items.map((p, i) => [p, i]));
+    items.sort((a, b) => (clicks[b.name] || 0) - (clicks[a.name] || 0) || order.get(a) - order.get(b));
 
-      const list = el("div", "project-cards");
-      category.items.forEach((project) => {
-        const screenshots = project.screenshots || [];
-        const card = el("div", `project-card-row${screenshots.length ? "" : " no-media"}`);
-        const visitLink = project.href
-          ? `<a class="btn btn-ghost btn-sm" href="${project.href}" target="_blank" rel="noopener noreferrer">Visit project</a>`
-          : "";
-        const repoLink = project.repo
-          ? `<a class="project-source" href="${project.repo}" target="_blank" rel="noopener noreferrer">Source</a>`
-          : "";
-        const pdfLink = project.pdf
-          ? `<a class="btn btn-ghost btn-sm" href="${project.pdf}" target="_blank" rel="noopener noreferrer">Read PDF</a>`
-          : "";
-        const typeTag = project.type ? `<span class="project-type project-type-${project.type.toLowerCase()}">${project.type}</span>` : "";
-        const statusTag = project.status ? `<span class="project-status project-status-${project.status.toLowerCase().replace(/\s+/g, "-")}">${project.status}</span>` : "";
-
-        const media = screenshots.length
-          ? `<div class="project-media" data-shots="${encodeURIComponent(JSON.stringify(screenshots))}" data-index="0" data-name="${escapeAttr(project.name)}">
-              <button type="button" class="project-media-img-btn">
-                <img class="project-media-img" src="${screenshots[0]}" alt="${escapeAttr(project.name)} screenshot 1">
-              </button>
-              ${
-                screenshots.length > 1
-                  ? `
-                    <button type="button" class="project-media-arrow project-media-prev" aria-label="Previous screenshot">&lsaquo;</button>
-                    <button type="button" class="project-media-arrow project-media-next" aria-label="Next screenshot">&rsaquo;</button>
-                    <div class="project-media-dots">
-                      ${screenshots.map((_, i) => `<span class="project-media-dot${i === 0 ? " active" : ""}"></span>`).join("")}
-                    </div>
-                  `
-                  : ""
-              }
-            </div>`
-          : "";
-
-        card.innerHTML = `
-          <div class="project-info">
-            <h4>${project.name}</h4>
-            <div class="project-tags">${typeTag}${statusTag}</div>
-            <p>${project.description}</p>
-            <div class="project-links">
-              ${visitLink}
-              ${pdfLink}
-              ${repoLink}
-            </div>
-          </div>
-          ${media}
-        `;
-        list.appendChild(card);
+    const list = el("div", "project-cards");
+    items.forEach((project) => {
+      const main = project.href || project.pdf || project.repo;
+      const card = el("a", "project-card-row");
+      if (main) { card.href = main; card.target = "_blank"; card.rel = "noopener noreferrer"; }
+      card.title = project.description;
+      const tags = [project.type, project.status].filter(Boolean).map((t) => `<span class="project-type">${t}</span>`).join("");
+      card.innerHTML = `<h4>${project.name}</h4><div class="project-tags">${tags}</div>`;
+      card.addEventListener("click", () => {
+        clicks[project.name] = (clicks[project.name] || 0) + 1;
+        try { localStorage.setItem("project-clicks", JSON.stringify(clicks)); } catch (e) {}
       });
-      group.appendChild(list);
-      container.appendChild(group);
+      list.appendChild(card);
     });
+    container.appendChild(list);
   }
 
   function setupProjectMedia(openLightbox) {
