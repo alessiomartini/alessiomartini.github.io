@@ -117,7 +117,7 @@
       card.title = project.description;
       const tags = [project.type, project.status].filter(Boolean).map((t) => `<span class="project-type">${t}</span>`).join("");
       const shot = (project.screenshots || [])[0];
-      card.innerHTML = `${shot ? `<img class="project-thumb" src="${shot}" alt="" loading="lazy">` : ""}<div class="project-card-text"><h4>${project.name}</h4><div class="project-tags">${tags}</div></div>`;
+      card.innerHTML = `${shot ? `<img class="project-thumb" src="${shot}" alt="" loading="lazy">` : ""}<div class="project-card-text"><h4>${project.name}</h4><div class="project-tags">${tags}</div><p class="project-desc">${project.description}</p></div>`;
       card.addEventListener("click", () => {
         clicks[project.name] = (clicks[project.name] || 0) + 1;
         try { localStorage.setItem("project-clicks", JSON.stringify(clicks)); } catch (e) {}
