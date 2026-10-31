@@ -383,8 +383,8 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
 
 .project-card-row {
   display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
+  align-items: center;
+  gap: 0.7rem;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -395,6 +395,8 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
 .project-card-row:hover { border-color: var(--accent); }
 .project-card-row h4 { margin: 0; font-size: 0.92rem; line-height: 1.3; }
 .project-card-row .project-tags { margin: 0; }
+.project-card-text { display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; }
+.project-thumb { width: 4.5rem; height: 3.2rem; flex: none; object-fit: cover; object-position: top; border-radius: 6px; border: 1px solid var(--border); }
 
 .project-info {
   display: flex;
