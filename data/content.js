@@ -433,6 +433,18 @@ const SITE = {
           status: "In progress",
           screenshots: ["images/projects/lecture-notes-economics-of-money-and-banking/1.jpg", "images/projects/lecture-notes-economics-of-money-and-banking/2.jpg", "images/projects/lecture-notes-economics-of-money-and-banking/3.jpg"],
         },
+        {
+          name: "Econophysics: Tutorial Notebooks",
+          description: "Worked solutions, in Python notebooks, to the tutorial exercises of Michael Benzaquen's course Modelling Financial Markets (École Polytechnique).",
+          repo: "https://github.com/alessiomartini/notebooks-econophysics-benzaquen",
+          type: "Notes",
+        },
+        {
+          name: "Machine & Deep Learning: Notebooks",
+          description: "Study log of notebooks from three courses (Géron's book, PyTorch, deep learning), from running the textbook code to implementing the layers myself.",
+          repo: "https://github.com/alessiomartini/notebooks-ml-and-deep-learning",
+          type: "Notes",
+        },
       ],
     },
     {
