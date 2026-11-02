@@ -89,7 +89,7 @@ already been explicitly deferred/rejected so nobody re-proposes it.
   supply photos/videos later. 2026-10-19: now a todo (see "## Contenuti").
 
 ## Log
-- 2026-11-02: Projects: aggiunto Saved Films (film-salvati), tolto Job News (confluito in Job Research Website); controllo di completezza fra i 3 elenchi
+- 2026-11-02: Projects: aggiunto Saved Films (film-salvati), tolto Job News (confluito in Job Research Website); controllo di completezza fra i 3 elenchi; aggiunti World Economies Map, Course Exercises (riquadro unico) e 5 strumenti privati (Site Notes, Google Tasks CLI, Life Log, CV Sources, Anki Decks)
 - 2026-10-19: 🤖 indice rapido a chip in cima a Projects (generato da content.js, con ancore sulle schede); installabile come app a sé dal telefono (manifest con nome, icona e perimetro propri); todo: media per "Extra Things I Did" (Google Sites + Google Photos)
 - 2026-10-18: aggiunte le idee da IDEE.md (protocollo unico)
 - 2026-10-18: FUTURE-ARCHITECTURE.md unito in ROADMAP.md (protocollo unico)
