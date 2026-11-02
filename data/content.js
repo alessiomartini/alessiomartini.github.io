@@ -473,13 +473,6 @@ const SITE = {
           screenshots: ["images/projects/job-research-website/1.png", "images/projects/job-research-website/2.png"],
         },
         {
-          name: "Job News",
-          description: "Collects the events worth attending for my work interests (quant finance, complexity, econophysics, sociophysics): seminars, workshops, conferences and networking events, at companies and for PhD positions, in one page with a link to each original source, ready to add to my calendar. Just started: only the plan so far.",
-          type: "Website",
-          repo: "https://github.com/alessiomartini/job-news",
-          status: "In progress",
-        },
-        {
           name: "Markets from First Principles",
           description: "A single-author learning site that teaches finance and economics to someone who already thinks like a theoretical physicist. Eight tracks, 51 pages, one concept per page.",
           type: "Website",
@@ -515,6 +508,14 @@ const SITE = {
           repo: "https://github.com/alessiomartini/mountain-huts-map",
           status: "In progress",
           screenshots: ["images/projects/mountain-huts-map/1.png", "images/projects/mountain-huts-map/2.png"],
+        },
+        {
+          name: "Saved Films",
+          description: "A custom site for the films I saved from Instagram posts: ratings, awards, cast, trailers and where to watch each one (Netflix, Prime Video, RaiPlay...). Started with 145 titles from my three saved collections.",
+          type: "Website",
+          href: "https://alessiomartini.github.io/film-salvati/",
+          repo: "https://github.com/alessiomartini/film-salvati",
+          status: "In progress",
         },
         {
           name: "Eating Amsterdam",
