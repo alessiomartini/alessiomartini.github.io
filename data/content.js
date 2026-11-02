@@ -447,7 +447,7 @@ const SITE = {
         },
         {
           name: "Course Exercises & Coursework",
-          description: "Exercises, lab write-ups and homework from the Bachelor's and Master's courses, one repository each: <a class=\"text-link\" href=\"https://github.com/alessiomartini/bsc-computational-physics-exercises\" target=\"_blank\" rel=\"noopener noreferrer\">Computational Physics</a>, <a class=\"text-link\" href=\"https://github.com/alessiomartini/bsc-physics-lab-1-mechanics-and-waves\" target=\"_blank\" rel=\"noopener noreferrer\">Physics Lab 1</a>, <a class=\"text-link\" href=\"https://github.com/alessiomartini/msc-hydrodynamics-homework\" target=\"_blank\" rel=\"noopener noreferrer\">Hydrodynamics</a> and <a class=\"text-link\" href=\"https://github.com/alessiomartini/msc-non-equilibrium-statistical-mechanics\" target=\"_blank\" rel=\"noopener noreferrer\">Non-Equilibrium Statistical Mechanics</a> are public; Physics Lab 2, Introduction to C and the liquid-fragmentation report are private.",
+          description: "Exercises, lab write-ups and homework from the Bachelor's and Master's courses, one repository each: <a class=\"text-link\" href=\"https://github.com/alessiomartini/bsc-computational-physics-exercises\" target=\"_blank\" rel=\"noopener noreferrer\">Computational Physics</a>, <a class=\"text-link\" href=\"https://github.com/alessiomartini/bsc-physics-lab-1-mechanics-and-waves\" target=\"_blank\" rel=\"noopener noreferrer\">Physics Lab 1</a>, <a class=\"text-link\" href=\"https://github.com/alessiomartini/msc-hydrodynamics-homework\" target=\"_blank\" rel=\"noopener noreferrer\">Hydrodynamics</a>, <a class=\"text-link\" href=\"https://github.com/alessiomartini/msc-non-equilibrium-statistical-mechanics\" target=\"_blank\" rel=\"noopener noreferrer\">Non-Equilibrium Statistical Mechanics</a>, <a class=\"text-link\" href=\"https://github.com/alessiomartini/bsc-physics-lab-2-circuits-and-optics\" target=\"_blank\" rel=\"noopener noreferrer\">Physics Lab 2</a>, <a class=\"text-link\" href=\"https://github.com/alessiomartini/bsc-intro-to-c-programming\" target=\"_blank\" rel=\"noopener noreferrer\">Introduction to C</a> and a <a class=\"text-link\" href=\"https://github.com/alessiomartini/msc-liquid-fragmentation-report\" target=\"_blank\" rel=\"noopener noreferrer\">short report on liquid fragmentation</a>.",
           type: "Notes",
         },
       ],
@@ -507,7 +507,7 @@ const SITE = {
         },
         {
           name: "World Economies Map",
-          description: "An interactive world map for understanding countries' economies: hovering a country shows the composition of public revenue and spending, clicking opens a page with more detail. Official data only, with sources cited. Under development, repository not public.",
+          description: "An interactive world map for understanding countries' economies: hovering a country shows the composition of public revenue and spending, clicking opens a page with more detail. Official data only, with sources cited. Under development; the repository is private for now because I have asked the data's author about copyright and I am waiting for the answer.",
           type: "Website",
           status: "Private",
         },
