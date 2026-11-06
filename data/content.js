@@ -419,7 +419,7 @@ const SITE = {
           name: "MIT 18.642: Lecture Notes",
           description: "LaTeX study notes of MIT's Topics in Mathematics with Applications in Finance, with full derivations, exercises and historical asides.",
           repo: "https://github.com/alessiomartini/lecture-notes-mit-18642-math-finance",
-          pdf: "pdfs/lecture-notes-mit-18642-math-finance.pdf",
+          pdf: "https://github.com/alessiomartini/lecture-notes-mit-18642-math-finance/releases/download/latest-pdf/lecture-notes-mit-18642-A4.pdf",
           type: "Notes",
           status: "In progress",
           screenshots: ["images/projects/lecture-notes-mit-18642-math-finance/1.jpg", "images/projects/lecture-notes-mit-18642-math-finance/2.jpg", "images/projects/lecture-notes-mit-18642-math-finance/3.jpg"],
