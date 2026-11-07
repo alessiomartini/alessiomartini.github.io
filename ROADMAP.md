@@ -13,6 +13,7 @@ Unico file per todo, idee, decisioni e diario, letto da Projects Overview
 - [ ] Immagini e video nella sezione "Extra Things I Did" (`media: []` in `data/content.js`): alcune dal vecchio sito su Google Sites, le altre da Google Photos (vedi idea `google-photos-cleanup` in projects-overview)
 
 ## Idee
+- [ ] Extra Things I Did: rivedere le foto una per una e rimettere solo quelle senza cose compromettenti e con il consenso degli amici (o una parte con accesso solo per Alessio)
 - [x] Sezione Projects più comoda per *raggiungere* i progetti (oggi per arrivare per es. a music-library bisogna scrollare tanto; `data/content.js`). Opzioni:
   - ordinarli per i più cliccati (servirebbe contare i click, es. Worker + D1 come per il feedback)
   - schede a griglia più piccole/compatte
@@ -89,6 +90,7 @@ already been explicitly deferred/rejected so nobody re-proposes it.
   supply photos/videos later. 2026-10-19: now a todo (see "## Contenuti").
 
 ## Log
+- 2026-11-07: Extra Things I Did: tolti i 6 link alle foto/video di Google Photos e i nomi degli amici (privacy); i link sono salvati fuori dal repo, in Dati-personali.
 - 2026-11-06: aggiunto il pulsante Feedback (`js/notes-widget.js`, POST al Worker site-notes con coda locale) a tutte le pagine; serve il deploy di site-notes. widget note v2 canonico (site-notes/widget) al posto del vecchio feedback. widget note allineato alla versione finale (migrazione key#field, dedupe), ?v=3.
 - 2026-11-02: Projects: aggiunto Saved Films (film-salvati), tolto Job News (confluito in Job Research Website); controllo di completezza fra i 3 elenchi; aggiunti World Economies Map, Course Exercises (riquadro unico) e 5 strumenti privati (Site Notes, Google Tasks CLI, Life Log, CV Sources, Anki Decks); resi pubblici Physics Lab 2, Intro to C e report frammentazione dei liquidi e linkati nel riquadro Course Exercises; World Economies Map: motivo privato (copyright dati, risposta dell'autore in attesa)
 - 2026-10-19: 🤖 indice rapido a chip in cima a Projects (generato da content.js, con ancore sulle schede); installabile come app a sé dal telefono (manifest con nome, icona e perimetro propri); todo: media per "Extra Things I Did" (Google Sites + Google Photos)

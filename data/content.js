@@ -699,12 +699,7 @@ const SITE = {
     sports: [
       "Krav Maga — KMA Milano Cimiano (Simone di Lello)",
       "Kungfu — Accademia Arti Marziali Biassono",
-      {
-        text: "Artistic Gymnastics — Oratorio Bernate, Palaunimec Arcore, Milano Gym Lab",
-        note: "My first (failed) back twist",
-        noteHref: "https://photos.app.goo.gl/M572xp32oTgCxtEJ9",
-        noteLinkText: "Video",
-      },
+      "Artistic Gymnastics — Oratorio Bernate, Palaunimec Arcore, Milano Gym Lab",
       "Breakdance — Arte e Spettacolo Lesmo",
       "Basketball — ProLoco Arcore, Ausonia Oreno",
       "Equestrian vaulting — ??? Villasanta",
@@ -731,16 +726,15 @@ const SITE = {
       {
         title: "Bivouacs",
         items: [
-          "Walter e Chiara",
-          { text: "Bivacco Zeb", href: "https://photos.app.goo.gl/L6UrkwAq6U2edpKY8" },
-          { text: "Bivacco del Piero — Monte Confinale", href: "https://photos.app.goo.gl/Eq5rht6sez8xmucs7" },
-          { text: "Military-based 1-night hike (Simone di Lello)", href: "https://photos.app.goo.gl/1FpmxvmkCKjj8RZh7" },
+          "Bivacco Zeb",
+          "Bivacco del Piero — Monte Confinale",
+          "Military-based 1-night hike",
           "2 hikes of 1 night in the Dolomites with gymnastics friends",
         ],
       },
       {
         title: "???",
-        items: [{ text: "Copenhagen Downtown hostel volunteering (Morten)", href: "https://photos.app.goo.gl/91Qh7HEg5husxhsA9" }],
+        items: ["Copenhagen Downtown hostel volunteering"],
       },
       { title: "Guitar", description: "Fixing my new classical-gipsy guitar bridge, which was detaching." },
       { title: "Shelf", description: "Built a customized shelf of copper and wood for S******'s mum." },
@@ -764,8 +758,6 @@ const SITE = {
       {
         title: "Wardrobe",
         description: "Team effort: moving a wardrobe at high school.",
-        note: "proof",
-        noteHref: "https://photos.app.goo.gl/dTbDUr6nNFxTZ6BW9",
       },
       { title: "Plants", description: "Hanging plant system: the Vertical Forest of Amsterdam." },
       { title: "Bathroom", description: "I demolished my dad's upstairs bathroom (intending to renovate it), and he had to repair it afterwards." },
