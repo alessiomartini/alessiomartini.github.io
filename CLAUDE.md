@@ -1,12 +1,9 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
 Personal/professional website of Alessio Martini (physics MSc student,
 graduating 24 June 2026 from the University of Amsterdam, ITFA; BSc from
 Milano-Bicocca). Plain HTML/CSS/JS, **no build step**, deployed via GitHub
-Pages on push to `main`. Owner communicates in Italian; content is written
-in English.
+Pages on push to `main`. Content is written in English.
 
 ## Commands
 
@@ -27,10 +24,7 @@ approval; this is a live personal site, not an app.
 - **Preview locally**: `python3 -m http.server 8000` from the repo root,
   then open `http://localhost:8000/` (plain `file://` can block
   `<script>`/`fetch` loading in some browsers).
-- **Verify a change in a real browser**: headless Chromium is available at
-  `/opt/pw-browsers/chromium` (Playwright) — use it to load the affected
-  page, check for console errors, and actually look at the section you
-  changed, not just confirm the page loads.
+- **Verify a change in a real browser**: load the affected page, check for console errors, and look at the section you changed.
 - **Deploy**: `git push` to `main` — GitHub Pages builds and publishes
   automatically, no CI step. Confirm the live site reflects the change
   after pushing.
@@ -69,21 +63,8 @@ approval; this is a live personal site, not an app.
 
 ## Pages
 
-- `index.html` — hero + `#about` `#teaching` `#resources` `#cv` `#contact`
-  (same-page anchors, sticky header nav). Footer has an `#elsewhere-note`
-  (discreet "elsewhere" mentions, e.g. brother's business) above the
-  copyright line.
-- `education.html` — full Education & Courses accordion. Top-level groups:
-  "Seminars, Workshops & Extra Courses" (open-ended, `subgroups` by rough
-  period — since graduating / during the Master's / between Bachelor's and
-  Master's / during the Bachelor's / during High School — this is where
-  new seminars/workshops keep landing, degree or no degree), "Master's
-  Degree", "Bachelor's Degree" (`subgroups` by year: Third/Second/First),
-  "High School Courses". A group either has flat `items` or
-  `subgroups: [{heading, items}]` — `renderEducation` in `js/main.js`
-  handles both, and only renders a summary meta line when the group has a
-  `place` and/or `years`. Individual items can carry an optional `place`
-  tag (rendered as `(Place)`) for groups that mix locations.
+- `index.html` — hero + same-page sections; the footer has an `#elsewhere-note` above the copyright line.
+- `education.html` — Education & Courses accordion; new seminars/workshops land in the open-ended "Seminars, Workshops & Extra Courses" group (`subgroups` by period). A group has either flat `items` or `subgroups: [{heading, items}]` (`renderEducation` handles both); items can carry an optional `place` tag.
 - `projects.html` — one full-width row per project: description on the
   left, screenshot(s) on the right. Each project item supports an optional
   `screenshots: [path, ...]` array (paths under `images/projects/<slug>/`,
@@ -97,9 +78,7 @@ approval; this is a live personal site, not an app.
   reuse the 16:10 cover box for phone screenshots or PDF pages, they'll get
   cut off. Theses/notes screenshots are PDF pages rendered with `pdftoppm`.
   For projects with a live `href`, `.github/workflows/capture-screenshots.yml`
-  (+ `.github/scripts/capture-screenshots.js`) runs a headless Chromium in
-  CI — this sandbox has no outbound network access to the live sites
-  itself — and walks down the page taking one shot per screenful (up to 4,
+  (+ `.github/scripts/capture-screenshots.js`) runs a headless Chromium in CI and walks down the page taking one shot per screenful (up to 4,
   stopping early if the page stops scrolling) into
   `images/projects/<slug>/1.png`, `2.png`, etc. It's wired to fire on any
   push to this branch that touches the workflow or script file, or run
@@ -109,16 +88,11 @@ approval; this is a live personal site, not an app.
   owner for real screenshots (or, for a runnable local web app, run it
   locally against fake/seed data — never real personal data — and
   screenshot that) rather than fabricating or guessing paths.
-- `course.html?id=<slug>` — generic per-course detail template.
+
 - `extra-things.html` — Sports / Music / Projects / Adventures, each item
   supports a `media: []` array (`{type, src, alt?}`) for future images/
   video; currently empty everywhere (owner will supply media later —
   explicitly deferred, don't chase this unprompted).
-
-All pages share the same header/nav. Same-page section links (`#about`
-etc.) are visually separated from cross-page links (`education.html` etc.)
-by a `.nav-sep` divider; cross-page nav links get a `.nav-page-link::after`
-"↗" marker.
 
 ## Conventions / design decisions (owner's explicit preferences)
 
@@ -161,26 +135,3 @@ by a `.nav-sep` divider; cross-page nav links get a `.nav-page-link::after`
    across every HTML file that includes it.
 5. `git add -A && git commit -m "..."`, push, and confirm the live site
    reflects the change after GitHub Pages deploys.
-
-## Repo / session note
-
-This repo is `alessiomartini/alessiomartini.github.io`. If you're a fresh
-Claude Code session, make sure your GitHub repo scope for this session is
-actually this repo (not some other project) before pushing anything.
-
-## Roadmap, idee e progressi
-
-`ROADMAP.md` nella root è l'**unico** file per todo, idee, decisioni e diario del progetto
-(niente `FUTURE-ARCHITECTURE.md`, `IDEE.md`, `TODO.md`). È letto da https://alessiomartini.github.io/projects-overview/.
-Sezioni: `## <fase>` (checkbox, contano nella percentuale), `## Idee` (checkbox, non contano),
-`## Decisioni e cose provate` (prosa: scartato/rimandato e perché, provato e annullato, limiti e bug noti), `## Log`.
-
-- Alla fine di ogni sessione di lavoro (prima del commit finale), aggiorna `ROADMAP.md`:
-  - spunta (`- [x]`) i punti completati in questa sessione;
-  - aggiungi come `- [ ]` i nuovi compiti nella fase giusta, e le idee non decise in `## Idee`;
-  - annota in `## Decisioni e cose provate` ciò che è stato scartato, rimandato o annullato, col perché;
-  - aggiungi in cima a `## Log` una riga `- AAAA-MM-GG: <cosa è stato fatto, in una frase>`
-    (se esiste già una riga con la data di oggi, estendila invece di crearne un'altra).
-- Non riscrivere né riordinare le voci esistenti senza motivo; non cancellare le voci completate.
-- Se `ROADMAP.md` non esiste, crealo da `templates/ROADMAP.md` di projects-overview.
-- Includi l'aggiornamento di `ROADMAP.md` nello stesso commit del lavoro.
