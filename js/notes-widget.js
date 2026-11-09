@@ -26,11 +26,16 @@
   if (!SITE) { console.error('notes-widget: data-site is missing'); return; }
   var T = ({
     it: { label: 'Feedback', title: 'Bug o suggerimento? La pagina viene allegata in automatico.', ph: 'Cosa cambieresti?',
-      send: 'Invia', empty: 'Scrivi qualcosa prima.', none: 'Nessuna nota scritta da questo browser.', sent: '\u2713 inviata', unsent: 'non ancora inviata', list: 'Le tue note' },
+      send: 'Invia', empty: 'Scrivi qualcosa prima.', none: 'Nessuna nota scritta da questo browser.', sent: '\u2713 inviata', unsent: 'non ancora inviata', list: 'Le tue note', all: 'Tutti i progetti' },
     en: { label: 'Feedback', title: 'Bug or suggestion? The page is attached automatically.', ph: 'What would you change?',
-      send: 'Send', empty: 'Write something first.', none: 'No notes written from this browser.', sent: '\u2713 sent', unsent: 'not sent yet', list: 'Your notes' }
+      send: 'Send', empty: 'Write something first.', none: 'No notes written from this browser.', sent: '\u2713 sent', unsent: 'not sent yet', list: 'Your notes', all: 'All projects' }
   })[cfg.lang === 'en' ? 'en' : 'it'];
   if (cfg.label) T.label = cfg.label;
+  // backlinks to the personal site / project list (not on the site they point to); language: data-lang, else <html lang>
+  var LANG = (cfg.lang || document.documentElement.lang || 'it').slice(0, 2) === 'en' ? 'en' : 'it';
+  var ALL = LANG === 'en' ? 'All projects' : 'Tutti i progetti';
+  var LINKS = [['Alessio Martini', 'https://alessiomartini.github.io/', 'alessiomartini.github.io'],
+    [ALL, 'https://alessiomartini.github.io/projects-overview/', 'projects-overview']].filter(function (l) { return l[2] !== SITE; });
 
   var URL_ = BASE + SITE + '/notes';
   var KEY = 'site-notes.list.' + SITE, LOCK = 'site-notes.lock.' + SITE;
@@ -122,6 +127,7 @@
     'html[data-theme=dark] .sn-w{--sn-bg:#1e1e1e;--sn-fg:#eee;--sn-mut:#aaa;--sn-bd:#777;--sn-ok:#5fd18a;--sn-warn:#ffb454;--sn-btn:#333}' +
     'html[data-theme=light] .sn-w{--sn-bg:#fff;--sn-fg:#222;--sn-mut:#666;--sn-bd:#888;--sn-ok:#1b7a3d;--sn-warn:#b25e00;--sn-btn:#f2f2f2}' +
     '.sn-w,.sn-w *{box-sizing:border-box}.sn-w a{text-decoration:none;color:inherit;font-weight:700}' +
+    '.sn-b{display:flex;align-items:center;justify-content:flex-end;gap:8px}.sn-k{font-size:12px;color:var(--sn-mut);background:var(--sn-bg);border:1px solid var(--sn-bd);border-radius:999px;padding:4px 10px;white-space:nowrap;opacity:.85}.sn-k a:hover{color:var(--sn-fg);text-decoration:underline}.sn-f{margin-top:10px;font-size:12px;color:var(--sn-mut)}.sn-f a:hover{color:var(--sn-fg);text-decoration:underline}@media(max-width:480px){.sn-k{display:none}}' +
     '.sn-t{display:block;margin-left:auto;border:1px solid var(--sn-bd);border-radius:999px;background:var(--sn-bg);color:var(--sn-fg);padding:8px 14px;font:inherit;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25)}' +
     '.sn-p{position:absolute;right:0;bottom:46px;width:min(360px,calc(100vw - 28px));max-height:min(75vh,560px);overflow:auto;background:var(--sn-bg);color:var(--sn-fg);border:1px solid var(--sn-bd);border-radius:10px;padding:12px;box-shadow:0 4px 16px rgba(0,0,0,.3)}' +
     '.sn-p[hidden]{display:none}.sn-p label{display:block;margin-bottom:6px;font-weight:600}' +
@@ -174,6 +180,15 @@
     text.value = ''; render(); flush();
   }
 
+  function links(cls) {
+    var d = el('div', cls);
+    LINKS.forEach(function (l, i) {
+      if (i) d.appendChild(document.createTextNode(' · '));
+      var a = el('a', '', l[0]); a.href = l[1]; d.appendChild(a);
+    });
+    return d;
+  }
+
   function build() {
     if (document.querySelector('.sn-w')) return;
     var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
@@ -187,7 +202,9 @@
     status = el('span', 'sn-s'); status.setAttribute('role', 'status'); row.appendChild(send); row.appendChild(status);
     var hd = el('div', 'sn-h', T.list); listEl = el('ul', 'sn-l');
     [lab, text, h, row, hd, listEl].forEach(function (c) { panel.appendChild(c); });
-    root.appendChild(panel); root.appendChild(toggle); document.body.appendChild(root);
+    if (LINKS.length) panel.appendChild(links('sn-f'));
+    var bar = el('div', 'sn-b'); if (LINKS.length) bar.appendChild(links('sn-k')); bar.appendChild(toggle);
+    root.appendChild(panel); root.appendChild(bar); document.body.appendChild(root);
     toggle.addEventListener('click', function () { setOpen(panel.hidden); });
     send.addEventListener('click', submit);
     text.addEventListener('keydown', function (e) { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) submit(); });
