@@ -13,10 +13,10 @@ Full context lives in `CLAUDE.md`; this skill is the repeatable procedure.
 2. **Test locally in a real browser**, not just "it didn't crash":
    - `python3 -m http.server 8000` from the repo root (plain `file://` can
      block `<script>`/`fetch` loading).
-   - Headless Chromium is available at `/opt/pw-browsers/chromium`
-     (Playwright) — load the affected page, check for console errors, and
-     look at the actual section that changed. For anything visual, take a
-     screenshot and look at it before calling the change done.
+   - Open it in the built-in browser: load the affected page, check for
+     console errors, and look at the actual section that changed (also on
+     mobile width). For anything visual, take a screenshot and look at it
+     before calling the change done.
 
 3. **Bump cache-busting.** If `data/content.js` or any `js/*.js` file
    changed, bump its `?v=N` query string on **every** HTML file that
@@ -26,12 +26,10 @@ Full context lives in `CLAUDE.md`; this skill is the repeatable procedure.
    mistake to make here.
 
 4. **Commit and push.**
-   `git add -A && git commit -m "..." && git push`. If working on a PR
-   branch, open/update the PR; GitHub Pages deploys automatically on push
-   to `main`, no CI step.
+   Usual flow (branch, PR, squash-merge); GitHub Pages deploys
+   automatically on push to `main`, no CI step.
 
-5. **Confirm the live site reflects the change** after deploy (or note
-   explicitly if you can't reach the live domain from this environment).
+5. **Confirm the live site reflects the change** after deploy.
 
 Don't skip step 3 silently — if unsure whether a change touched
 `data/content.js` or `js/*.js`, check with `git diff --stat` before
