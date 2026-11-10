@@ -201,7 +201,7 @@ const SITE = {
 
   bio: {
     intro: [
-      "<p>Hello! My name is Alessio Martini. I hold a Master&rsquo;s degree in Theoretical Physics from the University of Amsterdam (ITFA), graduating on 24 June 2026, after completing my Bachelor&rsquo;s degree in Physics at the University of Milano-Bicocca.</p>",
+      "<p>Hello! My name is Alessio Martini. I hold a Master&rsquo;s degree in Theoretical Physics from the University of Amsterdam (ITFA, June 2026), after completing my Bachelor&rsquo;s degree in Physics at the University of Milano-Bicocca.</p>",
       "<p>My academic path has been shaped by a strong interest in geometric and structural approaches to physics. During my Bachelor&rsquo;s and Master&rsquo;s I focused on quantum field theory, string theory, differential geometry, and topology in physics, culminating in a Master&rsquo;s thesis on generalized symmetries and modern symmetry structures in quantum field theory and gravity. This training has given me a rigorous background in abstract modelling, mathematical methods, and conceptual aspects of quantum theory.</p>",
       "<p>In parallel, I have always been deeply interested in social and political questions: how collective behaviour emerges, how institutions shape individual choices, and how crises and inequalities propagate through societies. Over time, this has led me to look for ways to connect my theoretical and computational skills with the quantitative study of social phenomena.</p>",
     ],

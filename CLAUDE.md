@@ -1,7 +1,7 @@
 # CLAUDE.md
 
-Personal/professional website of Alessio Martini (physics MSc student,
-graduating 24 June 2026 from the University of Amsterdam, ITFA; BSc from
+Personal/professional website of Alessio Martini (MSc in theoretical physics,
+graduated June 2026 at the University of Amsterdam, ITFA; BSc from
 Milano-Bicocca). Plain HTML/CSS/JS, **no build step**, deployed via GitHub
 Pages on push to `main`. Content is written in English.
 
