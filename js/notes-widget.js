@@ -35,7 +35,7 @@
   var LANG = (cfg.lang || document.documentElement.lang || 'it').slice(0, 2) === 'en' ? 'en' : 'it';
   var ALL = LANG === 'en' ? 'All projects' : 'Tutti i progetti';
   var LINKS = [['Alessio Martini', 'https://alessiomartini.github.io/', 'alessiomartini.github.io'],
-    [ALL, 'https://alessiomartini.github.io/projects-overview/', 'projects-overview']].filter(function (l) { return l[2] !== SITE; });
+    [ALL, SITE === 'alessiomartini.github.io' ? 'https://alessiomartini.github.io/projects.html' : 'https://alessiomartini.github.io/projects-overview/', 'projects-overview']].filter(function (l) { return l[2] !== SITE; });
 
   var URL_ = BASE + SITE + '/notes';
   var KEY = 'site-notes.list.' + SITE, LOCK = 'site-notes.lock.' + SITE;
