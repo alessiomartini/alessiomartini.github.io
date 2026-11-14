@@ -20,7 +20,7 @@ Unico file per todo, idee, decisioni e diario, letto da Projects Overview
   - schede a griglia più piccole/compatte
   - pagina a parte, solo nomi + link senza descrizioni, con poco scroll
 
-- [ ] Nota/feedback dei visitatori su database Cloudflare (dettagli sotto)
+- [x] Nota/feedback dei visitatori su database Cloudflare (dettagli sotto): fatto con il widget condiviso `js/notes-widget.js` (D1 unico `site-notes`, opzione 2), in tutte le pagine
 
 ### Idea: nota/feedback utente su database Cloudflare condiviso
 
@@ -55,10 +55,10 @@ Due opzioni per lo storage, ancora da scegliere:
 
 In ogni caso, limiti minimi da rispettare:
 
-- [ ] Nessun account utente richiesto per lasciare una nota.
-- [ ] Rate limit ragionevole per bucket/IP o per identificativo casuale del
+- [x] Nessun account utente richiesto per lasciare una nota.
+- [ ] (da verificare nel Worker `site-notes`, il widget ha solo l'honeypot) Rate limit ragionevole per bucket/IP o per identificativo casuale del
   browser (per scoraggiare spam senza richiedere login).
-- [ ] La nota va scritta "alla cieca": chi la invia non puo' rileggerla
+- [x] La nota va scritta "alla cieca": chi la invia non puo' rileggerla
   pubblicamente dopo — solo l'autore del sito (Alessio) la legge, dietro un
   token, come gia' fa `eating-amsterdam`.
 
@@ -91,7 +91,7 @@ already been explicitly deferred/rejected so nobody re-proposes it.
   supply photos/videos later. 2026-10-19: now a todo (see "## Contenuti").
 
 ## Log
-- 2026-11-14: note dal sito portate nel ROADMAP; fix del link «Tutti i progetti» del widget Feedback verso `projects.html`
+- 2026-11-14: 🤖 spuntata l'idea del feedback dei visitatori (già fatta col widget site-notes; resta da verificare il rate limit nel Worker); note dal sito portate nel ROADMAP; fix del link «Tutti i progetti» del widget Feedback verso `projects.html`
 - 2026-11-07: Extra Things I Did: tolti i 6 link alle foto/video di Google Photos e i nomi degli amici (privacy); i link sono salvati fuori dal repo, in Dati-personali.
 - 2026-11-06: aggiunto il pulsante Feedback (`js/notes-widget.js`, POST al Worker site-notes con coda locale) a tutte le pagine; serve il deploy di site-notes. widget note v2 canonico (site-notes/widget) al posto del vecchio feedback. widget note allineato alla versione finale (migrazione key#field, dedupe), ?v=3.
 - 2026-11-02: Projects: aggiunto Saved Films (film-salvati), tolto Job News (confluito in Job Research Website); controllo di completezza fra i 3 elenchi; aggiunti World Economies Map, Course Exercises (riquadro unico) e 5 strumenti privati (Site Notes, Google Tasks CLI, Life Log, CV Sources, Anki Decks); resi pubblici Physics Lab 2, Intro to C e report frammentazione dei liquidi e linkati nel riquadro Course Exercises; World Economies Map: motivo privato (copyright dati, risposta dell'autore in attesa)
