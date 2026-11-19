@@ -505,6 +505,7 @@ const SITE = {
           href: "https://alessiomartini.github.io/mental-math/",
           repo: "https://github.com/alessiomartini/mental-math",
           status: "In progress",
+          screenshots: ["images/projects/mental-math/1.png"],
         },
       ],
     },
