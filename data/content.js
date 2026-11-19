@@ -498,6 +498,14 @@ const SITE = {
           type: "Research",
           repo: "https://github.com/alessiomartini/wikipedia-attention-etf-volatility",
         },
+        {
+          name: "Mental Math",
+          description: "A timed mental-arithmetic drill of the kind used in quant interviews. Every answer is logged in the browser; the site compares response times across question types (e.g. ×7 against all multiplications, additions with two carries against all additions), points out the slow ones and builds a targeted drill for each.",
+          type: "Website",
+          href: "https://alessiomartini.github.io/mental-math/",
+          repo: "https://github.com/alessiomartini/mental-math",
+          status: "In progress",
+        },
       ],
     },
     {
