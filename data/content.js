@@ -494,7 +494,7 @@ const SITE = {
         },
         {
           name: "Wikipedia Attention & ETF Volatility",
-          description: "A quantitative research prototype asking whether a spike in public attention (Wikipedia pageviews) to a company predicts the next day's realized volatility on a related ETF — with lagged features and walk-forward validation to avoid fooling itself.",
+          description: "A quantitative research prototype asking whether a spike in public attention (Wikipedia pageviews) to a company adds anything to a standard (HAR-style) forecast of realized volatility on a related ETF. Six ETF/article pairs over 2016–2026, strictly lagged features, walk-forward refits and Diebold–Mariano tests corrected for multiple comparisons. The answer is no: volatility persistence explains almost everything, and the null result is reported as such.",
           type: "Research",
           repo: "https://github.com/alessiomartini/wikipedia-attention-etf-volatility",
         },
