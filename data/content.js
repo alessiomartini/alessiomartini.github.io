@@ -464,6 +464,12 @@ const SITE = {
           status: "In progress",
           screenshots: ["images/projects/conceptual-map-physics-math/1.png", "images/projects/conceptual-map-physics-math/2.png"],
         },
+        {
+          name: "Machine Learning Phases and Symmetries on the Lattice",
+          description: "Monte Carlo simulations of lattice models and neural networks that recognise their phases. For the 2D Ising model (Metropolis and Wolff, checked against Onsager's exact solution), a 13-parameter network with translation and Z2 symmetry built in classifies the phases at 94% test accuracy, beating unconstrained networks with up to 260k parameters; PCA alone recovers the magnetization. Next: the 3D Z2 gauge theory. The repository is private for now.",
+          type: "Research",
+          status: "In progress",
+        },
       ],
     },
     {
