@@ -1,80 +1,79 @@
 # Roadmap
 
 <!--
-Unico file per todo, idee, decisioni e diario, letto da Projects Overview
-(https://alessiomartini.github.io/projects-overview/). Protocollo: templates/ROADMAP.md di projects-overview.
+Single file for todos, ideas, decisions and diary, read by Projects Overview
+(https://alessiomartini.github.io/projects-overview/). Protocol: templates/ROADMAP.md of projects-overview.
 -->
 
-## Fatto
-- [x] Il pulsante «Tutti i progetti» del widget Feedback (es. in education.html) porta alla pagina Projects del sito personale (`projects.html`), non a projects-overview (privato, in italiano); widget canonico aggiornato, `?v=5` (nota dal sito, 2026-11-09)
-- [x] Sito personale generato da `data/content.js`, tema chiaro/scuro
-- [x] Projects Overview nella pagina Projects (scheda + pulsante in alto)
+## Done
+- [x] The «Tutti i progetti» button of the Feedback widget (e.g. in education.html) leads to the Projects page of the personal site (`projects.html`), not to projects-overview (private, in Italian); canonical widget updated, `?v=5` (note from the site, 2026-11-09)
+- [x] Personal site generated from `data/content.js`, light/dark theme
+- [x] Projects Overview in the Projects page (card + button at the top)
 
-## Contenuti
-- [ ] Immagini e video nella sezione "Extra Things I Did" (`media: []` in `data/content.js`): alcune dal vecchio sito su Google Sites, le altre da Google Photos (vedi idea `google-photos-cleanup` in projects-overview)
+## Content
+- [ ] Images and videos in the "Extra Things I Did" section (`media: []` in `data/content.js`): some from the old Google Sites site, the others from Google Photos (see idea `google-photos-cleanup` in projects-overview)
 
-## Idee
-- [ ] Extra Things I Did: rivedere le foto una per una e rimettere solo quelle senza cose compromettenti e con il consenso degli amici (o una parte con accesso solo per Alessio)
-- [x] Sezione Projects più comoda per *raggiungere* i progetti (oggi per arrivare per es. a music-library bisogna scrollare tanto; `data/content.js`). Opzioni:
-  - ordinarli per i più cliccati (servirebbe contare i click, es. Worker + D1 come per il feedback)
-  - schede a griglia più piccole/compatte
-  - pagina a parte, solo nomi + link senza descrizioni, con poco scroll
+## Ideas
+- [ ] Extra Things I Did: review the photos one by one and put back only those without compromising things and with the friends' consent (or a part with access only for Alessio)
+- [x] Projects section more convenient for *reaching* the projects (today, to get to e.g. music-library one has to scroll a lot; `data/content.js`). Options:
+  - order them by most clicked (would need counting clicks, e.g. Worker + D1 as for feedback)
+  - smaller/compact grid cards
+  - separate page, only names + links without descriptions, with little scrolling
 
-- [x] Nota/feedback dei visitatori su database Cloudflare (dettagli sotto): fatto con il widget condiviso `js/notes-widget.js` (D1 unico `site-notes`, opzione 2), in tutte le pagine
+- [x] Visitors' note/feedback on a Cloudflare database (details below): done with the shared widget `js/notes-widget.js` (single D1 `site-notes`, option 2), on all pages
 
-### Idea: nota/feedback utente su database Cloudflare condiviso
+### Idea: user note/feedback on a shared Cloudflare database
 
-Il sito non ha oggi nessun modo per un visitatore di lasciare un
-feedback — nessun endpoint, nessun worker, nessuna tabella. L'idea, da
-valutare e non ancora decisa, e' aggiungere un piccolo widget (es. un
-pulsante fisso in un angolo della pagina, o una sezione a fondo pagina)
-che permetta di scrivere una nota libera ("cosa non funziona", "cosa
-vorresti vedere", ecc.) e inviarla.
+The site currently has no way for a visitor to leave
+feedback — no endpoint, no worker, no table. The idea, to be
+evaluated and not yet decided, is to add a small widget (e.g. a fixed
+button in a corner of the page, or a section at the bottom of the page)
+that lets people write a free note ("what doesn't work", "what you would
+like to see", etc.) and send it.
 
-**Storage: mai `localStorage`/client-side** — una nota salvata solo nel
-browser del visitatore non la leggerebbe mai nessuno. Va salvata in un
+**Storage: never `localStorage`/client-side** — a note saved only in the
+visitor's browser would never be read by anyone. It must be saved in a
 database.
 
-Due opzioni per lo storage, ancora da scegliere:
+Two options for storage, still to be chosen:
 
-1. **D1 dedicato a questo sito** (pattern gia' usato da altri progetti di
+1. **D1 dedicated to this site** (pattern already used by other projects of
    Alessio: `ear-training`, `geopolitics-atlas`, `eating-amsterdam`,
-   `markets-first-principles` — ognuno ha gia' il proprio D1 + Worker con
-   una tabella `notes`). Pro: isolamento totale, un bug nel worker di un
-   sito non tocca gli altri. Contro: un account/infrastruttura Cloudflare
-   in piu' da mantenere per ogni sito.
-2. **D1 unico condiviso fra tutti i siti di Alessio**, dietro un unico
-   Worker Cloudflare, con una tabella tipo
-   `notes(id, site TEXT, page TEXT, text TEXT, created_at, ...)` — la
-   colonna `site` distingue la provenienza (es. `"alessiomartini.github.io"`
-   vs `"amsterdam-events"` ecc.), e il Worker applica un allowlist CORS per
-   dominio (un'origine per sito). Pro: un solo account/infrastruttura da
-   mantenere invece di N, un solo posto dove leggere tutte le note di tutti
-   i siti. Contro: un bug nel worker condiviso romperebbe la raccolta note
-   ovunque invece di restare isolato a un sito.
+   `markets-first-principles` — each already has its own D1 + Worker with
+   a `notes` table). Pros: total isolation, a bug in one site's worker
+   does not touch the others. Cons: one more Cloudflare account/infrastructure
+   to maintain for each site.
+2. **Single D1 shared by all of Alessio's sites**, behind a single
+   Cloudflare Worker, with a table like
+   `notes(id, site TEXT, page TEXT, text TEXT, created_at, ...)` — the
+   `site` column tells where a note comes from (e.g. `"alessiomartini.github.io"`
+   vs `"amsterdam-events"` etc.), and the Worker applies a CORS allowlist per
+   domain (one origin per site). Pros: a single account/infrastructure to
+   maintain instead of N, a single place to read all the notes of all
+   the sites. Cons: a bug in the shared worker would break note collection
+   everywhere instead of staying isolated to one site.
 
-In ogni caso, limiti minimi da rispettare:
+In any case, minimum limits to respect:
 
-- [x] Nessun account utente richiesto per lasciare una nota.
-- [ ] (da verificare nel Worker `site-notes`, il widget ha solo l'honeypot) Rate limit ragionevole per bucket/IP o per identificativo casuale del
-  browser (per scoraggiare spam senza richiedere login).
-- [x] La nota va scritta "alla cieca": chi la invia non puo' rileggerla
-  pubblicamente dopo — solo l'autore del sito (Alessio) la legge, dietro un
-  token, come gia' fa `eating-amsterdam`.
+- [x] No user account required to leave a note.
+- [ ] (to verify in the `site-notes` Worker, the widget only has the honeypot) Reasonable rate limit per bucket/IP or per random identifier of the
+  browser (to discourage spam without requiring login).
+- [x] The note is written "blind": whoever sends it cannot re-read it
+  publicly afterwards — only the site's author (Alessio) reads it, behind a
+  token, as `eating-amsterdam` already does.
 
-Nota implementativa per questo repo in particolare: essendo un sito
-statico senza build step e senza backend proprio, il widget qui sarebbe
-solo un piccolo form in `index.html` (o in tutte le pagine, via
-`js/main.js`) che fa una `fetch()` POST verso l'endpoint del Worker
-scelto — nessuna nuova dipendenza o build step da introdurre lato
-frontend.
+Implementation note for this repo in particular: being a static site
+with no build step and no backend of its own, the widget here would be
+just a small form in `index.html` (or on all pages, via
+`js/main.js`) that does a `fetch()` POST to the endpoint of the chosen
+Worker — no new dependency or build step to introduce on the frontend side.
 
-Questa e' solo documentazione dell'idea: non implementare finche' non
-viene chiesto esplicitamente.
+This is only documentation of the idea: do not implement until
+explicitly asked.
 
-## Decisioni e cose provate
+## Decisions and things tried
 
-- **Projects raggiungibili (2026-10-19)**: fatto un indice compatto di chip in cima a `projects.html` (generato da `SITE.projects`, raggruppato per categoria, con link "Back to index" in fondo). Non fatti: ordinamento per click (richiederebbe un backend per contare i click) e pagina separata solo nomi+link (l'indice compatto basta).
+- **Projects reachable (2026-10-19)**: made a compact index of chips at the top of `projects.html` (generated from `SITE.projects`, grouped by category, with a "Back to index" link at the bottom). Not done: ordering by clicks (would require a backend to count clicks) and a separate names+links page (the compact index is enough).
 
 This file collects ideas that are **not implemented yet** — ready for a
 future Claude Code session (or Alessio) to pick up. It is not a roadmap
@@ -88,14 +87,15 @@ already been explicitly deferred/rejected so nobody re-proposes it.
   manually curated in `data/content.js`.
 - **Media for "Extra Things I Did".** Each item already has an empty
   `media: []` array ready to take `{type, src, alt?}` entries — owner will
-  supply photos/videos later. 2026-10-19: now a todo (see "## Contenuti").
+  supply photos/videos later. 2026-10-19: now a todo (see "## Content").
 
 ## Log
-- 2026-11-14: 🤖 spuntata l'idea del feedback dei visitatori (già fatta col widget site-notes; resta da verificare il rate limit nel Worker); note dal sito portate nel ROADMAP; fix del link «Tutti i progetti» del widget Feedback verso `projects.html`
-- 2026-11-07: Extra Things I Did: tolti i 6 link alle foto/video di Google Photos e i nomi degli amici (privacy); i link sono salvati fuori dal repo, in Dati-personali.
-- 2026-11-06: aggiunto il pulsante Feedback (`js/notes-widget.js`, POST al Worker site-notes con coda locale) a tutte le pagine; serve il deploy di site-notes. widget note v2 canonico (site-notes/widget) al posto del vecchio feedback. widget note allineato alla versione finale (migrazione key#field, dedupe), ?v=3.
-- 2026-11-02: Projects: aggiunto Saved Films (film-salvati), tolto Job News (confluito in Job Research Website); controllo di completezza fra i 3 elenchi; aggiunti World Economies Map, Course Exercises (riquadro unico) e 5 strumenti privati (Site Notes, Google Tasks CLI, Life Log, CV Sources, Anki Decks); resi pubblici Physics Lab 2, Intro to C e report frammentazione dei liquidi e linkati nel riquadro Course Exercises; World Economies Map: motivo privato (copyright dati, risposta dell'autore in attesa)
-- 2026-10-19: 🤖 indice rapido a chip in cima a Projects (generato da content.js, con ancore sulle schede); installabile come app a sé dal telefono (manifest con nome, icona e perimetro propri); todo: media per "Extra Things I Did" (Google Sites + Google Photos)
-- 2026-10-18: aggiunte le idee da IDEE.md (protocollo unico)
-- 2026-10-18: FUTURE-ARCHITECTURE.md unito in ROADMAP.md (protocollo unico)
-- 2026-10-15: creata la roadmap per Projects Overview; aggiunto Projects Overview alla pagina Projects (scheda e pulsante in alto)
+- 2026-11-21: 🤖 ROADMAP translated to English (language rule: projects in English or bilingual EN/IT).
+- 2026-11-14: 🤖 ticked the visitors' feedback idea (already done with the site-notes widget; the rate limit in the Worker is still to verify); notes from the site brought into the ROADMAP; fix of the «Tutti i progetti» link of the Feedback widget towards `projects.html`
+- 2026-11-07: Extra Things I Did: removed the 6 links to Google Photos photos/videos and the friends' names (privacy); the links are saved outside the repo, in Dati-personali.
+- 2026-11-06: added the Feedback button (`js/notes-widget.js`, POST to the site-notes Worker with local queue) to all pages; site-notes deploy needed. canonical notes widget v2 (site-notes/widget) in place of the old feedback. notes widget aligned to the final version (key#field migration, dedupe), ?v=3.
+- 2026-11-02: Projects: added Saved Films (film-salvati), removed Job News (merged into Job Research Website); completeness check across the 3 lists; added World Economies Map, Course Exercises (single card) and 5 private tools (Site Notes, Google Tasks CLI, Life Log, CV Sources, Anki Decks); made Physics Lab 2, Intro to C and liquid fragmentation report public and linked them in the Course Exercises card; World Economies Map: private for a reason (data copyright, author's reply pending)
+- 2026-10-19: 🤖 quick chip index at the top of Projects (generated from content.js, with anchors on the cards); installable as a standalone app from the phone (manifest with its own name, icon and scope); todo: media for "Extra Things I Did" (Google Sites + Google Photos)
+- 2026-10-18: added the ideas from IDEE.md (single protocol)
+- 2026-10-18: FUTURE-ARCHITECTURE.md merged into ROADMAP.md (single protocol)
+- 2026-10-15: created the roadmap for Projects Overview; added Projects Overview to the Projects page (card and button at the top)
