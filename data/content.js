@@ -507,6 +507,14 @@ const SITE = {
           status: "In progress",
           screenshots: ["images/projects/mental-math/1.png"],
         },
+        {
+          name: "Radici",
+          description: "A daily review method for the fundamentals of theoretical physics and mathematics: spaced repetition (FSRS) for definitions and statements, one derivation or theorem a day with pen and paper, and several solutions per problem that point out the results borrowed from other fields (Wick and Isserlis, residues and Feynman propagators, Liouville and Fokker-Planck).",
+          type: "Website",
+          href: "https://alessiomartini.github.io/radici/",
+          repo: "https://github.com/alessiomartini/radici",
+          status: "In progress",
+        },
       ],
     },
     {
